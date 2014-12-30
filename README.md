@@ -18,7 +18,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??
 [Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29
 [Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??
-[Dreamhosts]                 |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20
+[Dreamhost]                  |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20
 [GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29
 

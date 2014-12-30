@@ -12,6 +12,9 @@ Let's stop this cycle.
 Send a PR with information about hosting companies, listing which versions of PHP they support, and which version
 is installed by default. 
 
-Host                 | 5.2 | 5.3 | 5.4 | 5.5 | 5.6 | Default?
--------------------- | --- | --- | --- | --- | --- | --------
+Host                        |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
+--------------------------- | ----- | ----- | ----- | ----- | ----- | --------
+[Bluehost (shared)]         |   -   |   -   |  .??  |   -   |   -   | 5.4.??
 
+
+[Bluehost (shared)]: http://www.bluehost.com/shared

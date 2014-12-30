@@ -22,7 +22,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [1&1]: http://www.1and1.com/web-hosting#info-list
 [Bluehost (shared)]: http://www.bluehost.com/shared
 [Cyon.ch]: http://www.cyon.ch/webhosting/#shared-2
-[GoDaddy (cPanel for Linux)]: 
+[GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
 
 ## Contributing
 

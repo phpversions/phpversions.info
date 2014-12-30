@@ -54,3 +54,17 @@ is installed by default when new plans are created. If you do not know the exact
 Try to focus on shared hosting not DIY dedicated servers where it's just down to whatever the distro feels like bundling by default.
 
 Please ensure that hosting company names are in alphabetical order.
+
+## TODO 
+
+As well as updating any `??` in that table, I also want to get numbers for these folks. 
+
+* Infomaniak
+* Linode
+* LiquidWeb
+* ManageWP
+* online.net
+* Rackspace
+* SiteGround
+* WPengine
+* Active24.cz

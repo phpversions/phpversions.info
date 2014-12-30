@@ -16,6 +16,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------
 [1&1]                        |   -   |   -   |   -   |  .??  | .??-beta | 5.5.??
 [Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??
+[Crucial (Split Shared])     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29
 [Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??
 [Dreamhosts]                 |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20
 [GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??
@@ -29,10 +30,3 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ## Contributing
 
 Please ensure that hosting company names are in alphabetical order.
-
-## Contacted
-
-I'm sending out some emails to various companies asking for their specific version numbers.
-
-* Crucial Hosts
-

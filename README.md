@@ -9,25 +9,25 @@ servers.
 
 Let's stop this cycle. Pick a host which supports the latest versions.
 
-Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
----------------------------- | ----- | ----- | ----- | ----- | ----- | --------
-[1&1]                        |   -   |   -   |   -   |  .??  | .??-beta | 5.5.??
-[Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??
-[Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29
-[Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??
-[Dreamhost]                  |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20
-[Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35
-[GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??
-[Heroku]                     |   -   |   -   |   -   |  .20  |  .4   | 5.6.4
-[HostEurope]                 |   -   |  .29  |  .36  |   -   |   -   | 5.3.29
-[HostGator (shared)]         |  .??  |  .??  |  .??  |  .??  |   -   | 5.5.??
-[Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??
-[MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29
-[Namecheap]                  |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??
-[ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16
-[Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29
-[Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35
-[OVH]                        |   -   |  .??  |  .??  |  .??  |   -   | 5.4.??
+Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?  | Manual Upgrade | Auto Upgrade
+---------------------------- | ----- | ----- | ----- | ----- | ----- | --------- | -------------- | ------------
+[1&1]                        |   -   |   -   |   -   |  .??  | .??-beta | 5.5.?? |                | 
+[Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??    |                | 
+[Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29    |                | 
+[Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??   |                | 
+[Dreamhost]                  |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20    |                | 
+[Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35    |                | 
+[GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??    | Yes            | 
+[Heroku]                     |   -   |   -   |   -   |  .20  |  .4   | 5.6.4     | Yes            | 
+[HostEurope]                 |   -   |  .29  |  .36  |   -   |   -   | 5.3.29    |                | 
+[HostGator (shared)]         |  .??  |  .??  |  .??  |  .??  |   -   | 5.5.??    |                | Yes
+[Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??    |                | 
+[MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29    |                | 
+[Namecheap]                  |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    |                | 
+[ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16    |                | 
+[Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29    |                | 
+[Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35    |                | 
+[OVH]                        |   -   |  .??  |  .??  |  .??  |   -   | 5.4.??    |                | 
 
 [1&1]: http://www.1and1.com/web-hosting#info-list
 [Bluehost (shared)]: http://www.bluehost.com/shared

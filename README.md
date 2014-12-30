@@ -20,7 +20,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??    | Yes            | 
 [Heroku]                     |   -   |   -   |   -   |  .20  |  .4   | 5.6.4     | Yes            | 
 [HostEurope]                 |   -   |  .29  |  .36  |   -   |   -   | 5.3.29    |                | 
-[HostGator (shared)]         |  .??  |  .??  |  .??  |  .??  |   -   | 5.5.??    |                | Yes
+[HostGator (shared)]         |  .17  |  .28  |  .35  |  .19  |   -   | 5.4.35    |                | Yes
 [Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??    |                | 
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29    |                | 
 [Namecheap]                  |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    |                | 

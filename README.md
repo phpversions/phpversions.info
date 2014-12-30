@@ -21,6 +21,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [HostGator (shared)]         |  .??  |  .??  |  .??  |  .??  |   -   | 5.5.??
 [Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29
+[Namecheap]                  |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??
 [ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16
 [Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29
 [Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35
@@ -36,6 +37,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [HostGator (shared)]: http://www.hostgator.com/shared
 [Hostmonster]: https://www.hostmonster.com/
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
+[Namecheap]: https://www.namecheap.com/hosting/shared.aspx
 [ServerGrove]: http://servergrove.com/sharedhosting
 [Site5]: http://www.site5.com/hosting/web/#programming_languages
 [OVH]: https://www.ovh.com/fr/hebergement-web/

@@ -21,6 +21,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??
 [Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29
+[Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35
 
 [1&1]: http://www.1and1.com/web-hosting#info-list
 [Bluehost (shared)]: http://www.bluehost.com/shared
@@ -30,6 +31,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Hostmonster]: https://www.hostmonster.com/
 [GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
+[Gandi (Simple Hosting)]: https://www.gandi.net/hebergement/simple?language=php&db=mysql
 
 ## Contributing
 

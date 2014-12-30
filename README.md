@@ -68,3 +68,5 @@ As well as updating any `??` in that table, I also want to get numbers for these
 * SiteGround
 * WPengine
 * Active24.cz
+
+When this gets a bit further I'll turn it into a website. Ideas for the domain name on the back of a postcard.

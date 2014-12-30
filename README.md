@@ -30,7 +30,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Dreamhosts]: http://www.dreamhost.com/hosting/shared/
 [GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
-[Gandi]: https://www.gandi.net/hebergement/simple?language=php&db=mysql
+[Gandi (Simple Hosting)]: https://www.gandi.net/hebergement/simple?language=php&db=mysql
 
 ## Contributing
 

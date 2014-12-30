@@ -12,7 +12,6 @@ Let's stop this cycle. Pick a host which supports the latest versions.
 Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------
 [1&1]                        |   -   |   -   |   -   |  .??  | .??-beta | 5.5.??
-[Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29
 [Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??
 [Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29
 [Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??
@@ -23,9 +22,11 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29
 [ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16
+[Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29
+[Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35
+[OVH]                        |   -   |  .??  |  .??  |  .??  |   -   | 5.4.??
 
 [1&1]: http://www.1and1.com/web-hosting#info-list
-[Site5]: http://www.site5.com/hosting/web/#programming_languages
 [Bluehost (shared)]: http://www.bluehost.com/shared
 [Crucial (Split Shared)]: http://www.crucialwebhost.com/hosting/split-shared/
 [Cyon.ch]: http://www.cyon.ch/webhosting/#shared-2
@@ -36,6 +37,8 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Hostmonster]: https://www.hostmonster.com/
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
 [ServerGrove]: http://servergrove.com/sharedhosting
+[Site5]: http://www.site5.com/hosting/web/#programming_languages
+[OVH]: https://www.ovh.com/fr/hebergement-web/
 
 ## Contributing
 

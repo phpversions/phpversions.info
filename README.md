@@ -7,9 +7,7 @@ Some developers force their requirements to be much higher than these default ve
 companies to upgrade, but in reality we just end up with people reducing their software to try and get it onto old 
 servers.
 
-Let's stop this cycle.
-
-If you need to find a host, pick one which supports the latest versions.
+Let's stop this cycle. Pick a host which supports the latest versions.
 
 Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------
@@ -19,6 +17,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??
 [Dreamhost]                  |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20
 [GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??
+[HostGator (shared)]         |  .??  |  .??  |  .??  |  .??  |   -   | 5.5.??
 [Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29
 [Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35
@@ -28,6 +27,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Crucial (Split Shared)]: http://www.crucialwebhost.com/hosting/split-shared/
 [Cyon.ch]: http://www.cyon.ch/webhosting/#shared-2
 [Dreamhost]: http://www.dreamhost.com/hosting/shared/
+[HostGator (shared)]: http://www.hostgator.com/shared
 [Hostmonster]: https://www.hostmonster.com/
 [GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/

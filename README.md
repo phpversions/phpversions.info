@@ -18,3 +18,7 @@ Host                        |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 
 
 [Bluehost (shared)]: http://www.bluehost.com/shared
+
+## Contributing
+
+Please ensure that hosting company names are in alphabetical order.

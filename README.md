@@ -10,9 +10,7 @@ servers.
 Let's stop this cycle.
 
 Send a PR with information about hosting companies, listing which versions of PHP they support, and which version
-is installed by default when new plans are created.
-
-_Try to focus on shared hosting not DIY dedicated servers where it's just down to whatever the distro feels like bundling by default._
+is installed by default. 
 
 Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------
@@ -30,8 +28,8 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Crucial (Split Shared)]: http://www.crucialwebhost.com/hosting/split-shared/
 [Cyon.ch]: http://www.cyon.ch/webhosting/#shared-2
 [Dreamhost]: http://www.dreamhost.com/hosting/shared/
-[Hostmonster]: https://www.hostmonster.com/
 [GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
+[Hostmonster]: https://www.hostmonster.com/
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
 
 ## Contributing

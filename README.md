@@ -22,3 +22,11 @@ Host                        |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ## Contributing
 
 Please ensure that hosting company names are in alphabetical order.
+
+## Contacted
+
+I'm sending out some emails to various companies asking for their specific version numbers.
+
+* Crucial Hosts
+* Dreamhost
+

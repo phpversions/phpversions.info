@@ -18,6 +18,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Dreamhost]                  |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20
 [Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35
 [GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??
+[HostEurope]                 |   -   |  .29  |  .36  |   -   |   -   | 5.3.29
 [HostGator (shared)]         |  .??  |  .??  |  .??  |  .??  |   -   | 5.5.??
 [Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29
@@ -34,6 +35,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Dreamhost]: http://www.dreamhost.com/hosting/shared/
 [Gandi (Simple Hosting)]: https://www.gandi.net/hebergement/simple?language=php&db=mysql
 [GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
+[HostEurope]: https://www.hosteurope.de/en/
 [HostGator (shared)]: http://www.hostgator.com/shared
 [Hostmonster]: https://www.hostmonster.com/
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/

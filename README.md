@@ -14,9 +14,10 @@ is installed by default.
 
 Host                        |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 --------------------------- | ----- | ----- | ----- | ----- | ----- | --------
+[1&1]                       |   -   |   -   |   -   |  .??  | .??-beta | 5.5.??
 [Bluehost (shared)]         |   -   |   -   |  .??  |   -   |   -   | 5.4.??
 
-
+[1&1]: http://www.1and1.com/web-hosting#info-list
 [Bluehost (shared)]: http://www.bluehost.com/shared
 
 ## Contributing

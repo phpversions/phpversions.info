@@ -12,6 +12,7 @@ Let's stop this cycle. Pick a host which supports the latest versions.
 Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------
 [1&1]                        |   -   |   -   |   -   |  .??  | .??-beta | 5.5.??
+[Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29
 [Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??
 [Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29
 [Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??
@@ -24,6 +25,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16
 
 [1&1]: http://www.1and1.com/web-hosting#info-list
+[Site5]: http://www.site5.com/hosting/web/#programming_languages
 [Bluehost (shared)]: http://www.bluehost.com/shared
 [Crucial (Split Shared)]: http://www.crucialwebhost.com/hosting/split-shared/
 [Cyon.ch]: http://www.cyon.ch/webhosting/#shared-2

@@ -9,7 +9,8 @@ servers.
 
 Let's stop this cycle.
 
-If you need to find a host, pick one which supports the latest versions.
+Send a PR with information about hosting companies, listing which versions of PHP they support, and which version
+is installed by default. 
 
 Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------
@@ -21,6 +22,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??
 [Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29
+[ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16
 
 [1&1]: http://www.1and1.com/web-hosting#info-list
 [Bluehost (shared)]: http://www.bluehost.com/shared
@@ -30,12 +32,8 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Hostmonster]: https://www.hostmonster.com/
 [GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
+[ServerGrove]: http://servergrove.com/sharedhosting
 
 ## Contributing
-
-Send a PR with information about hosting companies, listing which versions of PHP they support, and which version
-is installed by default when new plans are created. If you do not know the exact patch version then use `.??`, but please try to contribute exact numbers if possible.
-
-Try to focus on shared hosting not DIY dedicated servers where it's just down to whatever the distro feels like bundling by default.
 
 Please ensure that hosting company names are in alphabetical order.

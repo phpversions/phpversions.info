@@ -11,7 +11,7 @@ Let's stop this cycle. Pick a host which supports the latest versions.
 
 Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------
-[1&1]                        |   -   |   -   |   -   |  .??  | .??-beta | 5.5.??
+[1&1]                        |   -   |   -   |   -   |  .20  | .??-beta | 5.5.20
 [Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??
 [Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29
 [Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??

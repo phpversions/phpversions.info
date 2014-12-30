@@ -28,6 +28,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 [Crucial (Split Shared)]: http://www.crucialwebhost.com/hosting/split-shared/
 [Cyon.ch]: http://www.cyon.ch/webhosting/#shared-2
 [Dreamhosts]: http://www.dreamhost.com/hosting/shared/
+[Hostmonster]: https://www.hostmonster.com/
 [GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
 

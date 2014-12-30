@@ -10,7 +10,9 @@ servers.
 Let's stop this cycle.
 
 Send a PR with information about hosting companies, listing which versions of PHP they support, and which version
-is installed by default. 
+is installed by default when new plans are created.
+
+_Try to focus on shared hosting not DIY dedicated servers where it's just down to whatever the distro feels like bundling by default._
 
 Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------

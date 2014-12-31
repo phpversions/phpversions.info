@@ -29,7 +29,6 @@ Please ensure that hosting company names are in alphabetical order.
 As well as updating any `??` in that data file, I also want to get numbers for these folks. 
 
 * Infomaniak
-* Linode
 * LiquidWeb
 * ManageWP
 * online.net

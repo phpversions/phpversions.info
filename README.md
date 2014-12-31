@@ -50,7 +50,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [OVH]: https://www.ovh.ie/web-hosting/
 [ServerGrove]: http://servergrove.com/sharedhosting
 [Site5]: http://www.site5.com/hosting/web/#programming_languages
-[VidaHost (SharedCloud)]: https://www.vidahost.com/cloud-web-hosting
+[VidaHost (Shared Cloud)]: https://www.vidahost.com/cloud-web-hosting
 
 ## Contributing
 

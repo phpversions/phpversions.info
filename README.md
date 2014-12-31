@@ -27,6 +27,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [LexiConn]                   |  .17  |  .28  |  .35  |  .20  |   -   | 5.5.20    | Yes            | Yes
 [Locaweb (shared)]           |  .??  |  .??  |  .??  |  .??  |  .??  | 5.2.??    | Yes            | 
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29    |                | 
+[Microsoft Azure Web Sites]  |   -   |  .29  |  .34  |  .18  |   -   | 5.4.34    | Yes            | 
 [Namecheap]                  |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    |                | 
 [OVH]                        |  .17  |  .29  |  .34  |  .18  |  .2   | 5.4.34    | Yes (Patch)    | Yes (Minor)
 [ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16    |                | 
@@ -50,6 +51,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [LexiConn]: http://www.lexiconn.com/
 [Locaweb (shared)]: http://www.locaweb.com.br/produtos/hospedagem-de-sites/planos.html
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
+[Microsoft Azure Web Sites]: http://azure.microsoft.com/en-us/services/websites/
 [Namecheap]: https://www.namecheap.com/hosting/shared.aspx
 [OVH]: https://www.ovh.ie/web-hosting/
 [ServerGrove]: http://servergrove.com/sharedhosting

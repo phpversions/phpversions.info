@@ -9,29 +9,31 @@ servers.
 
 Let's stop this cycle. Pick a host which supports the latest versions.
 
-Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?  | Manual Upgrade | Auto Upgrade
----------------------------- | ----- | ----- | ----- | ----- | ----- | --------- | -------------- | ------------
-[1&1]                        |   -   |   -   |   -   |  .20  | .??-beta | 5.5.20 |                | 
-[Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??    |                | 
-[Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29    |                | 
-[Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??   |                | 
-[Dreamhost]                  |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20    |                | 
-[Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35    |                | 
-[GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??    | Yes            | 
-[Google App Engine]          |   -   |   -   |  .??  |   -   |   -   | 5.4.??    |                |
-[Heart Internet]             |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    | Yes            | No
-[Heroku]                     |   -   |   -   |   -   |  .20  |  .4   | 5.6.4     | Yes            | 
-[HostEurope]                 |   -   |  .29  |  .36  |   -   |   -   | 5.3.29    |                | 
-[HostGator (shared)]         |  .17  |  .28  |  .35  |  .19  |   -   | 5.4.35    |                | Yes
-[Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??    |                | 
-[LexiConn]                   |  .17  |  .28  |  .35  |  .20  |   -   | 5.5.20    | Yes            | Yes
-[Locaweb (shared)]           |  .??  |  .??  |  .??  |  .??  |  .??  | 5.2.??    | Yes            | 
-[MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29    |                | 
-[Namecheap]                  |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    |                | 
-[OVH]                        |  .17  |  .29  |  .34  |  .18  |  .2   | 5.4.34    | Yes (Patch)    | Yes (Minor)
-[ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16    |                | 
-[Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29    |                | 
-[VidaHost (Shared Cloud)]    |  .6   |  .28  |  .28  |  .12  |   -   | 5.3.28    |                |
+Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?  | Manual Upgrade   | Auto Upgrade
+---------------------------- | ----- | ----- | ----- | ----- | ----- | --------- | ---------------- | ------------
+[1&1]                        |   -   |   -   |   -   |  .20  | .??-beta | 5.5.20 |                  | 
+[Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??    |                  | 
+[Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29    |                  | 
+[Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??   |                  | 
+[Dreamhost]                  |   -   |  .27  |  .20  |  .17  |  .0   | 5.4.20    |                  | 
+[Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35    |                  | 
+[GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??    | Yes              | 
+[Google App Engine]          |   -   |   -   |  .??  |   -   |   -   | 5.4.??    |                  |
+[Heart Internet]             |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    | Yes              | No
+[Heroku]                     |   -   |   -   |   -   |  .20  |  .4   | 5.6.4     | Yes              | 
+[HostEurope]                 |   -   |  .29  |  .36  |   -   |   -   | 5.3.29    |                  | 
+[HostGator (shared)]         |  .17  |  .28  |  .35  |  .19  |   -   | 5.4.35    |                  | Yes
+[Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??    |                  | 
+[LexiConn]                   |  .17  |  .28  |  .35  |  .20  |   -   | 5.5.20    | Yes              | Yes
+[Locaweb (shared)]           |  .??  |  .??  |  .??  |  .??  |  .??  | 5.2.??    | Yes              | 
+[MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29    |                  | 
+[Namecheap]                  |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    |                  | 
+[names.co.uk]                |   -   |   -   |  .35  |  .19  |  .3   | 5.5.19    | Yes (5.n->5.n+1) | Yes (Patch)
+[OVH]                        |  .17  |  .29  |  .34  |  .18  |  .2   | 5.4.34    | Yes (Patch)      | Yes (Minor)
+[Register365]                |   -   |   -   |  .35  |  .19  |  .3   | 5.5.19    | Yes (5.n->5.n+1) | Yes (Patch)
+[ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16    |                  | 
+[Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29    |                  | 
+[VidaHost (Shared Cloud)]    |  .6   |  .28  |  .28  |  .12  |   -   | 5.3.28    |                  |
 
 
 [1&1]: http://www.1and1.com/web-hosting#info-list
@@ -51,7 +53,9 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [Locaweb (shared)]: http://www.locaweb.com.br/produtos/hospedagem-de-sites/planos.html
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
 [Namecheap]: https://www.namecheap.com/hosting/shared.aspx
+[names.co.uk]: https://www.names.co.uk/web-hosting
 [OVH]: https://www.ovh.ie/web-hosting/
+[Register365]: https://www.register365.com/web-hosting
 [ServerGrove]: http://servergrove.com/sharedhosting
 [Site5]: http://www.site5.com/hosting/web/#programming_languages
 [VidaHost (Shared Cloud)]: https://www.vidahost.com/cloud-web-hosting

@@ -24,6 +24,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [HostEurope]                 |   -   |  .29  |  .36  |   -   |   -   | 5.3.29    |                | 
 [HostGator (shared)]         |  .17  |  .28  |  .35  |  .19  |   -   | 5.4.35    |                | Yes
 [Hostmonster]                |  .??  |   -   |  .??  |   -   |   -   | 5.4.??    |                | 
+[LexiConn]                   |  .17  |  .28  |  .35  |  .20  |   -   | 5.5.20    | Yes            | Yes
 [Locaweb (shared)]           |  .??  |  .??  |  .??  |  .??  |  .??  | 5.2.??    | Yes            | 
 [MediaTemple (GS)]           |   -   |  .29  |   -   |  .18  |   -   | 5.3.29    |                | 
 [Namecheap]                  |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    |                | 
@@ -46,6 +47,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [HostEurope]: https://www.hosteurope.de/en/
 [HostGator (shared)]: http://www.hostgator.com/shared
 [Hostmonster]: https://www.hostmonster.com/
+[LexiConn]: http://www.lexiconn.com/
 [Locaweb (shared)]: http://www.locaweb.com.br/produtos/hospedagem-de-sites/planos.html
 [MediaTemple (GS)]: http://mediatemple.net/webhosting/shared/
 [Namecheap]: https://www.namecheap.com/hosting/shared.aspx

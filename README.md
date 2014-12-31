@@ -29,6 +29,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [OVH]                        |  .17  |  .29  |  .34  |  .18  |  .2   | 5.4.34    |                | 
 [ServerGrove]                |  .??  |  .29  |  .??  |  .16  |   -   | 5.5.16    |                | 
 [Site5]                      |  .17  |  .29  |  .35  |   -   |   -   | 5.3.29    |                | 
+[VidaHost (Shared Cloud)]    |  .6   |  .28  |  .28  |  .12  |   -   | 5.3.28    |                |
 
 
 [1&1]: http://www.1and1.com/web-hosting#info-list
@@ -49,6 +50,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [OVH]: https://www.ovh.ie/web-hosting/
 [ServerGrove]: http://servergrove.com/sharedhosting
 [Site5]: http://www.site5.com/hosting/web/#programming_languages
+[VidaHost (SharedCloud)]: https://www.vidahost.com/cloud-web-hosting
 
 ## Contributing
 

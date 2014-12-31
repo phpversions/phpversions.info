@@ -19,6 +19,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [Gandi (Simple Hosting)]     |   -   |   -   |  .35  |   -   |   -   | 5.4.35    |                | 
 [GoDaddy (cPanel for Linux)] |   -   |  .??  |  .??  |  .??  |   -   | 5.5.??    | Yes            | 
 [Google App Engine]          |   -   |   -   |  .??  |   -   |   -   | 5.4.??    |                |
+[Heart Internet]             |  .??  |  .??  |  .??  |  .??  |   -   | 5.3.??    | Yes            | No
 [Heroku]                     |   -   |   -   |   -   |  .20  |  .4   | 5.6.4     | Yes            | 
 [HostEurope]                 |   -   |  .29  |  .36  |   -   |   -   | 5.3.29    |                | 
 [HostGator (shared)]         |  .17  |  .28  |  .35  |  .19  |   -   | 5.4.35    |                | Yes
@@ -40,6 +41,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 [Gandi (Simple Hosting)]: https://www.gandi.net/hebergement/simple?language=php&db=mysql
 [GoDaddy (cPanel for Linux)]: https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009
 [Google App Engine]: https://cloud.google.com/appengine/
+[Heart Internet]: https://www.heartinternet.uk/web-hosting
 [Heroku]: https://devcenter.heroku.com/articles/php-support#php-runtimes
 [HostEurope]: https://www.hosteurope.de/en/
 [HostGator (shared)]: http://www.hostgator.com/shared

@@ -1,4 +1,4 @@
-# PHP Versions
+# phpversions.info
 
 As a PHP developer, we are often stuck with hosts that support insanely old versions of PHP. This means that some
 projects end up supporting those insanely old versions, and we all get stuck in this "Mexican Standoff" situation.
@@ -9,6 +9,8 @@ servers.
 
 Let's keep close tabs on who is offering which versions of PHP, so we can help those less in the know find 
 good companies to host their stuff on.
+
+**Website:** [phpversions.info](http://phpversions.info)
 
 ## Contributing
 

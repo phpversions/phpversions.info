@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Host</th>
+          <th>5.2</th>
+          <th>5.3</th>
+          <th>5.4</th>
+          <th>5.5</th>
+          <th>5.6</th>
+          <th>Default</th>
+          <th>Manual Upgrade</th>
+          <th>Auto Upgrade</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for host in site.data.hosts %}
+        <tr>
+          <td><a href="{{ host.url }}">{{ host.name }}</a></td>
+          <td>{% if host.52 %}{{ host.52 }}{% else %}<em>n/a</em>{% endif %}</td>
+          <td>{% if host.53 %}{{ host.53 }}{% else %}<em>n/a</em>{% endif %}</td>
+          <td>{% if host.54 %}{{ host.54 }}{% else %}<em>n/a</em>{% endif %}</td>
+          <td>{% if host.55 %}{{ host.55 }}{% else %}<em>n/a</em>{% endif %}</td>
+          <td>{% if host.56 %}{{ host.56 }}{% else %}<em>n/a</em>{% endif %}</td>
+          <td>{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
+          <td>{% if host.manual_update %}{{ host.manual_update }}{% else %}<em>???</em>{% endif %}</td>
+          <td>{% if host.auto_update %}{{ host.auto_update }}{% else %}<em>???</em>{% endif %}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

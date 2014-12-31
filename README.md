@@ -12,6 +12,7 @@ Let's stop this cycle. Pick a host which supports the latest versions.
 Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default?  | Manual Upgrade | Auto Upgrade
 ---------------------------- | ----- | ----- | ----- | ----- | ----- | --------- | -------------- | ------------
 [1&1]                        |   -   |   -   |   -   |  .20  | .??-beta | 5.5.20 |                | 
+[34SP]                       |   -   |  .??  |  .??  |   -   |   -   | 5.3.??    |                | 
 [Bluehost (shared)]          |  .??  |  .??  |  .??  |   -   |   -   | 5.4.??    |                | 
 [Crucial (Split Shared)]     |   -   |  .29  |  .36  |  .20  |  .4   | 5.3.29    |                | 
 [Cyon.ch]                    |   -   |   -   |  .??  |  .??  |  .??  | 5.??.??   |                | 
@@ -35,6 +36,7 @@ Host                         |  5.2  |  5.3  |  5.4  |  5.5  |  5.6  | Default? 
 
 
 [1&1]: http://www.1and1.com/web-hosting#info-list
+[34SP]: https://www.34sp.com/professional-hosting-specifications
 [Bluehost (shared)]: http://www.bluehost.com/shared
 [Crucial (Split Shared)]: http://www.crucialwebhost.com/hosting/split-shared/
 [Cyon.ch]: http://www.cyon.ch/webhosting/#shared-2

@@ -240,12 +240,29 @@
  */
 
 table {
-    width: 100%;
-    margin: 25px 0;
-    border-collapse: collapse;
+  width: 100%;
+  margin: 25px 0;
+  border-collapse: collapse;
 
-    th, td {
-        border-top: 1px solid $grey-color-light;
-        padding: 4px 0;
-    }
+  th, td {
+      border-width: 0px;
+      border-style: solid;
+      border-color: $grey-color-light;
+      padding: 5px 10px;
+      text-align: left;
+  }
+
+  td {
+      border-top-width: 1px;
+  }
+
+  th {
+      border-bottom-width: 2px;
+  }
+
+  tr {
+      &:hover td {
+          background-color: $grey-color-light;
+      }
+  }
 }

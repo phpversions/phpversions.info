@@ -11,7 +11,7 @@
   php54: ??
   default: 5.3.??
 
-- name: "Bluehost (shared)"
+- name: "Bluehost"
   url: "http://www.bluehost.com/shared"
   php52: ??
   php53: ??
@@ -41,7 +41,7 @@
   php56: 0
   default: 5.4.20
 
-- name: "Gandi (Simple Hosting)"
+- name: "Gandi"
   url: "https://www.gandi.net/hebergement/simple?language=php&db=mysql"
   php54: 35
   default: 5.4.35
@@ -52,13 +52,13 @@
   php54: ??
   php55: ??
   default: 5.5.??
-  manual_update: Yes
+  manual_update: "Yes"
 
 - name: "Google App Engine"
   url: "https://cloud.google.com/appengine/"
   php54: 32
   default: 5.4.32
-  auto_update: Yes
+  auto_update: "Yes"
 
 - name: "Heart Internet"
   url: "https://www.heartinternet.uk/web-hosting"
@@ -67,15 +67,8 @@
   php54: 25
   php55: 9
   default: 5.3.28
-  manual_update: Yes
-  auto_update: No
-
-- name: "Heroku"
-  url: "https://devcenter.heroku.com/articles/php-support#php-runtimes"
-  php55: 20
-  php56: 4
-  default: 5.6.4
-  manual_update: Yes
+  manual_update: "Yes"
+  auto_update: "No"
 
 - name: "Hetzner"
   url: "http://www.hetzner.de"
@@ -91,14 +84,14 @@
   php54: 36
   default: 5.3.29
 
-- name: "HostGator (shared)"
+- name: "HostGator"
   url: "http://www.hostgator.com/shared"
   php52: 17
   php53: 28
   php54: 35
   php55: 19
   default: 5.4.35
-  auto_update: Yes
+  auto_update: "Yes"
 
 - name: "Hostmonster"
   url: "https://www.hostmonster.com/"
@@ -113,8 +106,8 @@
   php54: 35
   php55: 20
   default: 5.5.20
-  manual_update: Yes
-  auto_update: Yes
+  manual_update: "Yes"
+  auto_update: "Yes"
 
 - name: Liquidweb
   url: "https://www.liquidweb.com"
@@ -123,10 +116,8 @@
   php54: ??
   php55: ??
   default: 5.5.18
-  manual_update: ??
-  auto_update: ??
 
-- name: "Locaweb (shared)"
+- name: "Locaweb"
   url: "http://www.locaweb.com.br/produtos/hospedagem-de-sites/planos.html"
   php52: ??
   php53: ??
@@ -134,27 +125,19 @@
   php55: ??
   php56: ??
   default: 5.2.??
-  manual_update: Yes
+  manual_update: "Yes"
 
-- name: "Lunarpages (shared)"
+- name: "Lunarpages"
   url: "https://support.lunarpages.com/knowledge_bases/article/326?fallback=true"
   php53: 27
   default: 5.3.27
-  manual_update: No
+  manual_update: "No"
 
 - name: "MediaTemple (GS)"
   url: "http://mediatemple.net/webhosting/shared/"
   php53: 29
   php55: 18
   default: 5.3.29
-
-- name: "Microsoft Azure Web Sites"
-  url: "http://azure.microsoft.com/en-us/services/websites"
-  php53: 29
-  php54: 34
-  php55: 18
-  default: 5.4.34
-  manual_update: Yes
 
 - name: "Namecheap"
   url: "https://www.namecheap.com/hosting/shared.aspx"
@@ -170,8 +153,8 @@
   php55: 19
   php56: 3
   default: 5.5.19
-  manual_update: Yes (Minor)
-  auto_update: Yes (Patch)
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
 
 - name: "OVH"
   url: "https://www.ovh.ie/web-hosting/"
@@ -181,16 +164,16 @@
   php55: 18
   php56: 2
   default: 5.4.34
-  manual_update: Yes (Minor)
-  auto_update: Yes (Patch)
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
 
 - name: "Rackspace (Cloud Sites)"
   url: "http://www.rackspace.com/cloud/sites"
   php53: 20
   php54: 10
   default: 5.3.20
-  manual_update: Yes (Minor)
-  auto_update: Yes (Patch)
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
 
 - name: "Register365"
   url: "https://www.register365.com/web-hosting/"
@@ -198,23 +181,16 @@
   php55: 19
   php56: 3
   default: 5.5.19
-  manual_update: Yes (Minor)
-  auto_update: Yes (Patch)
-
-- name: "Pagoda Box"
-  url: "https://pagodabox.com/"
-  php52: 17
-  php53: 23
-  php54: 14
-  default: 5.3.23
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
 
 - name: "PCextreme"
   url: "https://www.pcextreme.nl/en/webhosting/classic"
   php53: 10
   php55: 9
   default: 5.5.9
-  manual_update: Yes
-  auto_update: No
+  manual_update: "Yes"
+  auto_update: "No"
 
 - name: "ServerGrove"
   url: "http://servergrove.com/sharedhosting"
@@ -238,7 +214,7 @@
   php56: 2
   default: 5.3.29
 
-- name: "VidaHost (Shared Cloud)"
+- name: "VidaHost"
   url: "https://www.vidahost.com/cloud-web-hosting"
   php52: 6
   php53: 28

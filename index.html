@@ -14,6 +14,11 @@ layout: default
 
   <h2>Shared Hosting</h2>
 
+  <p>Shared hosting is the most common type of hosting. It means that multiple websites owned by various
+  people are all jamed onto the same server. These are often the slowest to update PHP versions because
+  of the potential for breaking many sites. Still, manual upgrade options should be offered to move 
+  from one PHP version to another, and automatic updates at the patch level (0.0.X) should be provided.</p>
+
   <table>
     <thead>
       <tr>
@@ -29,7 +34,7 @@ layout: default
       </tr>
     </thead>
     <tbody>
-    {% for host in site.data.hosts %}
+    {% for host in site.data.shared_hosts %}
       <tr>
         <td><a href="{{ host.url }}">{{ host.name }}</a></td>
         <td>{% if host.php52 %}{{ host.php52 }}{% else %}-{% endif %}</td>
@@ -40,6 +45,35 @@ layout: default
         <td>{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
         <td>{% if host.manual_update %}{{ host.manual_update }}{% endif %}</td>
         <td>{% if host.auto_update %}{{ host.auto_update }}{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Custom Hosting</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Host</th>
+        <th>5.2</th>
+        <th>5.3</th>
+        <th>5.4</th>
+        <th>5.5</th>
+        <th>5.6</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for host in site.data.custom_hosts %}
+      <tr>
+        <td><a href="{{ host.url }}">{{ host.name }}</a></td>
+        <td>{% if host.php52 %}{{ host.php52 }}{% else %}-{% endif %}</td>
+        <td>{% if host.php53 %}{{ host.php53 }}{% else %}-{% endif %}</td>
+        <td>{% if host.php54 %}{{ host.php54 }}{% else %}-{% endif %}</td>
+        <td>{% if host.php55 %}{{ host.php55 }}{% else %}-{% endif %}</td>
+        <td>{% if host.php56 %}{{ host.php56 }}{% else %}-{% endif %}</td>
+        <td>{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
       </tr>
     {% endfor %}
     </tbody>

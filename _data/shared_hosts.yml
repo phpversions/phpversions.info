@@ -43,8 +43,8 @@
 
 - name: "Gandi"
   url: "https://www.gandi.net/hebergement/simple?language=php&db=mysql"
-  php54: 35
-  default: 5.4.35
+  php54: 36
+  default: 5.4.36
 
 - name: "GoDaddy (cPanel for Linux)"
   url: "https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009"

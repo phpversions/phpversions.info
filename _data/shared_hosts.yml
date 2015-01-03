@@ -155,6 +155,16 @@
   default: 5.5.19
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
+  
+- name: "NearlyFreeSpeech.NET"
+  url: "https://www.nearlyfreespeech.net/"
+  php53: 29
+  php54: 36
+  php55: 20
+  php56: 4
+  default: 5.5.20
+  manual_update: "Yes (Major)"
+  auto_update: "Yes (Patch)"
 
 - name: "OVH"
   url: "https://www.ovh.ie/web-hosting/"

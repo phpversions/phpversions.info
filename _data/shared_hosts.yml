@@ -98,6 +98,15 @@
   php52: ??
   php54: ??
   default: 5.4.??
+  
+- name: "Krystal"
+  url: "https://krystal.co.uk/"
+  php52: 17
+  php53: 29
+  php54: 36
+  php55: 20
+  php56: 4
+  default: 5.4.36
 
 - name: LexiConn
   url: "http://www.lexiconn.com/"

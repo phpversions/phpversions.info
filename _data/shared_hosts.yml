@@ -109,6 +109,13 @@
   manual_update: "Yes"
   auto_update: "Yes"
 
+- name: Linuxpl
+  url: "http://linuxpl.com"
+  php52: 17
+  php53: 17
+  php54: 7
+  default: 5.2.17
+
 - name: Liquidweb
   url: "https://www.liquidweb.com"
   php52: ??

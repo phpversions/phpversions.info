@@ -156,10 +156,10 @@
 
 - name: "names.co.uk"
   url: "https://www.names.co.uk/web-hosting/"
-  php54: 35
-  php55: 19
-  php56: 3
-  default: 5.5.19
+  php54: 36
+  php55: 30
+  php56: 4
+  default: 5.5.20
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
   
@@ -194,10 +194,10 @@
 
 - name: "Register365"
   url: "https://www.register365.com/web-hosting/"
-  php54: 35
-  php55: 19
-  php56: 3
-  default: 5.5.19
+  php54: 36
+  php55: 30
+  php56: 4
+  default: 5.5.20
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 

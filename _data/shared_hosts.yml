@@ -10,6 +10,13 @@
   php53: ??
   php54: ??
   default: 5.3.??
+  
+- name: "A Small Orange"
+  url: "https://asmallorange.com/hosting/shared/#tab-two"
+  php53: 29
+  php54: 34
+  php55: 18
+  default: 5.4.32  
 
 - name: "Bluehost"
   url: "http://www.bluehost.com/shared"

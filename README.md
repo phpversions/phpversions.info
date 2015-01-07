@@ -26,13 +26,5 @@ Please ensure that hosting company names are in alphabetical order.
 
 ## TODO 
 
-As well as updating any `??` in that data file, I also want to get numbers for these folks. 
-
-* Infomaniak
-* LiquidWeb
-* ManageWP
-* online.net
-* Rackspace
-* SiteGround
-* WPengine
-* Active24.cz
+- [ ] Improve Design - this is a default Jekyll theme with two massive tables jammed in
+- [ ] Everything Else

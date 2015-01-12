@@ -1,3 +1,13 @@
+- name: "SiteGround Shared Plans"
+  url: "http://www.siteground.com/web-hosting.htm"
+  php55: 17
+  php54: 33
+  php53: 29
+  php52: 17
+  default: 5.5.17
+  manual_update: "Yes"
+  auto_update: "Yes"
+
 - name: "1&1"
   url: "http://www.1and1.com/web-hosting#info-list"
   php54: 35

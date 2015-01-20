@@ -1,0 +1,26 @@
+- name: "Debian 7 (Wheezy)"
+  default: 5.4.4
+
+- name: "Debian 6 (Squeeze)"
+  default: 5.3.3
+
+- name: "Ubuntu 14.10 (Utopic)"
+  default: 5.5.12
+
+- name: "Ubuntu 14.04 (Trusty)"
+  default: 5.5.9
+
+- name: "Ubuntu 12.04 (Precise)"
+  default: 5.3.10
+
+- name: "Ubuntu 10.04 (Lucid)"
+  default: 5.3.2
+
+- name: "CentOS 7.0"
+  default: 5.4.16
+
+- name: "CentOS 6.6"
+  default: 5.3.3
+
+- name: "CentOS 5.11"
+  default: 5.1.6

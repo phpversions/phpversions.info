@@ -28,6 +28,16 @@
   php55: 18
   default: 5.4.32  
 
+- name: "Aruba.it"
+  url: "http://hosting.aruba.it/"
+  php52: 17
+  php53: 29
+  php54: 35
+  php55: 19
+  default: 5.3.29
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
+
 - name: "Bluehost"
   url: "http://www.bluehost.com/shared"
   php52: ??

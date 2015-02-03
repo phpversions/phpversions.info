@@ -236,6 +236,13 @@
   manual_update: "Yes"
   auto_update: "No"
 
+- name: "Seeweb (Cloud Server)"
+  url: "http://www.seeweb.it/"
+  php53: 29
+  default: 5.3.29
+  manual_update: "No"
+  auto_update: "Yes (Patch)"
+
 - name: "ServerGrove"
   url: "http://servergrove.com/sharedhosting"
   php52: ??

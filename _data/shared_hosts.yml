@@ -243,15 +243,6 @@
   manual_update: "No"
   auto_update: "Yes (Patch)"
 
-- name: "Servage"
-  url: "http://www.servage.net/"
-  php52: ??
-  php53: ??
-  php54: ??
-  default: 5.4.??
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
 - name: "ServerGrove"
   url: "http://servergrove.com/sharedhosting"
   php52: ??

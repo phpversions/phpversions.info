@@ -28,6 +28,16 @@
   php55: 18
   default: 5.4.32  
 
+- name: "Aruba.it"
+  url: "http://hosting.aruba.it/"
+  php52: 17
+  php53: 29
+  php54: 35
+  php55: 19
+  default: 5.3.29
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
+
 - name: "Bluehost"
   url: "http://www.bluehost.com/shared"
   php52: ??
@@ -173,10 +183,10 @@
 
 - name: "names.co.uk"
   url: "https://www.names.co.uk/web-hosting/"
-  php54: 36
-  php55: 20
-  php56: 4
-  default: 5.5.20
+  php54: 37
+  php55: 21
+  php56: 5
+  default: 5.5.21
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
   
@@ -211,10 +221,10 @@
 
 - name: "Register365"
   url: "https://www.register365.com/web-hosting/"
-  php54: 36
-  php55: 20
-  php56: 4
-  default: 5.5.20
+  php54: 37
+  php55: 21
+  php56: 5
+  default: 5.5.21
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 

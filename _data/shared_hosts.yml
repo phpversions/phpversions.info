@@ -20,20 +20,20 @@
   php53: ??
   php54: ??
   default: 5.3.??
-  
+
 - name: "A Small Orange"
   url: "https://asmallorange.com/hosting/shared/#tab-two"
   php53: 29
   php54: 34
   php55: 18
-  default: 5.4.32  
+  default: 5.4.32
 
 - name: "Aruba.it"
   url: "http://hosting.aruba.it/"
   php52: 17
   php53: 29
-  php54: 35
-  php55: 19
+  php54: 37
+  php55: 21
   default: 5.3.29
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
@@ -189,7 +189,7 @@
   default: 5.5.21
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
-  
+
 - name: "NearlyFreeSpeech.NET"
   url: "https://www.nearlyfreespeech.net/"
   php53: 29

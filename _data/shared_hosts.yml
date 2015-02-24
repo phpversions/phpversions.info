@@ -1,5 +1,6 @@
 - name: "SiteGround Shared Plans"
   url: "http://www.siteground.com/web-hosting.htm"
+  php56: 3
   php55: 17
   php54: 33
   php53: 29

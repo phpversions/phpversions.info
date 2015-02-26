@@ -126,7 +126,7 @@
   php52: ??
   php54: ??
   default: 5.4.??
-  
+
 - name: "Krystal"
   url: "https://krystal.co.uk/"
   php52: 17
@@ -208,6 +208,13 @@
   php56: 4
   default: 5.5.20
   manual_update: "Yes (Major)"
+  auto_update: "Yes (Patch)"
+
+- name: "OpenShift Online (PaaS Cartridges)"
+  url: "https://www.openshift.com/products/online"
+  php54: 16
+  default: 5.4.16
+  manual_update: "No"
   auto_update: "Yes (Patch)"
 
 - name: "OVH"

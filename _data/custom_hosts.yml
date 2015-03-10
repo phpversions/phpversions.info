@@ -10,6 +10,7 @@
   php53: 29
   php54: 34
   php55: 18
+  php56: 2
   default: 5.4.34
   manual_update: Yes
 

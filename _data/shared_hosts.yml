@@ -250,6 +250,7 @@
   url: "https://www.pcextreme.nl/en/webhosting/classic"
   php53: 10
   php55: 9
+  php56: 7
   default: 5.5.9
   manual_update: "Yes"
   auto_update: "No"

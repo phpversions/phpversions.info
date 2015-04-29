@@ -1,8 +1,14 @@
+- name: "Debian 8 (Jessie)"
+  default: 5.6.7
+
 - name: "Debian 7 (Wheezy)"
   default: 5.4.4
 
 - name: "Debian 6 (Squeeze)"
   default: 5.3.3
+
+- name: "Ubuntu 15.04 (Vivid)"
+  default: 5.6.4
 
 - name: "Ubuntu 14.10 (Utopic)"
   default: 5.5.12

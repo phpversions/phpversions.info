@@ -18,9 +18,10 @@
 
 - name: "34SP"
   url: "https://www.34sp.com/professional-hosting-specifications"
-  php53: ??
-  php54: ??
-  default: 5.3.??
+  php53: 29
+  php54: 38
+  php55: 24
+  default: 5.5.24
 
 - name: "A Small Orange"
   url: "https://asmallorange.com/hosting/shared/#tab-two"

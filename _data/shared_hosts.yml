@@ -86,8 +86,8 @@
 - name: "Google App Engine"
   url: "https://cloud.google.com/appengine/"
   php54: 35
-  php55: 20
-  default: 5.4.35
+  php55: 23
+  default: 5.5.23
   auto_update: "Yes"
 
 - name: "Heart Internet"

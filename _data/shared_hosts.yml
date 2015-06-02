@@ -20,8 +20,10 @@
   url: "https://www.34sp.com/professional-hosting-specifications"
   php53: 29
   php54: 38
-  php55: 24
-  default: 5.5.24
+  php55: 25
+  default: 5.5.25
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
 
 - name: "A Small Orange"
   url: "https://asmallorange.com/hosting/shared/#tab-two"

@@ -310,4 +310,5 @@
   php53: 27
   php54: 17
   php55: 7
-  default: 5.2.17
+  php56: 5.6.4
+  default: 5.6.4

@@ -1,11 +1,11 @@
 - name: "SiteGround Shared Plans"
   url: "http://www.siteground.com/web-hosting.htm"
-  php56: 3
-  php55: 17
-  php54: 33
+  php56: 9
+  php55: 25
+  php54: 41
   php53: 29
   php52: 17
-  default: 5.5.17
+  default: 5.5.25
   manual_update: "Yes"
   auto_update: "Yes"
 

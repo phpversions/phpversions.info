@@ -216,8 +216,8 @@
 
 - name: "OpenShift Online (PaaS Cartridges)"
   url: "https://www.openshift.com/products/online"
-  php54: 16
-  default: 5.4.16
+  php54: 40
+  default: 5.4.40
   manual_update: "No"
   auto_update: "Yes (Patch)"
 

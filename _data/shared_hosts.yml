@@ -1,14 +1,3 @@
-- name: "SiteGround Shared Plans"
-  url: "http://www.siteground.com/web-hosting.htm"
-  php56: 9
-  php55: 25
-  php54: 41
-  php53: 29
-  php52: 17
-  default: 5.5.25
-  manual_update: "Yes"
-  auto_update: "Yes"
-
 - name: "1&1"
   url: "http://www.1and1.com/web-hosting#info-list"
   php54: 35
@@ -277,6 +266,17 @@
   php53: 29
   php54: 35
   default: 5.3.29
+  
+- name: "SiteGround Shared Plans"
+  url: "http://www.siteground.com/web-hosting.htm"
+  php56: 9
+  php55: 25
+  php54: 41
+  php53: 29
+  php52: 17
+  default: 5.5.25
+  manual_update: "Yes"
+  auto_update: "Yes"
 
 - name: "STRATO"
   url: "http://www.strato.de"

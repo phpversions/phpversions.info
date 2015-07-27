@@ -173,7 +173,7 @@
 - name: "MediaTemple (GS)"
   url: "http://mediatemple.net/webhosting/shared/"
   php53: 29
-  php55: 18
+  php55: 21
   default: 5.3.29
 
 - name: "Namecheap"

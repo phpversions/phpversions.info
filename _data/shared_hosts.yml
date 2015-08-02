@@ -33,10 +33,10 @@
 
 - name: "Bluehost"
   url: "http://www.bluehost.com/shared"
-  php52: ??
-  php53: ??
-  php54: ??
-  default: 5.4.??
+  php52: 5.2.17
+  php53: 0
+  php54: 5.4.40
+  default: 5.2.17
 
 - name: "Crucial (Split Shared)"
   url: http://www.crucialwebhost.com/hosting/split-shared/

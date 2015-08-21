@@ -28,7 +28,8 @@
   php53: 29
   php54: 44
   php55: 28
-  default: 5.3.29
+  php56: 12
+  default: 5.5.28
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 

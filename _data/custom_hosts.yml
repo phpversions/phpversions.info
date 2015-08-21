@@ -17,7 +17,8 @@
 
 - name: "Pagoda Box"
   url: "https://pagodabox.com/"
-  php52: 17
   php53: 23
   php54: 14
-  default: 5.3.23
+  php55: ??
+  php56: ??
+  default: 5.??.??

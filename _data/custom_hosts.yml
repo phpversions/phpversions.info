@@ -22,3 +22,11 @@
   php55: ??
   php56: ??
   default: 5.??.??
+
+- name: "ServerPilot"
+  url: "https://serverpilot.io"
+  php54: 44
+  php55: 28
+  php56: 12
+  php70: RC1
+  default: 5.6.12

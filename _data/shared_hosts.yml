@@ -101,6 +101,17 @@
   php55: 20
   default: 5.3.29
 
+- name: "Hostek"
+  url: "https://hostek.com/"
+  php52: 17
+  php53: 29
+  php54: 44
+  php55: 28
+  php56: 12
+  default: 5.3.29
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
+
 - name: "HostEurope"
   url: "https://www.hosteurope.de/en/"
   php53: 29
@@ -268,7 +279,7 @@
   php53: 29
   php54: 35
   default: 5.3.29
-  
+
 - name: "SiteGround Shared Plans"
   url: "http://www.siteground.com/web-hosting.htm"
   php56: 9

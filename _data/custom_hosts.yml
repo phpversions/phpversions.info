@@ -18,11 +18,11 @@
 
 - name: "Pagoda Box"
   url: "https://pagodabox.io/"
-  php53: ??
-  php54: ??
-  php55: ??
-  php56: ??
-  default: 5.6.??
+  php53: 29
+  php54: 42
+  php55: 26
+  php56: 10
+  default: 5.6.10
   auto_update: "Yes (Patch)"
 
 - name: "ServerPilot"

@@ -55,6 +55,14 @@
   php56: 12
   php70: RC1
   default: 5.5.28
+  
+- name: "DiPHOST"
+  url: "http://www.diphost.ru/"
+  php53: 29
+  php54: 34
+  php55: 18
+  php56: 2
+  default: 5.6.2
 
 - name: "Dreamhost"
   url: "http://www.dreamhost.com/hosting/shared/"

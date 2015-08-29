@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<article class="hosts">
+    <section>
+        <h2>PHP 7</h2>
+
+        <p>PHP 7 is the new hotness. It is not quite production ready until it hits v7.0.0, but you can and absolutely should start running trial versions of your code on PHP 7 servers now.</p>
+        
+        <p>We're out of the betas now, and onto "release candiates". The higher the RC number the better.</p>
+
+        <table class="tables" data-sortable>
+        <thead>
+          <tr>
+            <th>Host</th>
+            <th>7.0</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for host in site.data.shared_hosts %}
+          {% if host.php70 %}
+          <tr>
+            <td><a href="{{ host.url }}">{{ host.name }}</a></td>
+            <td>{{ host.php70 }}</td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+        {% for host in site.data.custom_hosts %}
+          {% if host.php70 %}
+          <tr>
+            <td><a href="{{ host.url }}">{{ host.name }}</a></td>
+            <td>{{ host.php70 }}</td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    </section>
+</article>

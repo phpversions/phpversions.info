@@ -225,13 +225,6 @@
   manual_update: "Yes (Major)"
   auto_update: "Yes (Patch)"
 
-- name: "OpenShift Online (PaaS Cartridges)"
-  url: "https://www.openshift.com/products/online"
-  php54: 40
-  default: 5.4.40
-  manual_update: "No"
-  auto_update: "Yes (Patch)"
-
 - name: "OVH"
   url: "https://www.ovh.ie/web-hosting/"
   php52: 17

@@ -1,3 +1,9 @@
+- name: "Google App Engine"
+  url: "https://cloud.google.com/appengine/"
+  php55: 23
+  default: 5.5.23
+  auto_update: "Yes"
+
 - name: "Heroku"
   url: "https://devcenter.heroku.com/articles/php-support#php-runtimes"
   php55: 28

@@ -16,6 +16,13 @@
   default: 5.4.34
   manual_update: Yes
 
+- name: "OpenShift Online"
+  url: "https://www.openshift.com/products/online"
+  php54: 40
+  default: 5.4.40
+  manual_update: "No"
+  auto_update: "Yes (Patch)"
+
 - name: "Pagoda Box"
   url: "https://pagodabox.io/"
   php53: 29

@@ -28,7 +28,7 @@ layout: default
           </tr>
           {% endif %}
         {% endfor %}
-        {% for host in site.data.custom_hosts %}
+        {% for host in site.data.paas_hosts %}
           {% if host.php70 %}
           <tr>
             <td><a href="{{ host.url }}">{{ host.name }}</a></td>

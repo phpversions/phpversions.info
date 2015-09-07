@@ -211,7 +211,7 @@
   url: "https://www.names.co.uk/web-hosting/"
   php55: 28
   php56: 12
-  php70: RC1
+  php70: RC2
   default: 5.6.12
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
@@ -249,7 +249,7 @@
   url: "https://www.register365.com/web-hosting/"
   php55: 28
   php56: 12
-  php70: RC1
+  php70: RC2
   default: 5.6.12
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"

@@ -30,3 +30,6 @@
 
 - name: "CentOS 5.11"
   default: 5.1.6
+
+- name: "Fedora 22"
+  default: 5.6.12

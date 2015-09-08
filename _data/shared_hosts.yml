@@ -143,6 +143,14 @@
   php54: ??
   default: 5.4.??
 
+- name: "Kinghost"
+  url: "http://www.kinghost.com.br/"
+  php53: ??
+  php54: ??
+  php55: 0
+  default: 5.3.??
+  manual_update: "Yes (Minor)"
+
 - name: "Krystal"
   url: "https://krystal.co.uk/"
   php52: 17

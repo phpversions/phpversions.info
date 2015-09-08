@@ -39,3 +39,10 @@
   php56: 12
   php70: RC1
   default: 5.6.12
+
+- name: "Laravel Forge"
+  url: "https://forge.laravel.com/"
+  php56: 12
+  php7: RC2
+  default: 5.6.12
+  auto_update: "Yes"

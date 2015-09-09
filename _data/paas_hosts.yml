@@ -1,9 +1,9 @@
 - name: "Heroku"
   url: "https://devcenter.heroku.com/articles/php-support#php-runtimes"
-  php55: 28
-  php56: 12
-  php70: RC1
-  default: 5.6.12
+  php55: 29
+  php56: 13
+  php70: RC2
+  default: 5.6.13
   manual_update: Yes
   auto_update: Yes
 

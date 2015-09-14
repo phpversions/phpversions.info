@@ -26,9 +26,9 @@
   url: "http://hosting.aruba.it/"
   php52: 17
   php53: 29
-  php54: 44
-  php55: 28
-  php56: 12
+  php54: 45
+  php55: 29
+  php56: 13
   default: 5.5.28
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"

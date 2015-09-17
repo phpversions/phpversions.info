@@ -13,10 +13,10 @@
 - name: "Ubuntu 14.10 (Utopic)"
   default: 5.5.12
 
-- name: "Ubuntu 14.04 (Trusty)"
+- name: "Ubuntu 14.04 LTS (Trusty)"
   default: 5.5.9
 
-- name: "Ubuntu 12.04 (Precise)"
+- name: "Ubuntu 12.04 LTS (Precise)"
   default: 5.3.10
 
 - name: "CentOS 7"

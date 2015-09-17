@@ -19,9 +19,6 @@
 - name: "Ubuntu 12.04 (Precise)"
   default: 5.3.10
 
-- name: "Ubuntu 10.04 (Lucid)"
-  default: 5.3.2
-
 - name: "CentOS 7"
   default: 5.4.16
 

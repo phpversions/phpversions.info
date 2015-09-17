@@ -22,11 +22,11 @@
 - name: "Ubuntu 10.04 (Lucid)"
   default: 5.3.2
 
-- name: "CentOS 7.0"
+- name: "CentOS 7"
   default: 5.4.16
 
-- name: "CentOS 6.6"
+- name: "CentOS 6"
   default: 5.3.3
 
-- name: "CentOS 5.11"
+- name: "CentOS 5"
   default: 5.1.6

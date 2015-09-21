@@ -322,10 +322,10 @@
   url: "https://www.tsohost.com"
   php52: 6
   php53: 28
-  php54: 28
-  php55: 12
+  php54: 42
+  php55: 26
   php56: 8
-  default: 5.3.28
+  default: 5.4.42
 
 - name: "VidaHost"
   url: "https://www.vidahost.com/cloud-web-hosting"

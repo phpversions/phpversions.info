@@ -55,7 +55,7 @@
   php56: 12
   php70: RC1
   default: 5.5.28
-  
+
 - name: "DiPHOST"
   url: "http://www.diphost.ru/"
   php53: 29
@@ -69,7 +69,7 @@
   php52: 17
   php53: 13
   default: 5.2.17
-  
+
 - name: "Dreamhost"
   url: "http://www.dreamhost.com/hosting/shared/"
   php53: 27
@@ -269,13 +269,14 @@
   auto_update: "Yes (Patch)"
 
 - name: "PCextreme"
-  url: "https://www.pcextreme.nl/en/webhosting/classic"
+  url: "https://www.pcextreme.com/webhosting/classic"
   php53: 10
   php55: 9
   php56: 7
+  php70: RC3
   default: 5.5.9
   manual_update: "Yes"
-  auto_update: "No"
+  auto_update: "Yes (Patch)"
 
 - name: "Seeweb (Cloud Server)"
   url: "http://www.seeweb.it/"

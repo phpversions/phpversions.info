@@ -1,14 +1,3 @@
-- name: "SiteGround Shared Plans"
-  url: "http://www.siteground.com/web-hosting.htm"
-  php56: 3
-  php55: 17
-  php54: 33
-  php53: 29
-  php52: 17
-  default: 5.5.17
-  manual_update: "Yes"
-  auto_update: "Yes"
-
 - name: "1&1"
   url: "http://www.1and1.com/web-hosting#info-list"
   php54: 35
@@ -28,26 +17,28 @@
 - name: "A Small Orange"
   url: "https://asmallorange.com/hosting/shared/#tab-two"
   php53: 29
-  php54: 34
-  php55: 18
-  default: 5.4.32
+  php54: 43
+  php55: 27
+  php56: 11
+  default: 5.4.43
 
 - name: "Aruba.it"
   url: "http://hosting.aruba.it/"
   php52: 17
   php53: 29
-  php54: 40
-  php55: 24
-  default: 5.3.29
+  php54: 45
+  php55: 29
+  php56: 13
+  default: 5.5.28
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 
 - name: "Bluehost"
   url: "http://www.bluehost.com/shared"
-  php52: ??
-  php53: ??
-  php54: ??
-  default: 5.4.??
+  php52: 17
+  php53: 0
+  php54: 40
+  default: 5.2.17
 
 - name: "Crucial (Split Shared)"
   url: http://www.crucialwebhost.com/hosting/split-shared/
@@ -57,12 +48,27 @@
   php56: 4
   default: 5.3.29
 
-- name: "Cyon"
+- name: "cyon"
   url: "https://www.cyon.ch"
+  php54: 44
+  php55: 28
+  php56: 12
+  php70: RC1
+  default: 5.5.28
+
+- name: "DiPHOST"
+  url: "http://www.diphost.ru/"
+  php53: 29
   php54: 34
   php55: 18
   php56: 2
-  default: 5.5.18
+  default: 5.6.2
+
+- name: "Dot 5 Hosting"
+  url: "http://www.dot5hosting.com/"
+  php52: 17
+  php53: 13
+  default: 5.2.17
 
 - name: "Dreamhost"
   url: "http://www.dreamhost.com/hosting/shared/"
@@ -110,10 +116,22 @@
   php55: 20
   default: 5.3.29
 
+- name: "Hostek"
+  url: "https://hostek.com/"
+  php52: 17
+  php53: 29
+  php54: 44
+  php55: 28
+  php56: 12
+  default: 5.3.29
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
+
 - name: "HostEurope"
   url: "https://www.hosteurope.de/en/"
   php53: 29
-  php54: 36
+  php54: 44
+  php55: 28
   default: 5.3.29
 
 - name: "HostGator"
@@ -130,6 +148,14 @@
   php52: ??
   php54: ??
   default: 5.4.??
+
+- name: "iPage"
+  url: "https://www.ipage.com/"
+  php52: 17
+  php53: 13
+  php54: ??
+  php55: 1
+  default: 5.3.13
 
 - name: "Krystal"
   url: "https://krystal.co.uk/"
@@ -184,7 +210,7 @@
 - name: "MediaTemple (GS)"
   url: "http://mediatemple.net/webhosting/shared/"
   php53: 29
-  php55: 18
+  php55: 21
   default: 5.3.29
 
 - name: "Namecheap"
@@ -197,10 +223,10 @@
 
 - name: "names.co.uk"
   url: "https://www.names.co.uk/web-hosting/"
-  php54: 40
-  php55: 24
-  php56: 8
-  default: 5.5.24
+  php55: 29
+  php56: 13
+  php70: RC3
+  default: 5.6.13
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 
@@ -212,13 +238,6 @@
   php56: 4
   default: 5.5.20
   manual_update: "Yes (Major)"
-  auto_update: "Yes (Patch)"
-
-- name: "OpenShift Online (PaaS Cartridges)"
-  url: "https://www.openshift.com/products/online"
-  php54: 16
-  default: 5.4.16
-  manual_update: "No"
   auto_update: "Yes (Patch)"
 
 - name: "OVH"
@@ -242,21 +261,22 @@
 
 - name: "Register365"
   url: "https://www.register365.com/web-hosting/"
-  php54: 40
-  php55: 24
-  php56: 8
-  default: 5.5.24
+  php55: 29
+  php56: 13
+  php70: RC3
+  default: 5.6.13
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 
 - name: "PCextreme"
-  url: "https://www.pcextreme.nl/en/webhosting/classic"
+  url: "https://www.pcextreme.com/webhosting/classic"
   php53: 10
   php55: 9
   php56: 7
+  php70: RC3
   default: 5.5.9
   manual_update: "Yes"
-  auto_update: "No"
+  auto_update: "Yes (Patch)"
 
 - name: "Seeweb (Cloud Server)"
   url: "http://www.seeweb.it/"
@@ -280,6 +300,18 @@
   php54: 35
   default: 5.3.29
 
+- name: "SiteGround Shared Plans"
+  url: "http://www.siteground.com/web-hosting.htm"
+  php70: Beta3
+  php56: 12
+  php55: 28
+  php54: 44
+  php53: 29
+  php52: 17
+  default: 5.6.12
+  manual_update: "Yes"
+  auto_update: "Yes"
+
 - name: "STRATO"
   url: "http://www.strato.de"
   php53: 29
@@ -291,10 +323,10 @@
   url: "https://www.tsohost.com"
   php52: 6
   php53: 28
-  php54: 28
-  php55: 12
+  php54: 42
+  php55: 26
   php56: 8
-  default: 5.3.28
+  default: 5.4.42
 
 - name: "VidaHost"
   url: "https://www.vidahost.com/cloud-web-hosting"
@@ -310,4 +342,5 @@
   php53: 27
   php54: 17
   php55: 7
-  default: 5.2.17
+  php56: 4
+  default: 5.6.4

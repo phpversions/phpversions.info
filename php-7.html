@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<article class="hosts">
+    <section>
+        <h2>PHP 7</h2>
+
+        <p>PHP 7 is the new hotness. It's <a href="http://www.infoworld.com/article/2947680/web-development/lightning-fast-php-7-reaches-beta.html">blazing fast</a>, it has a bunch of <a href="http://www.sitepoint.com/php-7-revolution-return-types-removed-artifacts/">cool new features</a> and it's just <a href="https://www.digitalocean.com/company/blog/getting-ready-for-php-7/">generally a lot better</a>.
+            
+        <p>While it might not be entirely production ready, now is the time to test your applications and websites work on it. Use the latest "release candidate" possible, as they are more stable than "beta" versions.</p>
+
+        <p>These hosts will let you play with PHP 7. To play with it locally, try this <a href="https://github.com/rlerdorf/php7dev">Vagrant box</a>.</p>
+
+        <table class="tables" data-sortable>
+        <thead>
+          <tr>
+            <th>Host</th>
+            <th>7.0</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for host in site.data.shared_hosts %}
+          {% if host.php70 %}
+          <tr>
+            <td><a href="{{ host.url }}">{{ host.name }}</a></td>
+            <td>{{ host.php70 }}</td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+        {% for host in site.data.paas_hosts %}
+          {% if host.php70 %}
+          <tr>
+            <td><a href="{{ host.url }}">{{ host.name }}</a></td>
+            <td>{{ host.php70 }}</td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    </section>
+</article>

@@ -9,8 +9,8 @@
   url: "https://www.34sp.com/professional-hosting-specifications"
   php53: 29
   php54: 38
-  php55: 25
-  default: 5.5.25
+  php55: 29
+  default: 5.5.29
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 

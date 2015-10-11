@@ -1,0 +1,48 @@
+- name: "Heroku"
+  url: "https://devcenter.heroku.com/articles/php-support#php-runtimes"
+  php55: 30
+  php56: 14
+  php70: RC4
+  default: 5.6.14
+  manual_update: Yes
+  auto_update: Yes
+
+- name: "Microsoft Azure Web Sites"
+  url: "http://azure.microsoft.com/en-us/services/websites"
+  php53: 29
+  php54: 34
+  php55: 18
+  php56: 2
+  default: 5.4.34
+  manual_update: Yes
+
+- name: "OpenShift Online"
+  url: "https://www.openshift.com/products/online"
+  php54: 40
+  default: 5.4.40
+  manual_update: "No"
+  auto_update: "Yes (Patch)"
+
+- name: "Pagoda Box"
+  url: "https://pagodabox.io/"
+  php53: 29
+  php54: 42
+  php55: 26
+  php56: 10
+  default: 5.6.10
+  auto_update: "Yes (Patch)"
+
+- name: "ServerPilot"
+  url: "https://serverpilot.io"
+  php54: 45
+  php55: 30
+  php56: 14
+  php70: RC4
+  default: 5.6.14
+
+- name: "Laravel Forge"
+  url: "https://forge.laravel.com/"
+  php56: 12
+  php70: RC2
+  default: 5.6.12
+  auto_update: "Yes"

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="hosts">
+    <section>
+        <h2 id="paas-hosting">Linux Distros</h2>
+
+        <table data-sortable>
+        <thead>
+          <tr>
+            <th>Distribution</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for distro in site.data.linux_distros %}
+          <tr>
+            <td>{{ distro.name }}</td>
+            <td>{{ distro.default }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </section>
+</article>

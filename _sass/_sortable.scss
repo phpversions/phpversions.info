@@ -1,0 +1,42 @@
+table[data-sortable] {
+    $marker-color: lighten($text-color, 50);
+
+    // put cursor and disable selection of non-sotable headers
+    th:not([data-sortable="false"]) {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+           -o-user-select: none;
+              user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-touch-callout: none;
+      cursor: pointer;
+    }
+
+    // sorting arrows
+    th:after {
+        content: "";
+        visibility: hidden;
+        display: inline-block;
+        vertical-align: inherit;
+        height: 0;
+        width: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent;
+        margin-right: 1px;
+        margin-left: 10px;
+        float: right;
+    }
+    th[data-sorted="true"]:after {
+      visibility: visible;
+    }
+    th[data-sorted-direction="descending"]:after {
+      border-top-color: $marker-color;
+      margin-top: 8px;
+    }
+    th[data-sorted-direction="ascending"]:after {
+      border-bottom-color: $marker-color;
+      margin-top: 3px;
+    }
+}

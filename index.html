@@ -1,43 +1,40 @@
 ---
-layout: default
+layout: index
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <p>As a PHP developer, we are often stuck with hosts that support insanely old versions of PHP. This means that some projects end up supporting those insanely old versions, and we all get stuck in this "Mexican Standoff" situation.</p>
-
-  <p>Some developers force their requirements to be much higher than these default versions in a bid to force the hosting companies to upgrade, but in reality we just end up with people reducing their software to try and get it onto old servers.</p>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Host</th>
-        <th>5.2</th>
-        <th>5.3</th>
-        <th>5.4</th>
-        <th>5.5</th>
-        <th>5.6</th>
-        <th>Default</th>
-        <th>Manual Upgrade</th>
-        <th>Auto Upgrade</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for host in site.data.hosts %}
-      <tr>
-        <td><a href="{{ host.url }}">{{ host.name }}</a></td>
-        <td>{% if host.php52 %}{{ host.php52 }}{% else %}-{% endif %}</td>
-        <td>{% if host.php53 %}{{ host.php53 }}{% else %}-{% endif %}</td>
-        <td>{% if host.php54 %}{{ host.php54 }}{% else %}-{% endif %}</td>
-        <td>{% if host.php55 %}{{ host.php55 }}{% else %}-{% endif %}</td>
-        <td>{% if host.php56 %}{{ host.php56 }}{% else %}-{% endif %}</td>
-        <td>{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
-        <td>{% if host.manual_update %}{{ host.manual_update }}{% endif %}</td>
-        <td>{% if host.auto_update %}{{ host.auto_update }}{% endif %}</td>
-      </tr>
-    {% endfor %}
-    </tbody>
-  </table>
+<div class="grid-items">
+  <a href="/shared-hosting/" class="grid-item">
+    <h1>Shared Hosting</h1>
+    <p>Need a standard bit of web hosting? Something all set up for you and you just
+    gotta throw your code up there?</p>
+    <p>Maybe a bit of SSH, but just a bit? Take a look at these.</p>
+  </a>
+  <a href="/paas-hosting/" class="grid-item">
+    <h1>PaaS Hosting</h1>
+    <p>Gotta get that Git-push fancy goodness, with simple addons?</p>
+    <p>Heroku started a trend years ago, and now we have a lot of Platform-as-a-Service systems that take minimal effort to get working.</p>
+  </a>
+  <a href="/linux-distros/" class="grid-item">
+    <h1>Linux Distributions</h1>
+    <p>Want to know which Linux distributions come with what versions of PHP?</p>
+    <p>Sure, you can upgrade the version, but some folks don't know how, so maybe starting out right is a good move.</p>
+  </a>
 </div>
+
+<h2>FAQ</h2>
+
+<h3>Where do you get the data from?</h3>
+
+<p>This is a community managed project. People send the versions in <a href="https://github.com/philsturgeon/phpversions.info/tree/gh-pages/_data">via GitHub</a>. We've had a few hosting company employees sending in updates as they deploy them, which is cool.</p>
+
+<h3>Any plans to automate this?</h3>
+
+<p>Yeah loads, but for now we still rely on humans.</p>
+
+<h3>What's up with this design?</h3>
+
+<p>Phil is pretty good at building APIs, but terrible at design. Please, send help...</p>
+
+<h3>How do I contribute?</h3>
+
+<p>Read the <a href="https://github.com/philsturgeon/phpversions.info/blob/gh-pages/CONTRIBUTING.md">contributing guide on GitHub</a>.</p>

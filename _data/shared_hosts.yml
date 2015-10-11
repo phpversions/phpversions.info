@@ -328,6 +328,18 @@
   php56: 8
   default: 5.4.42
 
+- name: "Uberspace.de"
+  url: "https://uberspace.de"
+  php52: 17
+  php53: 29
+  php54: 44
+  php55: 28
+  php56: 12
+  php70: "RC1"
+  default: 5.6.12
+  manual_update: "Yes"
+  auto_update: "Yes"
+
 - name: "VidaHost"
   url: "https://www.vidahost.com/cloud-web-hosting"
   php52: 6

@@ -1,6 +1,6 @@
 ## Contributing
 
-We use Jekyll for this, which yep, trollolol is Jekyll. This is done purely because GitHub Pages isis free and easy, and who cares.
+We use Jekyll for this, which yep, trollolol is Jekyll. This is done purely because GitHub Pages is free and easy, and who cares.
 
 ## Getting Started
 
@@ -10,8 +10,8 @@ We use Jekyll for this, which yep, trollolol is Jekyll. This is done purely beca
 
 ## Our Custom Data
 
-Send a PR adding or updating records in `./data/shared_hosts.yml`, listing which versions of PHP they support, and which 
-version is installed by default when new plans are created. 
+Send a PR adding or updating records in `./data/shared_hosts.yml`, listing which versions of PHP they support, and which
+version is installed by default when new plans are created.
 
 If you do not know the exact patch version then use `??`, but please try to contribute exact numbers if possible.
 

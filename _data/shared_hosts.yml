@@ -50,11 +50,10 @@
 
 - name: "cyon"
   url: "https://www.cyon.ch"
-  php54: 44
-  php55: 28
-  php56: 12
-  php70: RC1
-  default: 5.5.28
+  php55: 29
+  php56: 13
+  php70: RC3
+  default: 5.5.29
 
 - name: "DiPHOST"
   url: "http://www.diphost.ru/"

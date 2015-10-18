@@ -1,353 +1,204 @@
+/** 
+  GLOBAL STYLES 
+**/
+
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: $small-screen;
+  font-family: $sans-serif;
+  padding: 0% 3%;
+  @media (min-width: $medium-screen) {
+    max-width: $medium-screen;
+  }
+  @media (min-width: $large-screen) {
+    max-width: $large-screen;
+  }
 }
 
+// Content area of webpage
 .container .wrapper {
-  padding: 2em;
+  width: 100%;
+  margin: 0 auto;
 }
 
-// Hero
+// Header
+header {
+  margin: 0 auto;
 
-.hero {  
-  $base-border-radius: 3px !default;
-  $action-color: #477DCA !default;
-  $large-screen: em(860) !default;
-  $hero-background-top: #7F99BE; 
-  $hero-background-bottom: #20392B;
-  $hero-color: white;
-  $gradient-angle: 10deg;
-  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
-
-  @include background(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: #324766;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .hero-logo img {
-    height: 4em;
-    margin-bottom: 1em;
+  .logo img {
+    padding: 5% 35% 0%;
+    width: 100px;
+    @media (min-width: $medium-screen) {
+      padding: 5% 42% 0%;
+      width: 120px;
+    }
+    @media (min-width: $large-screen) {
+      width: 150px;
+      padding-top: 0;
+    }
   }
 
-  .hero-inner {
-    @include outer-container;
-    @include clearfix;
-    margin: auto;
-    padding: 3.5em 3.5em 0 3.5em;
+  hr {
+    width: 45%;
+    border-bottom: 1px solid $action-color;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: 0 auto;
+  }
+}
+
+// Nav Menu
+.navigation-wrapper {
+  padding: 5% 0% 0%;
+  margin-bottom: 50px;
+  hr {
+    width: 0 auto;
+  }
+  @media (min-width: $medium-screen) {
+    margin-bottom: 30px;
+    padding-top: 3%;
+    hr {
+      display: none;
+    }
+  }
+}
+
+ul.navigation-menu {
+  -webkit-transform-style: preserve-3d; // stop webkit flicker
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  padding: 5% 0%;
+  &.show {
+    display: block;
+  }
+  @media (min-width: $medium-screen) {
+    background-image: url($hero-image);
+    display: inline-block;
+    margin-top: -10px;
+  }
+  @media (min-width: $large-screen) {
+    background-image: url($hero-image);
+    background-size: cover;
+    padding: 2% 0%;
+  }
+}
+
+ul li.nav-link {
+  display: block;
+  text-align: center;
+  @media (min-width: $medium-screen) {
+    display: inline-block;
+    border-right: dotted;
+    border-color: $action-color;
+    border-width: 3px;
+    width: 24%;
     text-align: center;
+    &:last-child{
+      border-right: none;
+    }
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    &:focus,
+    &:hover {
+      color: $action-color;
+    }
+  }
+}
+
+// Footer
+footer {
+  text-align: center;
+  font-size: 0.7em;
+  color: $dark-gray;
+}
+
+
+/** 
+  HOMEPAGE
+**/ 
+
+
+// Hero -- Section below Navigation (defined in _layouts/index.html
+.hero {  
+  position: relative;
+
+  .hero-inner {
+    @include clearfix;
+    margin: 0 auto;
+    padding: 2% 0%;
+    text-align: center;
+
+    :before {
+      top: 100%;
+      left: 50%;
+      margin-left: -20px;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid;
+      border-top-color: inherit;
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      color: #ffffff;
+    }
 
     .hero-copy {
       text-align: center;
-      
-      h1 {
-        color: $hero-color;
-        font-size: 1.6em;
-        margin-bottom: 0.5em;
-
-        @include media($large-screen) {
-          font-size: 1.8em;
-        }
-      }
-
       p {
-        color: $hero-color;
+        color: $action-color;
         line-height: 1.4em;
-        margin: 0 auto 3em auto; 
-
-        @include media($large-screen) {
-          font-size: 1.1em;
-          max-width: 40%;
-        }
       }
     }
-  }
+  } 
 }
 
-
-// Navigation 
-
-header.navigation {
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
-  $navigation-padding: 1em;
-  $navigation-background: $dark-gray;
-  $navigation-color: transparentize(white, 0.3);
-  $navigation-color-hover: white;
-  $navigation-height: 60px;
-  $navigation-nav-button-background: $action-color;
-  $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
-  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
-  $navigation-search-background: lighten($navigation-background, 5);
-  $navigation-search-border: 1px solid darken($navigation-background, 5);
-  $navigation-active-link-color: transparentize(white, 0.5);
-  $navigation-submenu-padding: 1em;
-  $navigation-submenu-width: 12em;
-  $horizontal-bar-mode: $large-screen;
-
-  background-color: $navigation-background;
-  border-bottom: 1px solid darken($navigation-background, 10);
-  min-height: $navigation-height;
-  width: 100%;
-  z-index: 999;
-
-  .navigation-wrapper {
-    @include clearfix;
-    @include outer-container;
-    position: relative;
-    z-index: 9999;
-  }
-
-  .logo {
-    float: left;
-    max-height: $navigation-height;
-    padding-left: $navigation-padding;
-    padding-right: 2em;
-
-    img {
-      max-height: $navigation-height;
-      padding: 0.8em 0;
-    }
-  }
-
-  // Mobile view
-
-  .navigation-menu-button {
-    color: $navigation-color;
-    display: block;
-    float: right;
-    line-height: $navigation-height;
-    margin: 0;
-    padding-right: 1em;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    @include media ($horizontal-bar-mode) {
-      display: none;
-    }
-
-    &:focus,
-    &:hover {
-      color: $navigation-color-hover;
-    }
-  }
-
-  // Nav menu
-
-  nav {
-    float: none;
-    min-height: $navigation-height;
-    z-index: 9999999;
-
-    @include media ($horizontal-bar-mode) {
-      float: left;
-    }
-  }
-
-  ul.navigation-menu {
-    -webkit-transform-style: preserve-3d; // stop webkit flicker
-    clear: both;
-    display: none;
-    margin: 0 auto;
-    overflow: visible;
-    padding: 0;
-    width: 100%;
-    z-index: 9999;
-
-    &.show {
-      display: block;
-    }
-
-    @include media ($horizontal-bar-mode) {
-      display: inline;
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  // The nav items
-
-  ul li.nav-link {
-    background: $navigation-background;
-    display: block;
-    line-height: $navigation-height;
-    overflow: hidden;
-    padding-right: 0.8em;
-    text-align: right;
-    width: 100%;
-    z-index: 9999;
-
-    @include media ($horizontal-bar-mode) {
-      background: transparent;
-      display: inline;
-      line-height: $navigation-height;
-      text-decoration: none;
-      width: auto;
-    }
-
-    a {
-      color: $navigation-color;
-      display: inline-block;
-      text-decoration: none;
-
-      @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
-      }
-
-      &:focus,
-      &:hover {
-        color: $navigation-color-hover;
-      }
-    }
-  }
-  
-  .active-nav-item a {
-    border-bottom: 1px solid $navigation-active-link-color;
-    padding-bottom: 3px;
-  }
-
-  // Sub menus
-
-  li.home.nav-link {
-    font-weight: bold;
-  }
-
-  // Elements on the far right
-
-  .navigation-tools {
-    background: #505050;
-    clear: both;
-    display: block;
-    height: $navigation-height;
-
-    @include media($horizontal-bar-mode) {
-      background: transparent;
-      clear: none;
-      float: right;
-    }
-  }
-
-  // Search bar
-
-  .search-bar {
-    $search-bar-border-color: $base-border-color;
-    $search-bar-border: 1px solid $search-bar-border-color;
-    $search-bar-background: lighten($search-bar-border-color, 10%);
-
-    float: left;
-    padding: 0.85em 0.85em 0.7em 0.6em;
-    width: 60%;
-
-    form {
-      position: relative;
-
-      input[type=search] {
-        @include box-sizing(border-box);
-        background: $navigation-search-background;
-        border-radius: $base-border-radius * 2;
-        border: $navigation-search-border;
-        color: $navigation-color;
-        font-size: 0.9em;
-        font-style: italic;
-        margin: 0;
-        padding: 0.5em 0.8em;
-        width: 100%;
-
-        @include media($horizontal-bar-mode) {
-          width: 100%;
-        }
-      }
-
-      button[type=submit] {
-        background: $navigation-search-background;
-        border: none;
-        bottom: 0.3em;
-        left: auto;
-        outline: none;
-        padding: 0 9px;
-        position: absolute;
-        right: 0.3em;
-        top: 0.3em;
-
-        img {
-          height: 12px;
-          opacity: 0.7;
-          padding: 1px;
-        }
-      }
-    }
-
-    @include media($horizontal-bar-mode) {
-      display: inline-block;
-      position: relative;
-      width: 16em;
-
-      input {
-        @include box-sizing(border-box);
-        display: block;
-      }
-    }
-  }
-}
-
-
-
-@mixin grid-item-columns($columns) {
-  width: (100% / 12) * $columns;
-}
+// Info Boxes
 
 .grid-items {
-  $action-color: #477DCA !default;
-  $base-background-color: white !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $grid-items-background: $base-background-color;
-  $grid-item-background: desaturate($action-color, 30%);
-  $grid-item-colors: 
-    desaturate($action-color, 30%), 
-    #3581A5, 
-    #5FBEBE,
-    #98C79A,
-    #A7A891, 
-    #BDCC97,
-    #979EA0;
-  $grid-item-border-size: 9px;
-  $grid-item-columns: 4;
-  $grid-item-big-columns: 8;
-  $grid-item-color: white;
-  $grid-item-height: 18em;
-
   @include clearfix;
+  width: 100%;
+  a {
+    text-decoration: none;
+  }
+  @media (min-width: $medium-screen) {
+      display: inline-block;
+      width: 100%;
+  }
     
   .grid-item {
-    @include transition (all 0.2s ease-in-out);
-    background: $grid-item-background;
-    border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
-    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
+    @include clearfix;
+    background: #6b83a6;
     border-top: 0;
     cursor: pointer;
-    float: left;
-    height: $grid-item-height;
     overflow: hidden;
     outline: none;
-    padding: 2em;
+    padding: 5%;
     text-align: center;
-    text-decoration: none;
-    width: 100%;
-
-    @include media($large-screen) {
-      @include grid-item-columns($grid-item-columns);
+    display: block;
+    @media (min-width: $medium-screen) {
+      @include clearfix;
+      float: left;
+      width: 33.334%;
+      margin: 0 auto;
+      height: 400px;
+      padding: 0;
     }
-
-    @for $i from 1 through length($grid-item-colors) { // assign colors from $grid-item-colors list
+    @media (min-width: $large-screen) {
+      height: 340px;
+    }
+    // assign colors from $grid-item-colors list
+    @for $i from 1 through length($grid-item-colors) {
       &:nth-child(#{$i}) {
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
         box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%);
-
         &:focus,
         &:hover {
           background-color: darken($background-from-list, 10%);
@@ -359,223 +210,116 @@ header.navigation {
     }
   }
 
-  .grid-item img {
-    display: block;
-    height: 3em;
-    margin: 0 auto 1em;
-  }
-
   .grid-item h1 {
     color: $grid-item-color;
-    font-size: 1.3em;
-    margin-bottom: 0.4em;
+    font-size: 18px;
+    padding: 6% 5% 0%;
+    @media (min-width: $medium-screen) {
+      padding: 10% 5% 0%;
+    }
   }
 
   .grid-item p {
     color: transparentize($grid-item-color, 0.3);
-    line-height: 1.5em;
-    margin: auto;
-    
-    @include media($medium-screen) {
-      max-width: 70%;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 2%;
+    @media (min-width: $medium-screen) {
+      padding: 5%;
     }
   }
+}
 
-  .grid-item-big {
-    @include media($large-screen) {
-      @include grid-item-columns($grid-item-big-columns);
-    }
-    
-    p {
-      @include media($medium-screen) {
-        max-width: 60%;
-      }  
-    }
+.homepage-faq {
+  margin: 0 auto;
+  padding: 5% 0% 10%;
+  color: $dark-gray;
+  @media (min-width: $medium-screen) {
+    padding-top: 2%;
   }
-
-  .grid-item-image {
-    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
-    background-color: $grid-item-background;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+  h2 {
+    text-decoration: underline;
+  }
+  h3 {
+    margin-bottom: 0.5px;
   }
 }
 
 
 
+/** 
+  HOST PAGES 
+**/
 
 article.hosts {
-  $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default;
-  $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $base-font-color: $dark-gray !default;
-  $sans-serif: 'Nunito', sans-serif;
-  $sans-serif-2: 'Varela Round', sans-serif;
-
-  @include clearfix;
-  font-family: $sans-serif;
   text-align: left;
-  
   h1, h2, h3, p {
-    margin: 0;
+    margin: 0 auto;
   }
-
   hr {
     border-bottom: 1px solid $light-gray;
     border-left: none;
     border-right: none;
     border-top: none;
-    margin: $base-spacing 0;
+    margin: 0 auto;
+    width: 20px;
   }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
-  }
-
   a {
     color: $action-color;
     text-decoration: none;
   }
-
-  .type {
-    border-bottom: 1px solid;
-    display: inline-block;
-    font-family: $sans-serif;
-    font-size: 0.7em;
-    font-weight: 800;
-    margin-bottom: 2em;
-    padding: 0.3em 0;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-family: $sans-serif-2;
-    font-size: 1.8em;
-    margin-bottom: 0.5em;
-
-    @include media($medium-screen) {
-      font-size: 2.4em;
-    }
-  }
-
   h2 {
     font-family: $sans-serif-2;
-    font-size: 1.2em;
+    font-size: 22px;
     font-weight: 400;
-    line-height: 1.4em;
-    margin-bottom: 0.9em;
-
-    @include media($medium-screen) {
-      font-size: 1.4em;
-    }
+    line-height: 1.4;
+    margin-bottom: $base-margin-bottom;
   }
-
-  code {
-    background: #F7F7F7;
-    border-radius: $base-border-radius * 1.5;
-    border: 1px solid #E0E0E0;
-    font-family: monaco;
-    font-size: 0.7em;
-    font-style: normal;
-    padding: 0.1em 0.4em;
-    white-space: nowrap;
-  }
-
-
   h3 {
     font-family: $sans-serif-2;
-    font-size: 1.2em;
+    font-size: 10px;
     font-weight: 400;
-    line-height: 1.3em;
-    margin-bottom: 0.4em;
+    line-height: 1.3;
+    margin-bottom: $base-margin-bottom;
   }
-
-  p.date {
-    color: transparentize($base-font-color, 0.6);
-    font-family: $sans-serif;
-    font-size: 0.9em;
-    margin-bottom: 0.3em;
-  }
-
   p {
-    font-family: $sans-serif;
-    font-size: 1.05em;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 1.4em;
-    margin-bottom: 1.5em;
-
+    color: $base-font-color;
+    line-height: $base-line-height;
+    margin-bottom: $base-margin-bottom;
     span {
       font-family: $sans-serif-2;
-      font-size: 0.8em;
+      font-size: 12px;
       text-transform: uppercase;
     }
   }
 
-  a.read-more {
-    display: inline-block;
-    font-family: $sans-serif-2;
-    font-size: 0.8em;
-    font-weight: 700;
-    margin-left: 0.2em;
-    position: relative;
-    text-transform: uppercase;
-
-    span {
-      font-size: 1.5em;
-      position: absolute;
-      right: -12px;
-      top: -1px;
+  .host-description {
+    margin: 0 auto;
+    padding: 5% 0%;
+    @media(min-width: $large-screen) {
+      padding: 3% 0% 2%;
     }
-  }
-  
-  hr {
-    width: 3em;
-  }
-
-  p.author {
-    font-family: $sans-serif;
   }
 }
 
 
-// Tables
+/** 
+  TABLES
+**/
 
 .tables {
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default;
-  $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
-  $table-border-color: $base-border-color;
-  $table-border: 1px solid $table-border-color;
-  $table-background: lighten($table-border-color, 12%);
-  $table-header-background: lighten($table-background, 10%);
-  $table-hover-background: darken($table-background, 5%);
-  $table-stripe-background: darken($table-background, 2%);
-  $table-stripe-background-hover: darken($table-stripe-background, 5%);
-  $table-padding: 0.75em 1em;
-
   border-collapse: separate;
   border-left: 0px;
   border-radius: $base-border-radius;
   border-spacing: 0;
   border: $table-border;
+  width: 100%;
+  margin: 0 auto;
 
   tbody {
     background-color: $table-background;
-
     tr:hover > td, tr:hover > th {
       background-color: $table-hover-background;
     }
@@ -591,7 +335,6 @@ article.hosts {
     tr:first-child > th:first-child {
       border-top-left-radius: $base-border-radius;
     }
-
     tr:first-child > th:last-child {
       border-top-right-radius: $base-border-radius;
     }
@@ -601,7 +344,6 @@ article.hosts {
     tr:last-child > td:first-child {
       border-bottom-left-radius: $base-border-radius;
     }
-
     tr:last-child > td:last-child {
       border-bottom-right-radius: $base-border-radius;
     }
@@ -610,50 +352,95 @@ article.hosts {
   thead {
     th {
       background-color: $table-header-background;
-      border-bottom: 0px;
       border-left: 1px solid $table-border-color;
+      border-bottom: 5px solid $table-border-color;
       padding: $table-padding;
       text-align: left;
-
+      font-size: 15px;
+      @media (min-width: $medium-screen) {
+        text-align: center;
+      }
       &:first-child {
+        @include word-wrap;
         border-left: none;
+        text-align: left;
+        font-size: 18px;
       }
     }
   }
 
   tbody {
-    background-color: $table-background;
-
     td {
       border-bottom: 0px;
       border-left: 1px solid $table-border-color;
       border-top: 1px solid $table-border-color;
       padding: $table-padding;
-
       &:first-child {
         border-left: none;
       }
-
-      button {
-        display: inline-block;
-        font-size: 0.7em;
-        line-height: $base-line-height;
-        margin-bottom: 0.3em;
-        margin-right: 0.5em;
-        outline: none;
-        padding: 0.3em 1em;
-        width: 100%;
-
-        @include media($medium-screen) {
-          margin-bottom: 0;
-          width: auto;
+      &.host-name {
+        font-size: 14px;
+        @media(min-width: $large-screen) {
+          font-size: 16px;
+        }
+      } 
+      &.host-info {
+        font-size: 12px;
+        text-align: center;
+        @media(min-width: $large-screen) {
+          font-size: 14px;
         }
       }
     }
   }
 }
 
-// Footer
-footer.wrapper {
-  text-align: center;
+.tables__scrollbar {
+  @include ellipsis(100%);
+  overflow: scroll;
+  &.paas {
+    @media (min-width: $medium-screen) {
+      display: inline-table;
+    }
+  }
+  @media (min-width: $large-screen) {
+    display: inline-table;
+  }
+}
+
+table[data-sortable] {
+  // put cursor and disable selection of non-sortable headers
+  th:not([data-sortable="false"]) {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    cursor: pointer;
+  }
+  // sorting arrows
+  th:after {
+      content: "";
+      visibility: visible;
+      display: inline-block;
+      vertical-align: middle;
+      height: 2px;
+      width: 2px;
+      border-width: 5px;
+      border-style: dotted;
+      border-color: $marker-color;
+      margin-right: 5px;
+      margin-left: 10px;
+  }
+  th[data-sorted="true"]:after {
+    visibility: visible;
+  }
+  th[data-sorted-direction="descending"]:after {
+    border-top-color: $marker-color;
+  }
+  th[data-sorted-direction="ascending"]:after {
+    border-bottom-color: $marker-color;
+  }
 }

@@ -1,10 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    bitters (1.0.0)
-      bourbon (>= 3.2)
-      sass (>= 3.2)
-      thor
     blankslate (2.1.2.4)
     bourbon (4.2.4)
       sass (~> 3.4)
@@ -52,9 +48,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
-    neat (1.7.2)
-      bourbon (>= 4.0)
-      sass (>= 3.3)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.11)
@@ -78,7 +71,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bitters
   bourbon
   jekyll
-  neat

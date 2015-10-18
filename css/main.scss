@@ -10,7 +10,5 @@ $text-color:       #111;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "bourbon/bourbon";
 @import "base/base";
-@import "neat/neat-helpers";
-@import "neat/neat";
+@import "base/normalize";
 @import "layout";
-@import "sortable";

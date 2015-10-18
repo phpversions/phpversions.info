@@ -23,7 +23,8 @@ layout: default
               </tr>
             </thead>
             <tbody>
-            {% for host in site.data.paas_hosts %}
+            {% assign hosts = (site.data.paas_hosts | sort: 'default') %}
+            {% for host in hosts reversed %}
               <tr>
                 <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
                 <td class="host-info">{% if host.php70 %}{{ host.php70 }}{% else %}-{% endif %}</td>

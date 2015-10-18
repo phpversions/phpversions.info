@@ -17,7 +17,8 @@ layout: default
         </tr>
       </thead>
       <tbody>
-      {% for distro in site.data.linux_distros %}
+      {% assign linux_distros = (site.data.linux_distros | sort: 'default') %}
+      {% for distro in linux_distros reversed %}
         <tr>
           <td class="host-name">{{ distro.name }}</td>
           <td class="host-info">{{ distro.default }}</td>

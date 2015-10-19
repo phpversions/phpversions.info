@@ -19,16 +19,16 @@ layout: default
         </tr>
       </thead>
       <tbody>
+      {% assign all_hosts = "" | split: "" %}
       {% for host in site.data.shared_hosts %}
-        <tr>
-          {% if host.php70 %}
-          <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
-          <td class="host-info">{{ host.php70 }}</td>
-          {% endif %}
-        </tr>
+      {% assign all_hosts = all_hosts | push: host %}
       {% endfor %}
-
       {% for host in site.data.paas_hosts %}
+      {% assign all_hosts = all_hosts | push: host %}
+      {% endfor %}
+      
+      {% assign sorted_hosts = (all_hosts | sort: 'php70') %}
+      {% for host in sorted_hosts reversed %}
         <tr>
           {% if host.php70 %}
           <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>

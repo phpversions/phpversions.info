@@ -26,21 +26,21 @@ header {
   margin: 0 auto;
 
   .logo img {
-    padding: 5% 35% 0%;
-    width: 100px;
+    padding: 5% 20% 0%;
+    width: 205px;
     @media (min-width: $medium-screen) {
-      padding: 5% 42% 0%;
-      width: 120px;
+      padding: 5% 32% 0%;
+      width: 228px;
     }
     @media (min-width: $large-screen) {
-      width: 150px;
-      padding-top: 0;
+      padding: 0% 39% 0%;
+      width: 270px;
     }
   }
 
   hr {
     width: 45%;
-    border-bottom: 1px solid $action-color;
+    // border-bottom: 1px solid $action-color;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -68,7 +68,7 @@ ul.navigation-menu {
   -webkit-transform-style: preserve-3d; // stop webkit flicker
   clear: both;
   display: none;
-  margin: 0 auto;
+  margin: -40px auto 0;
   padding: 0;
   width: 100%;
   padding: 5% 0%;
@@ -100,6 +100,9 @@ ul li.nav-link {
     &:last-child{
       border-right: none;
     }
+  }
+  @media (min-width: $large-screen) {
+    width: 24.5%;
   }
   a {
     display: inline-block;
@@ -185,7 +188,7 @@ footer {
     @media (min-width: $medium-screen) {
       @include clearfix;
       float: left;
-      width: 33.334%;
+      width: 33.33%;
       margin: 0 auto;
       height: 400px;
       padding: 0;

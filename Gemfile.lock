@@ -2,9 +2,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     blankslate (2.1.2.4)
-    bourbon (4.2.4)
-      sass (~> 3.4)
-      thor (~> 0.19)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     classifier-reborn (2.0.3)
@@ -60,7 +57,7 @@ GEM
     redcarpet (3.3.2)
     safe_yaml (1.0.4)
     sass (3.4.18)
-    thor (0.19.1)
+    semantic (1.4.1)
     timers (4.0.1)
       hitimes
     toml (0.1.2)
@@ -71,5 +68,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bourbon
-  jekyll
+  jekyll!
+  semantic!
+
+BUNDLED WITH
+   1.10.6

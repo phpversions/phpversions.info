@@ -82,13 +82,15 @@
   php54: 36
   default: 5.4.36
 
-- name: "GoDaddy (cPanel for Linux)"
-  url: "https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009"
-  php53: ??
-  php54: ??
-  php55: ??
-  default: 5.5.??
-  manual_update: "Yes"
+# Fuck GoDaddy. If anyone knows exact details then PR them in, but I don't like them
+# enough to try and make my new SemVer sort work with a ??
+# - name: "GoDaddy (cPanel for Linux)"
+#   url: "https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009"
+#   php53: ??
+#   php54: ??
+#   php55: ??
+#   default: 5.5.??
+#   manual_update: "Yes"
 
 - name: "Google App Engine"
   url: "https://cloud.google.com/appengine/"
@@ -142,11 +144,12 @@
   default: 5.4.35
   auto_update: "Yes"
 
-- name: "Hostmonster"
-  url: "https://www.hostmonster.com/"
-  php52: ??
-  php54: ??
-  default: 5.4.??
+# Please provide more information for this host
+# - name: "Hostmonster"
+#   url: "https://www.hostmonster.com/"
+#   php52: ??
+#   php54: ??
+#   default: 5.4.??
 
 - name: "iPage"
   url: "https://www.ipage.com/"
@@ -190,15 +193,16 @@
   php55: ??
   default: 5.5.18
 
-- name: "Locaweb"
-  url: "http://www.locaweb.com.br/produtos/hospedagem-de-sites/planos.html"
-  php52: ??
-  php53: ??
-  php54: ??
-  php55: ??
-  php56: ??
-  default: 5.2.??
-  manual_update: "Yes"
+# Please provide more information for this host
+# - name: "Locaweb"
+#   url: "http://www.locaweb.com.br/produtos/hospedagem-de-sites/planos.html"
+#   php52: ??
+#   php53: ??
+#   php54: ??
+#   php55: ??
+#   php56: ??
+#   default: 5.2.??
+#   manual_update: "Yes"
 
 - name: "Lunarpages"
   url: "https://support.lunarpages.com/knowledge_bases/article/326?fallback=true"
@@ -212,13 +216,14 @@
   php55: 21
   default: 5.3.29
 
-- name: "Namecheap"
-  url: "https://www.namecheap.com/hosting/shared.aspx"
-  php52: ??
-  php53: ??
-  php54: ??
-  php55: ??
-  default: 5.3.??
+# Please provide more information for this host
+# - name: "Namecheap"
+#   url: "https://www.namecheap.com/hosting/shared.aspx"
+#   php52: ??
+#   php53: ??
+#   php54: ??
+#   php55: ??
+#   default: 5.3.??
 
 - name: "names.co.uk"
   url: "https://www.names.co.uk/web-hosting/"

@@ -37,7 +37,7 @@
   php54: 45
   php55: 30
   php56: 14
-  php70: RC4
+  php70: RC5
   default: 5.6.14
 
 - name: "Laravel Forge"

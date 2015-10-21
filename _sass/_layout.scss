@@ -137,20 +137,7 @@ footer {
     padding: 2% 0%;
     text-align: center;
 
-    :before {
-      top: 100%;
-      left: 50%;
-      margin-left: -20px;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 20px solid;
-      border-top-color: inherit;
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      color: #ffffff;
-    }
+
 
     .hero-copy {
       text-align: center;

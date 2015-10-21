@@ -244,6 +244,16 @@
   manual_update: "Yes (Major)"
   auto_update: "Yes (Patch)"
 
+- name: "Nexcess"
+  url: "https://www.nexcess.net/"
+  php53: 29
+  php54: 45
+  php55: 29
+  php56: 13
+  default: 5.4.45
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
+
 - name: "OVH"
   url: "https://www.ovh.ie/web-hosting/"
   php52: 17

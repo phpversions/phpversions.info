@@ -215,6 +215,16 @@
   php53: 29
   php55: 21
   default: 5.3.29
+  
+- name: "Monarobase"
+  url: "https://monarobase.net/hebergement.php"
+  php52: 17
+  php53: 29
+  php54: 45
+  php55: 30
+  php56: 14
+  php70: RC4
+  default: 5.6.14
 
 # Please provide more information for this host
 # - name: "Namecheap"

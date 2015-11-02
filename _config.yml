@@ -1,8 +1,8 @@
 # Site settings
 title: PHP Versions
 email: me@philsturgeon.uk
-description: > # this means to ignore newlines until "baseurl:"
-  Learn which versions of PHP are available on different web hosts.
+description: >
+  Learn which versions of PHP are available on different web hosting providers, so you can make informed decisions.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://phpversions.info" # the base hostname & protocol for your site
 # twitter_username: jekyllrb

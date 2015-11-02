@@ -240,7 +240,7 @@
   php55: 30
   php56: 15
   php70: RC6
-  default: 5.6.13
+  default: 5.6.15
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 
@@ -288,7 +288,7 @@
   php55: 30
   php56: 15
   php70: RC6
-  default: 5.6.13
+  default: 5.6.15
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 

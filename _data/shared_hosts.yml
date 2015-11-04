@@ -186,7 +186,7 @@
   default: 5.2.17
 
 - name: Liquidweb
-  url: "https://www.liquidweb.com"
+  url: "http://www.liquidweb.com/?RID=phpversions"
   php52: ??
   php53: ??
   php54: ??

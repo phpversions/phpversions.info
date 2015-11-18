@@ -151,6 +151,15 @@
 #   php54: ??
 #   default: 5.4.??
 
+- name: "InMotion Hosting"
+  url: "http://www.inmotionhosting.com/"
+  php52: 17
+  php53: 29
+  php54: 45
+  php55: 30
+  php56: 15
+  default: 5.5.30
+
 - name: "iPage"
   url: "https://www.ipage.com/"
   php52: 17

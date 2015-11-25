@@ -17,10 +17,10 @@
 - name: "A Small Orange"
   url: "https://asmallorange.com/hosting/shared/#tab-two"
   php53: 29
-  php54: 43
-  php55: 27
-  php56: 11
-  default: 5.4.43
+  php54: 45
+  php55: 30
+  php56: 15
+  default: 5.4.45
 
 - name: "Aruba.it"
   url: "http://hosting.aruba.it/"

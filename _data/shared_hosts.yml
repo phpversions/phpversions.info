@@ -338,10 +338,10 @@
 
 - name: "SiteGround Shared Plans"
   url: "http://www.siteground.com/web-hosting.htm"
-  php70: RC4
-  php56: 12
-  php55: 28
-  php54: 44
+  php70: RC7
+  php56: 15
+  php55: 30
+  php54: 45
   php53: 29
   php52: 17
   default: 5.6.12

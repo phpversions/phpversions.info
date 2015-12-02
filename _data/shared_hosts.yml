@@ -190,9 +190,11 @@
 - name: Linuxpl
   url: "http://linuxpl.com"
   php52: 17
-  php53: 17
+  php53: 28
   php54: 7
-  default: 5.2.17
+  php55: 25
+  php56: 8
+  default: 5.3.28
 
 - name: Liquidweb
   url: "http://www.liquidweb.com/?RID=phpversions"

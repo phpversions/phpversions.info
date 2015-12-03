@@ -2,16 +2,26 @@
 layout: default
 ---
 
+{% assign all_hosts = "" | split: "" %}
+{% for host in site.data.shared_hosts %}
+{% assign all_hosts = all_hosts | push: host %}
+{% endfor %}
+{% for host in site.data.paas_hosts %}
+{% assign all_hosts = all_hosts | push: host %}
+{% endfor %}
+{% assign final_hosts = (all_hosts | filter_final_only: 'php70' | sort: 'php70') %}
+{% assign dev_hosts = (all_hosts | filter_dev_only: 'php70' | sort: 'php70') %}
+
 <article class="hosts">
   <section>
     <div class="host-description">
       <h2>PHP 7</h2>
-      <p>PHP 7 is the new hotness. It's <a href="http://www.infoworld.com/article/2947680/web-development/lightning-fast-php-7-reaches-beta.html">blazing fast</a>, it has a bunch of <a href="http://www.sitepoint.com/php-7-revolution-return-types-removed-artifacts/">cool new features</a> and it's just <a href="https://www.digitalocean.com/company/blog/getting-ready-for-php-7/">generally a lot better</a>.   
-      <p>While it might not be entirely production ready, now is the time to test and make sure your applications and websites work on it. Use the latest "release candidate" possible, as they are more stable than "beta" versions.</p>
-      <p>These hosts will let you play with PHP 7. To play with it locally, try this <a href="https://github.com/rlerdorf/php7dev">Vagrant box</a>.</p>
+      <p>PHP 7 is the new hotness, and it is finally <a href="http://php.net/archive/2015.php#id2015-12-03-1">ready for the world to use</a>!! It's <a href="http://www.infoworld.com/article/2947680/web-development/lightning-fast-php-7-reaches-beta.html">blazing fast</a>, it has a bunch of <a href="http://www.sitepoint.com/php-7-revolution-return-types-removed-artifacts/">cool new features</a> and it's just <a href="https://www.digitalocean.com/company/blog/getting-ready-for-php-7/">generally a lot better</a>.   
+      <p>Watch out though, you only want the stable versions. If you see a number there then it's production ready, but any RC version is a "release candidate", and you don't want that.</p>
+      <p>To play with it PHP 7.0 locally, try this <a href="https://github.com/rlerdorf/php7dev">Vagrant box</a>.</p>
       <hr>
     </div>
-    <table class="tables" data-sortable>
+    <table class="tables">
       <thead>
         <tr>
           <th>Host</th>
@@ -19,20 +29,25 @@ layout: default
         </tr>
       </thead>
       <tbody>
-      {% assign all_hosts = "" | split: "" %}
-      {% for host in site.data.shared_hosts %}
-      {% assign all_hosts = all_hosts | push: host %}
-      {% endfor %}
-      {% for host in site.data.paas_hosts %}
-      {% assign all_hosts = all_hosts | push: host %}
-      {% endfor %}
-      
-      {% assign sorted_hosts = (all_hosts | sort: 'php70') %}
-      {% for host in sorted_hosts reversed %}
+        <tr>
+          <th colspan="2">Production Ready</th>
+        </tr>
+      {% for host in final_hosts reversed %}
         <tr>
           {% if host.php70 %}
           <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
-          <td class="host-info">{{ host.php70 }}</td>
+          <td class="host-info good-php">{{ host.php70 }}</td>
+          {% endif %}
+        </tr>
+      {% endfor %}
+        <tr>
+          <th colspan="2">Developers Only - Do Not Use</th>
+        </tr>
+      {% for host in dev_hosts reversed %}
+        <tr class="">
+          {% if host.php70 %}
+          <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
+          <td class="host-info bad-php">{{ host.php70 }}</td>
           {% endif %}
         </tr>
       {% endfor %}

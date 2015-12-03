@@ -8,12 +8,16 @@ module Jekyll
       end
     end
 
-    def filter_final_only(input, property = nil)
-      Array(input).select { |i| i[property].is_a? ::Integer }
+    def sort_and_filter_final_only(input, property = nil)
+      Array(input)
+        .select { |i| i[property].is_a? ::Integer }
+        .sort_by { |x| x[property] }
     end
 
-    def filter_dev_only(input, property = nil)
-      Array(input).select { |i| i[property].is_a? ::String }
+    def sort_and_filter_dev_only(input, property = nil)
+      Array(input)
+        .select { |i| i[property].is_a? ::String }
+        .sort_by { |x| x[property] }
     end
 
     def is_inty?(version)

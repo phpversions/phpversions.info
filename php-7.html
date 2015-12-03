@@ -9,8 +9,8 @@ layout: default
 {% for host in site.data.paas_hosts %}
 {% assign all_hosts = all_hosts | push: host %}
 {% endfor %}
-{% assign final_hosts = (all_hosts | filter_final_only: 'php70' | sort: 'php70') %}
-{% assign dev_hosts = (all_hosts | filter_dev_only: 'php70' | sort: 'php70') %}
+{% assign final_hosts = (all_hosts | sort_and_filter_final_only: 'php70') %}
+{% assign dev_hosts = (all_hosts | sort_and_filter_dev_only: 'php70') %}
 
 <article class="hosts">
   <section>

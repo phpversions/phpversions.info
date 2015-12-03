@@ -1,0 +1,55 @@
+- name: "CentOS 7"
+  default: 5.4.16
+  family: linux
+
+- name: "CentOS 6"
+  default: 5.3.3
+  family: linux
+
+- name: "CentOS 5"
+  default: 5.1.6
+  family: linux
+  
+- name: "Debian 8 (Jessie)"
+  default: 5.6.12
+  family: linux
+
+- name: "Debian 7 (Wheezy)"
+  default: 5.4.44
+  family: linux
+
+- name: "Debian 6 (Squeeze)"
+  default: 5.3.3
+  family: linux
+
+- name: "OSX 10.8 (Mountain Lion)"
+  default: 5.3.10
+  family: osx
+
+- name: "OSX 10.9 (Mavericks)"
+  default: 5.4.17
+  family: osx
+
+- name: "OSX 10.10 (Yosemite)"
+  default: 5.5.9
+  family: osx
+
+- name: "OSX 10.11 (El Capitan)"
+  default: 5.5.29
+  family: osx
+
+- name: "Ubuntu 15.04 (Vivid)"
+  default: 5.6.4
+  family: linux
+
+- name: "Ubuntu 14.10 (Utopic)"
+  default: 5.5.12
+  family: linux
+
+- name: "Ubuntu 14.04 LTS (Trusty)"
+  default: 5.5.9
+  family: linux
+
+- name: "Ubuntu 12.04 LTS (Precise)"
+  default: 5.3.10
+  family: linux

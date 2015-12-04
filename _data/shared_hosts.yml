@@ -237,7 +237,7 @@
   php53: 29
   php55: 21
   default: 5.3.29
-  
+
 - name: "Monarobase"
   url: "https://monarobase.net/hebergement.php"
   php52: 17
@@ -265,6 +265,17 @@
   php56: 15
   php70: RC8
   default: 5.6.15
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
+
+- name: "Nucleus BVBA"
+  url: "https://www.nucleus.be/en/webhosting/linux/"
+  php53: 29
+  php54: 45
+  php55: 30
+  php56: 16
+  php70: 0
+  default: 5.6.16
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 

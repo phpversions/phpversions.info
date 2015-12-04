@@ -24,7 +24,7 @@
 - name: "Laravel Forge"
   url: "https://forge.laravel.com/"
   php56: 12
-  php70: RC7
+  php70: 0
   default: 5.6.12
   auto_update: "Yes"
 

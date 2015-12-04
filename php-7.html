@@ -36,7 +36,7 @@ layout: default
         <tr>
           {% if host.php70 %}
           <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
-          <td class="host-info good-php">{{ host.php70 }}</td>
+          <td class="host-info good-php">7.0.{{ host.php70 }}</td>
           {% endif %}
         </tr>
       {% endfor %}

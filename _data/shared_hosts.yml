@@ -39,6 +39,18 @@
   php56: 11
   default: 5.4.24
 
+- name: "Combell"
+  url: http://www.combell.com/en/hosting/web-hosting
+  php52: 17  
+  php53: 29
+  php54: 45
+  php55: 30
+  php56: 14
+  php70: 0
+  default: 5.5.45
+  manual_update: "Yes"
+  auto_update: "Yes"  
+
 - name: "Crucial (Split Shared)"
   url: http://www.crucialwebhost.com/hosting/split-shared/
   php53: 29

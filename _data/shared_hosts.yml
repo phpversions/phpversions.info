@@ -262,9 +262,9 @@
 - name: "names.co.uk"
   url: "https://www.awin1.com/awclick.php?mid=897&id=253713"
   php55: 30
-  php56: 15
-  php70: RC8
-  default: 5.6.15
+  php56: 16
+  php70: 0
+  default: 5.6.16
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 
@@ -321,9 +321,9 @@
 - name: "Register365"
   url: "https://www.register365.com/web-hosting/"
   php55: 30
-  php56: 15
-  php70: RC8
-  default: 5.6.15
+  php56: 16
+  php70: 0
+  default: 5.6.16
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 

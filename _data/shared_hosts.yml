@@ -377,6 +377,16 @@
   php55: 18
   php56: 2
   default: 5.3.29
+  
+- name: "TigerTech"
+  url: "https://tigertech.net"
+  php53: 29
+  php54: 45
+  php55: 30
+  php56: 16
+  php70: 0
+  default: 7.0.0
+  auto_update: "Yes"
 
 - name: "TsoHost"
   url: "https://www.tsohost.com"

@@ -360,7 +360,7 @@
   default: 5.3.29
 
 - name: "SiteGround Shared Plans"
-  url: "http://www.siteground.com/web-hosting.htm"
+  url: "http://www.siteground.com/web-hosting.htm?afcode=f04013fa78e942eb9675eb7497fea9e6"
   php70: RC7
   php56: 15
   php55: 30

@@ -18,5 +18,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## TODO 
 
-- [ ] Improve Design - this is a default Jekyll theme with two massive tables jammed in
-- [ ] Everything Else
+- [ ] Automate as many hosts as possible with [phparse](https://github.com/philsturgeon/phparse)
+- [ ] Rebuild so it's not a silly Jekyll site

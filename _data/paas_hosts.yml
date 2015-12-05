@@ -59,5 +59,5 @@
   php54: 45
   php55: 30
   php56: 16
-  php70: RC8
-  default: 5.6.16
+  php70: 0
+  default: 7.0.0

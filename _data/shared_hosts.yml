@@ -305,7 +305,7 @@
   php54: 34
   php55: 18
   php56: 2
-  php70: RC5
+  php70: RC8
   default: 5.4.34
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"

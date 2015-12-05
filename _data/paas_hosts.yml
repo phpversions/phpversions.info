@@ -59,7 +59,8 @@
   php54: 45
   php55: 30
   php56: 14
-  php70: 3.9.1
+  php70: 0
+  hhvm: 3.9.1
   default: 5.4.45
   manual_update: Yes
 

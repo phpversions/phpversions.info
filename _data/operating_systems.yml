@@ -22,6 +22,14 @@
   default: 5.3.3
   family: linux
 
+- name: Red Hat Enterprise Linux (RHEL) 7.1
+  default: 5.4.16
+  family: linux
+
+- name: Red Hat Enterprise Linux (RHEL) 6.7
+  default: 5.3.3
+  family: linux
+
 - name: "OSX 10.8 (Mountain Lion)"
   default: 5.3.10
   family: osx

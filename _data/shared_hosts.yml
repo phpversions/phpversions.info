@@ -206,6 +206,7 @@
   php54: 7
   php55: 25
   php56: 8
+  php70: 0
   default: 5.3.28
 
 - name: Liquidweb

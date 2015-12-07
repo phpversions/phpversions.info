@@ -3,7 +3,7 @@
   php54: 35
   php55: 20
   php56: 4
-  php70: Beta1
+  php70: RC3
   default: 5.5.20
 
 - name: "34SP"

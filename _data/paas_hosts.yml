@@ -8,7 +8,7 @@
 
 - name: "Google App Engine"
   url: "https://cloud.google.com/appengine/"
-  php55: 23
+  php55: 26
   default: 5.5.26
   auto_update: "Yes"
 

@@ -54,6 +54,16 @@
   default: 5.6.10
   auto_update: "Yes (Patch)"
 
+- name: "Platform.sh"
+  url: "https://platform.sh/"
+  php54: 45
+  php55: 30
+  php56: 14
+  php70: 0
+  hhvm: 3.9.1
+  default: 5.4.45
+  manual_update: Yes
+
 - name: "ServerPilot"
   url: "https://serverpilot.io"
   php54: 45

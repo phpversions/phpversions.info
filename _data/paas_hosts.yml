@@ -9,7 +9,7 @@
 - name: "Google App Engine"
   url: "https://cloud.google.com/appengine/"
   php55: 23
-  default: 5.5.23
+  default: 5.5.26
   auto_update: "Yes"
 
 - name: "Heroku"

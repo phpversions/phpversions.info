@@ -141,23 +141,27 @@
   php55: 28
   default: 5.3.29
 
-- name: "HostGator"
+- name: HostGator
   url: "http://www.hostgator.com/shared"
   php52: 17
   php53: 28
   php54: 35
   php55: 19
   default: 5.4.35
-  auto_update: "Yes"
+  auto_update: Yes
 
-# Please provide more information for this host
-# - name: "Hostmonster"
-#   url: "https://www.hostmonster.com/"
-#   php52: ??
-#   php54: ??
-#   default: 5.4.??
+- name: iClickAndHost
+  php52: 17
+  php53: 29
+  php54: 39
+  php55: 23
+  php56: 16
+  php70: 0
+  default: 5.6.16
+  manual_update: Yes
+  auto_update: "Yes (Patch)"
 
-- name: "InMotion Hosting"
+- name: InMotion Hosting
   url: "http://www.inmotionhosting.com/"
   php52: 17
   php53: 29
@@ -166,7 +170,7 @@
   php56: 15
   default: 5.5.30
 
-- name: "iPage"
+- name: iPage
   url: "https://www.ipage.com/"
   php52: 17
   php53: 13

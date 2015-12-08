@@ -37,10 +37,10 @@
 - name: "Microsoft Azure Web App"
   url: "http://azure.microsoft.com/en-us/services/websites"
   php53: 29
-  php54: 34
-  php55: 18
-  php56: 2
-  php70: RC8
+  php54: 42
+  php55: 26
+  php56: 10
+  php70: 0
   default: 5.4.34
   manual_update: Yes
 

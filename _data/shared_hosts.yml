@@ -63,8 +63,8 @@
 - name: "cyon"
   url: "https://www.cyon.ch"
   php55: 30
-  php56: 14
-  php70: RC5
+  php56: 15
+  php70: 0
   default: 5.5.30
 
 - name: "DiPHOST"

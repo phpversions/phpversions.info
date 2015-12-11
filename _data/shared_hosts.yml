@@ -137,8 +137,8 @@
 - name: "HostEurope"
   url: "https://www.hosteurope.de/en/"
   php53: 29
-  php54: 44
-  php55: 28
+  php55: 30
+  php56: 15
   default: 5.3.29
 
 - name: HostGator

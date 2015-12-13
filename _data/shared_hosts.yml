@@ -103,8 +103,8 @@
   php56: 16
   php70: 0
   default: 5.3.29
-  manual_update: Yes
-  auto_update: Yes (Patch)
+  manual_update: "Yes"
+  auto_update: "Yes (Patch)"
 
 # Fuck GoDaddy. If anyone knows exact details then PR them in, but I don't like them
 # enough to try and make my new SemVer sort work with a ??

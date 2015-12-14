@@ -95,6 +95,17 @@
   php54: 36
   default: 5.4.36
 
+- name: "GeekStorage"
+  url: "https://www.geekstorage.com/shared-hosting"
+  php53: 29
+  php54: 44
+  php55: 30
+  php56: 16
+  php70: 0
+  default: 5.3.29
+  manual_update: "Yes"
+  auto_update: "Yes (Patch)"
+
 # Fuck GoDaddy. If anyone knows exact details then PR them in, but I don't like them
 # enough to try and make my new SemVer sort work with a ??
 # - name: "GoDaddy (cPanel for Linux)"

@@ -162,6 +162,7 @@
   auto_update: Yes
 
 - name: iClickAndHost
+  url: https://iclickandhost.com/website-hosting/
   php52: 17
   php53: 29
   php54: 39

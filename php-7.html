@@ -35,7 +35,7 @@ layout: default
       {% for host in final_hosts reversed %}
         <tr>
           {% if host.php70 %}
-          <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
+          <td class="host-name"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
           <td class="host-info good-php">7.0.{{ host.php70 }}</td>
           {% endif %}
         </tr>
@@ -46,7 +46,7 @@ layout: default
       {% for host in dev_hosts reversed %}
         <tr class="">
           {% if host.php70 %}
-          <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
+          <td class="host-name"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
           <td class="host-info bad-php">{{ host.php70 }}</td>
           {% endif %}
         </tr>

@@ -10,7 +10,7 @@
   url: "https://cloud.google.com/appengine/"
   php55: 26
   default: 5.5.26
-  auto_update: "Yes"P
+  auto_update: "Yes"
 
 - name: "Heroku"
   url: "https://devcenter.heroku.com/articles/php-support#php-runtimes"

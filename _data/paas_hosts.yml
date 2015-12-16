@@ -10,7 +10,7 @@
   url: "https://cloud.google.com/appengine/"
   php55: 26
   default: 5.5.26
-  auto_update: "Yes"
+  auto_update: "Yes"P
 
 - name: "Heroku"
   url: "https://devcenter.heroku.com/articles/php-support#php-runtimes"
@@ -51,12 +51,13 @@
   manual_update: "No"
   auto_update: "Yes (Patch)"
 
-- name: "Pagoda Box"
+- name: "PagodaBox"
   url: "https://pagodabox.io/"
   php53: 29
   php54: 42
   php55: 26
   php56: 10
+  php70: 0
   default: 5.6.10
   auto_update: "Yes (Patch)"
 

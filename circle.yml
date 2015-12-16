@@ -9,7 +9,7 @@ dependencies:
 test:
   post:
     - bundle exec jekyll build
-    - bundle exec htmlproof ./_site --only-4xx --href-ignore "#" --href-ignore github.com
+    #- bundle exec htmlproof ./_site --only-4xx --href-ignore "#" --href-ignore github.com
 
 deployment:
   production:

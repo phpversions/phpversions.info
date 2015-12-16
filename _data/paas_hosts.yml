@@ -56,7 +56,7 @@
   php53: 29
   php54: 42
   php55: 26
-  php56: 10
+  php56: 14
   php70: 0
   default: 5.6.10
   auto_update: "Yes (Patch)"

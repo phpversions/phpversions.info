@@ -6,6 +6,13 @@
   default: 5.6.13
   manual_update: Yes
 
+- name: "fortrabbit"
+  url: "http://www.fortrabbit.com/"
+  php56: 16
+  php70: 0
+  default: 5.6.16
+  auto_update: "Yes (Patch)"
+  
 - name: "Google App Engine"
   url: "https://cloud.google.com/appengine/"
   php55: 26
@@ -78,10 +85,3 @@
   php56: 16
   php70: 0
   default: 7.0.0
-
-- name: "fortrabbit"
-  url: "http://www.fortrabbit.com/"
-  php56: 16
-  php70: 0
-  default: 5.6.16
-  auto_update: "Yes (Patch)"  

@@ -83,5 +83,5 @@
   php54: 45
   php55: 30
   php56: 16
-  php70: 0
-  default: 7.0.0
+  php70: 1
+  default: 7.0.1

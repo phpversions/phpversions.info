@@ -417,6 +417,7 @@
   php54: 42
   php55: 26
   php56: 8
+  php70: 0
   default: 5.4.42
 
 - name: "Uberspace.de"

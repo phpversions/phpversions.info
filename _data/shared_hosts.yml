@@ -48,7 +48,7 @@
   php55: 30
   php56: 16
   php70: 1
-  default: 5.5.45
+  default: 5.5.30
   manual_update: "Yes"
   auto_update: "Yes"
 

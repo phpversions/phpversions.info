@@ -280,17 +280,6 @@
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 
-- name: "Nucleus BVBA"
-  url: "https://www.nucleus.be/en/webhosting/linux/"
-  php53: 29
-  php54: 45
-  php55: 30
-  php56: 16
-  php70: 0
-  default: 5.6.16
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
 - name: "NearlyFreeSpeech.NET"
   url: "https://www.nearlyfreespeech.net/"
   php53: 29
@@ -308,6 +297,17 @@
   php55: 29
   php56: 13
   default: 5.4.45
+  manual_update: "Yes (Minor)"
+  auto_update: "Yes (Patch)"
+
+- name: "Nucleus BVBA"
+  url: "https://www.nucleus.be/en/webhosting/linux/"
+  php53: 29
+  php54: 45
+  php55: 30
+  php56: 16
+  php70: 0
+  default: 5.6.16
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"
 

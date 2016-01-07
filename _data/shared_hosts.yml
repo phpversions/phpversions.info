@@ -324,9 +324,9 @@
 
 - name: "Onlime Webhosting"
   url: "https://www.onlime.ch/"
-  php55: 30
+  php55: 31
   php56: 16
-  php70: 1
+  php70: 2
   default: 5.6.16
   manual_update: "Yes (Minor)"
   auto_update: "Yes (Patch)"

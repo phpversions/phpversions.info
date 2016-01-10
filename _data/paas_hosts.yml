@@ -81,7 +81,7 @@
 - name: "ServerPilot"
   url: "https://serverpilot.io"
   php54: 45
-  php55: 30
-  php56: 16
-  php70: 1
-  default: 7.0.1
+  php55: 31
+  php56: 17
+  php70: 2
+  default: 7.0.2

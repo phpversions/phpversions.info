@@ -62,10 +62,12 @@
 
 - name: "cyon"
   url: "https://www.cyon.ch"
-  php55: 30
-  php56: 16
-  php70: 1
-  default: 5.5.30
+  php55: 31
+  php56: 17
+  php70: 2
+  default: 5.6.17
+  manual_update: "Yes"
+  auto_update: "Yes"
 
 - name: "DiPHOST"
   url: "http://www.diphost.ru/"

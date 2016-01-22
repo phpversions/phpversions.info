@@ -62,10 +62,10 @@
   url: "https://pagodabox.io/"
   php53: 29
   php54: 45
-  php55: 30
-  php56: 16
-  php70: 1
-  default: 5.6.16
+  php55: 31
+  php56: 17
+  php70: 2
+  default: 5.6.17
   auto_update: "Yes (Patch)"
 
 - name: "Platform.sh"

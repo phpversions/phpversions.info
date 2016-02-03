@@ -58,7 +58,7 @@
   php55: 31
   php56: 17
   php70: 2
-  default: 5.6.17
+  default: 7.0.2
   auto_update: "Yes (Patch)"
 
 - name: "Platform.sh"

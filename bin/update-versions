@@ -1,0 +1,45 @@
+<?php
+
+require "vendor/autoload.php";
+
+use Sturgeon\PHPArse\Parser;
+use Symfony\Component\Yaml\Yaml;
+
+function readYamlFile($fileName) {
+  $yamlFile = __DIR__.'/../_data/'.$fileName.'.yml';
+  return YAML::parse(file_get_contents($yamlFile));
+}
+
+function saveYamlFile($fileName, $array) {
+  $newYaml = Yaml::dump($array, 4);
+
+  $yamlFile = __DIR__.'/../_data/'.$fileName.'.yml';
+  file_put_contents($yamlFile, $newYaml);
+}
+
+function updateHostVersionArray($array) {
+  foreach ($array as $hostKey => &$hostMeta) {
+    foreach ($hostMeta['versions'] as $versionKey => &$versionMeta) {
+      if (empty($versionMeta['phpinfo'])) {
+        echo "Skipping {$hostMeta['name']} PHP {$versionKey}".PHP_EOL;
+        continue;
+      }
+
+      echo "Parsing {$hostMeta['name']} PHP {$versionKey} from: {$versionMeta['phpinfo']}".PHP_EOL;
+
+      $parser = Parser::readFromUrl($versionMeta['phpinfo']);
+      $info = $parser->parse();
+
+      $versionMeta['patch'] = $info->phpSemanticVersion()->getPatch();
+      $versionMeta['semver'] = (string) $info->phpSemanticVersion();
+      $versionMeta['version'] = $info->phpVersion();
+    }
+  }
+  return $array;
+}
+
+foreach (['shared_hosts', 'paas_hosts'] as $dataFileName) {
+  $existingArray = readYamlFile($dataFileName);
+  $updatedArray = updateHostVersionArray($existingArray);
+  saveYamlFile($dataFileName, $updatedArray);
+}

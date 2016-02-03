@@ -12,3 +12,5 @@ url: "http://phpversions.info" # the base hostname & protocol for your site
 markdown: kramdown
 
 permalink: pretty
+
+exclude: [bin, vendor, php-vendor]

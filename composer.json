@@ -1,0 +1,14 @@
+{
+  "repositories": [
+      {
+          "type": "vcs",
+          "url": "https://github.com/philsturgeon/phparse"
+      }
+    ],
+    "require": {
+        "sturgeon/phparse": "0.1.0",
+        "symfony/yaml": "^3.0",
+        "php": "^7.0"
+    },
+    "vendor-dir": "php-vendor"
+}

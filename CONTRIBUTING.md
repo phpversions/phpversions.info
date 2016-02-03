@@ -1,6 +1,6 @@
 ## Contributing
 
-We use Jekyll for this, which yep, trollolol is Ruby I know. We did this because GitHub Pages is easy, but comically enough now that we use custom plugins we've had to build it from `master` and push the HTML to `gh-pages`, making that decision rather pointless.
+We use Jekyll for this, which yep, trollolol is Ruby I know. We did this because hosting on GitHub Pages is easy, but comically enough now that we use custom plugins we've had to build it from `master` and push the HTML to `gh-pages`, making that decision rather pointless.
 
 ## Getting Started
 
@@ -10,8 +10,10 @@ We use Jekyll for this, which yep, trollolol is Ruby I know. We did this because
 
 ## Our Custom Data
 
-Send a PR adding or updating records in `./data/`, listing which versions of PHP they support, and which 
-version is installed by default when new plans are created. 
+Send a PR adding or updating records in `./data/`, listing which versions of PHP they support, and which
+version is installed by default when new plans are created.
+
+Keep in mind, if the value of any versions `phpinfo` is a URL (not `null`) then whatever number you put in will be overridden. We used to ask for version numbers manually, but we're trying to switch towards automation now, so getting us a phpinfo URL would be the most useful thing to do.
 
 We use a semver-based sorting algorithm as PHP has been semver-ish for a while now. That means if the numbers you put into `default` are not proper [SemVer](http://semver.org/), then it'll fall over.
 

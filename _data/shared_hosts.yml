@@ -1,474 +1,1239 @@
-- name: "1&1"
-  url: "http://www.1and1.com/web-hosting#info-list"
-  php54: 35
-  php55: 20
-  php56: 4
-  php70: 0
-  default: 5.5.20
-
-- name: "34SP"
-  url: "https://www.34sp.com/professional-hosting-specifications"
-  php53: 29
-  php54: 38
-  php55: 29
-  default: 5.5.29
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "A Small Orange"
-  url: "https://asmallorange.com/hosting/shared/#tab-two"
-  php53: 29
-  php54: 45
-  php55: 30
-  php56: 15
-  default: 5.4.45
-
-- name: "Aruba.it"
-  url: "http://hosting.aruba.it/"
-  php52: 17
-  php53: 29
-  php54: 45
-  php55: 29
-  php56: 13
-  default: 5.5.28
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "Bluehost"
-  url: "http://www.bluehost.com/shared"
-  php54: 24
-  php56: 11
-  default: 5.4.24
-
-- name: "Combell"
-  url: http://www.combell.com/en/hosting/web-hosting
-  php52: 17
-  php53: 29
-  php54: 45
-  php55: 30
-  php56: 16
-  php70: 1
-  default: 5.5.45
-  manual_update: "Yes"
-  auto_update: "Yes"
-
-- name: "Crucial (Split Shared)"
-  url: http://www.crucialwebhost.com/hosting/split-shared/
-  php53: 29
-  php54: 36
-  php55: 20
-  php56: 4
-  default: 5.3.29
-
-- name: "cyon"
-  url: "https://www.cyon.ch"
-  php55: 31
-  php56: 17
-  php70: 2
-  default: 5.6.17
-  manual_update: "Yes"
-  auto_update: "Yes"
-
-- name: "DiPHOST"
-  url: "http://www.diphost.ru/"
-  php53: 29
-  php54: 34
-  php55: 18
-  php56: 2
-  php70: 0
-  default: 5.6.2
-
-- name: "Dot 5 Hosting"
-  url: "http://www.dot5hosting.com/"
-  php52: 17
-  php53: 13
-  default: 5.2.17
-
-- name: "Dreamhost"
-  url: "http://www.dreamhost.com/hosting/shared/"
-  php53: 27
-  php54: 20
-  php55: 17
-  php56: 0
-  default: 5.4.20
-
-- name: "Gandi"
-  url: "https://www.gandi.net/hebergement/simple?language=php&db=mysql"
-  php54: 36
-  default: 5.4.36
-
-- name: "GeekStorage"
-  url: "https://www.geekstorage.com/shared-hosting"
-  php53: 29
-  php54: 44
-  php55: 30
-  php56: 16
-  php70: 0
-  default: 5.3.29
-  manual_update: "Yes"
-  auto_update: "Yes (Patch)"
-
-# Fuck GoDaddy. If anyone knows exact details then PR them in, but I don't like them
-# enough to try and make my new SemVer sort work with a ??
-# - name: "GoDaddy (cPanel for Linux)"
-#   url: "https://www.godaddy.com/hosting/web-hosting.aspx?isc=hos1gbr21&ci=9009"
-#   php53: ??
-#   php54: ??
-#   php55: ??
-#   default: 5.5.??
-#   manual_update: "Yes"
-
-- name: "Heart Internet"
-  url: "https://www.heartinternet.uk/web-hosting"
-  php52: 17
-  php53: 28
-  php54: 25
-  php55: 9
-  default: 5.3.28
-  manual_update: "Yes"
-  auto_update: "No"
-
-- name: "Hetzner"
-  url: "http://www.hetzner.de"
-  php52: 17
-  php53: 29
-  php54: 36
-  php55: 20
-  default: 5.3.29
-
-- name: "Hostek"
-  url: "https://hostek.com/"
-  php52: 17
-  php53: 29
-  php54: 44
-  php55: 28
-  php56: 12
-  default: 5.3.29
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "HostEurope"
-  url: "https://www.hosteurope.de/en/"
-  php53: 29
-  php55: 30
-  php56: 15
-  default: 5.3.29
-
-- name: HostGator
-  url: "http://www.hostgator.com/shared"
-  php52: 17
-  php53: 28
-  php54: 35
-  php55: 19
-  default: 5.4.35
-  auto_update: Yes
-
-- name: iClickAndHost
-  url: https://iclickandhost.com/website-hosting/
-  php52: 17
-  php53: 29
-  php54: 39
-  php55: 23
-  php56: 16
-  php70: 0
-  default: 5.6.16
-  manual_update: Yes
-  auto_update: "Yes (Patch)"
-
-- name: InMotion Hosting
-  url: "http://www.inmotionhosting.com/"
-  php52: 17
-  php53: 29
-  php54: 45
-  php55: 30
-  php56: 15
-  default: 5.5.30
-
-- name: iPage
-  url: "https://www.ipage.com/"
-  php52: 17
-  php53: 13
-  php54: ??
-  php55: 1
-  default: 5.3.13
-
-- name: "Krystal"
-  url: "https://krystal.co.uk/"
-  php52: 17
-  php53: 29
-  php54: 36
-  php55: 20
-  php56: 4
-  default: 5.4.36
-
-- name: LexiConn
-  url: "http://www.lexiconn.com/"
-  php52: 17
-  php53: 28
-  php54: 35
-  php55: 20
-  default: 5.5.20
-  manual_update: "Yes"
-  auto_update: "Yes"
-
-- name: Linuxpl
-  url: "http://linuxpl.com"
-  php52: 17
-  php53: 28
-  php54: 7
-  php55: 25
-  php56: 8
-  php70: 0
-  default: 5.3.28
-
-- name: Liquidweb
-  url: "http://www.liquidweb.com/?RID=phpversions"
-  php52: ??
-  php53: ??
-  php54: ??
-  php55: ??
-  default: 5.5.18
-
-# Please provide more information for this host
-# - name: "Locaweb"
-#   url: "http://www.locaweb.com.br/produtos/hospedagem-de-sites/planos.html"
-#   php52: ??
-#   php53: ??
-#   php54: ??
-#   php55: ??
-#   php56: ??
-#   default: 5.2.??
-#   manual_update: "Yes"
-
-- name: "Lunarpages"
-  url: "https://support.lunarpages.com/knowledge_bases/article/326?fallback=true"
-  php53: 27
-  default: 5.3.27
-  manual_update: "No"
-
-- name: "MediaTemple (GS)"
-  url: "http://mediatemple.net/webhosting/shared/"
-  php53: 29
-  php55: 21
-  default: 5.3.29
-
-- name: "Monarobase"
-  url: "https://monarobase.net/hebergement.php"
-  php52: 17
-  php53: 29
-  php54: 45
-  php55: 31
-  php56: 17
-  php70: 2
-  default: 5.6.17
-  manual_update: "Yes"
-  auto_update: "Yes"
-
-# Please provide more information for this host
-# - name: "Namecheap"
-#   url: "https://www.namecheap.com/hosting/shared.aspx"
-#   php52: ??
-#   php53: ??
-#   php54: ??
-#   php55: ??
-#   default: 5.3.??
-
-- name: "names.co.uk"
-  url: "https://www.awin1.com/awclick.php?mid=897&id=253713"
-  php55: 31
-  php56: 17
-  php70: 2
-  default: 5.6.17
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "NearlyFreeSpeech.NET"
-  url: "https://www.nearlyfreespeech.net/"
-  php53: 29
-  php54: 36
-  php55: 20
-  php56: 4
-  default: 5.5.20
-  manual_update: "Yes (Major)"
-  auto_update: "Yes (Patch)"
-
-- name: "Nexcess"
-  url: "https://www.nexcess.net/"
-  php53: 29
-  php54: 45
-  php55: 29
-  php56: 13
-  default: 5.4.45
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "Ngage Hosting"
-  url: "https://www.ngagehosting.uk"
-  php53: 29
-  php54: 45
-  php55: 30
-  php56: 16
-  php70: 0
-  default: 5.6.16
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "Nucleus BVBA"
-  url: "https://www.nucleus.be/en/webhosting/linux/"
-  php53: 29
-  php54: 45
-  php55: 30
-  php56: 16
-  php70: 0
-  default: 5.6.16
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "Onlime Webhosting"
-  url: "https://www.onlime.ch/"
-  php55: 32
-  php56: 17
-  php70: 3
-  default: 5.6.17
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "OVH"
-  url: "https://www.ovh.ie/web-hosting/"
-  php52: 17
-  php53: 29
-  php54: 34
-  php55: 18
-  php56: 2
-  php70: 0
-  default: 5.4.34
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "Rackspace (Cloud Sites)"
-  url: "http://www.rackspace.com/cloud/sites"
-  php53: 20
-  php54: 10
-  default: 5.3.20
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "Register365"
-  url: "https://www.register365.com/web-hosting/"
-  php55: 31
-  php56: 17
-  php70: 2
-  default: 5.6.17
-  manual_update: "Yes (Minor)"
-  auto_update: "Yes (Patch)"
-
-- name: "PCextreme"
-  url: "https://www.pcextreme.com/webhosting/classic"
-  php53: 10
-  php55: 9
-  php56: 7
-  php70: 0
-  default: 5.5.9
-  manual_update: "Yes"
-  auto_update: "Yes (Patch)"
-
-- name: "Seeweb (Cloud Server)"
-  url: "http://www.seeweb.it/"
-  php53: 29
-  default: 5.3.29
-  manual_update: "No"
-  auto_update: "Yes (Patch)"
-
-- name: "ServerGrove"
-  url: "http://servergrove.com/sharedhosting"
-  php52: ??
-  php53: 29
-  php54: ??
-  php55: 16
-  default: 5.5.16
-
-- name: "Site5"
-  url: "http://www.site5.com/hosting/web/#programming_languages"
-  php52: 17
-  php53: 29
-  php54: 35
-  default: 5.3.29
-
-- name: "SiteGround Shared Plans"
-  url: "http://www.siteground.com/web-hosting.htm?afcode=f04013fa78e942eb9675eb7497fea9e6"
-  php70: 00
-  php56: 16
-  php55: 30
-  php54: 45
-  php53: 29
-  php52: 17
-  default: 5.6.12
-  manual_update: "Yes"
-  auto_update: "Yes"
-
-- name: "STRATO"
-  url: "http://www.strato.de"
-  php53: 29
-  php55: 18
-  php56: 2
-  default: 5.3.29
-
-- name: "TigerTech"
-  url: "https://tigertech.net"
-  php53: 29
-  php54: 45
-  php55: 30
-  php56: 16
-  php70: 0
-  default: 7.0.0
-  auto_update: "Yes"
-
-- name: "TsoHost"
-  url: "https://www.tsohost.com"
-  php52: 6
-  php53: 28
-  php54: 42
-  php55: 26
-  php56: 8
-  php70: 0
-  default: 5.4.42
-
-- name: "Uberspace.de"
-  url: "https://uberspace.de"
-  php52: 17
-  php53: 29
-  php54: 44
-  php55: 28
-  php56: 12
-  php70: 0
-  default: 5.6.12
-  manual_update: "Yes"
-  auto_update: "Yes"
-
-- name: "VidaHost"
-  url: "https://www.vidahost.com/cloud-web-hosting"
-  php52: 6
-  php53: 28
-  php54: 28
-  php55: 12
-  default: 5.3.28
-
-- name: "WebFaction"
-  url: "https://www.webfaction.com"
-  php52: 17
-  php53: 27
-  php54: 17
-  php55: 7
-  php56: 4
-  php70: 0
-  default: 5.6.4
-  
-- name: "WebhostOne"
-  url: "https://www.webhostone.de"
-  php52: 17
-  php53: 29
-  php54: 45
-  php55: 31
-  php56: 16
-  php70: 2
-  default: 5.5.30
+-
+    name: '1&1'
+    url: 'http://www.1and1.com/web-hosting#info-list'
+    php70: 0
+    default: 5.5.20
+    versions:
+        54:
+            phpinfo: null
+            patch: 35
+            version: 5.4.35
+            semver: 5.4.35
+        55:
+            phpinfo: null
+            patch: 20
+            version: 5.5.20
+            semver: 5.5.20
+        56:
+            phpinfo: null
+            patch: 4
+            version: 5.6.4
+            semver: 5.6.4
+-
+    name: 34SP
+    url: 'https://www.34sp.com/professional-hosting-specifications'
+    default: 5.5.29
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 38
+            version: 5.4.38
+            semver: 5.4.38
+        55:
+            phpinfo: null
+            patch: 29
+            version: 5.5.29
+            semver: 5.5.29
+-
+    name: 'A Small Orange'
+    url: 'https://asmallorange.com/hosting/shared/#tab-two'
+    default: 5.4.45
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: null
+            patch: 15
+            version: 5.6.15
+            semver: 5.6.15
+-
+    name: Aruba.it
+    url: 'http://hosting.aruba.it/'
+    default: 5.5.28
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 29
+            version: 5.5.29
+            semver: 5.5.29
+        56:
+            phpinfo: null
+            patch: 13
+            version: 5.6.13
+            semver: 5.6.13
+-
+    name: Bluehost
+    url: 'http://www.bluehost.com/shared'
+    default: 5.4.24
+    versions:
+        54:
+            phpinfo: null
+            patch: 24
+            version: 5.4.24
+            semver: 5.4.24
+        56:
+            phpinfo: null
+            patch: 11
+            version: 5.6.11
+            semver: 5.6.11
+-
+    name: Combell
+    url: 'http://www.combell.com/en/hosting/web-hosting'
+    default: 5.5.45
+    manual_update: 'Yes'
+    auto_update: 'Yes'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: null
+            patch: 16
+            version: 5.6.16
+            semver: 5.6.16
+        70:
+            phpinfo: null
+            patch: 1
+            version: 7.0.1
+            semver: 7.0.1
+-
+    name: 'Crucial (Split Shared)'
+    url: 'http://www.crucialwebhost.com/hosting/split-shared/'
+    default: 5.3.29
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 36
+            version: 5.4.36
+            semver: 5.4.36
+        55:
+            phpinfo: null
+            patch: 20
+            version: 5.5.20
+            semver: 5.5.20
+        56:
+            phpinfo: null
+            patch: 4
+            version: 5.6.4
+            semver: 5.6.4
+-
+    name: cyon
+    url: 'https://www.cyon.ch'
+    default: 5.6.17
+    manual_update: 'Yes'
+    auto_update: 'Yes'
+    versions:
+        55:
+            phpinfo: null
+            patch: 31
+            version: 5.5.31
+            semver: 5.5.31
+        56:
+            phpinfo: null
+            patch: 17
+            version: 5.6.17
+            semver: 5.6.17
+        70:
+            phpinfo: null
+            patch: 2
+            version: 7.0.2
+            semver: 7.0.2
+-
+    name: DiPHOST
+    url: 'http://www.diphost.ru/'
+    php70: 0
+    default: 5.6.2
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 34
+            version: 5.4.34
+            semver: 5.4.34
+        55:
+            phpinfo: null
+            patch: 18
+            version: 5.5.18
+            semver: 5.5.18
+        56:
+            phpinfo: null
+            patch: 2
+            version: 5.6.2
+            semver: 5.6.2
+-
+    name: 'Dot 5 Hosting'
+    url: 'http://www.dot5hosting.com/'
+    default: 5.2.17
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 13
+            version: 5.3.13
+            semver: 5.3.13
+-
+    name: Dreamhost
+    url: 'http://www.dreamhost.com/hosting/shared/'
+    php56: 0
+    default: 5.4.20
+    versions:
+        53:
+            phpinfo: null
+            patch: 27
+            version: 5.3.27
+            semver: 5.3.27
+        54:
+            phpinfo: null
+            patch: 20
+            version: 5.4.20
+            semver: 5.4.20
+        55:
+            phpinfo: null
+            patch: 17
+            version: 5.5.17
+            semver: 5.5.17
+-
+    name: Gandi
+    url: 'https://www.gandi.net/hebergement/simple?language=php&db=mysql'
+    default: 5.4.36
+    versions:
+        54:
+            phpinfo: null
+            patch: 36
+            version: 5.4.36
+            semver: 5.4.36
+-
+    name: GeekStorage
+    url: 'https://www.geekstorage.com/shared-hosting'
+    php70: 0
+    default: 5.3.29
+    manual_update: 'Yes'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: 'http://goliath.geekstorage.com/~goliath/phpinfo.php53'
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: 'http://goliath.geekstorage.com/~goliath/phpinfo.php54'
+            patch: 44
+            version: 5.4.44
+            semver: 5.4.44
+        55:
+            phpinfo: 'http://goliath.geekstorage.com/~goliath/phpinfo.php55'
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: 'http://goliath.geekstorage.com/~goliath/phpinfo.php56'
+            patch: 16
+            version: 5.6.16
+            semver: 5.6.16
+        70:
+            phpinfo: 'http://goliath.geekstorage.com/~goliath/phpinfo.php70'
+            patch: 0
+            semver: 7.0.0
+            version: 7.0.0
+-
+    name: 'Heart Internet'
+    url: 'https://www.heartinternet.uk/web-hosting'
+    default: 5.3.28
+    manual_update: 'Yes'
+    auto_update: 'No'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 28
+            version: 5.3.28
+            semver: 5.3.28
+        54:
+            phpinfo: null
+            patch: 25
+            version: 5.4.25
+            semver: 5.4.25
+        55:
+            phpinfo: null
+            patch: 9
+            version: 5.5.9
+            semver: 5.5.9
+-
+    name: Hetzner
+    url: 'http://www.hetzner.de'
+    default: 5.3.29
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 36
+            version: 5.4.36
+            semver: 5.4.36
+        55:
+            phpinfo: null
+            patch: 20
+            version: 5.5.20
+            semver: 5.5.20
+-
+    name: Hostek
+    url: 'https://hostek.com/'
+    default: 5.3.29
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 44
+            version: 5.4.44
+            semver: 5.4.44
+        55:
+            phpinfo: null
+            patch: 28
+            version: 5.5.28
+            semver: 5.5.28
+        56:
+            phpinfo: null
+            patch: 12
+            version: 5.6.12
+            semver: 5.6.12
+-
+    name: HostEurope
+    url: 'https://www.hosteurope.de/en/'
+    default: 5.3.29
+    versions:
+        53:
+            phpinfo: 'http://php53.hosteurope-infos.de/phpinfo.php'
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        55:
+            phpinfo: 'http://php55.hosteurope-infos.de/phpinfo.php'
+            patch: 17
+            version: 5.6.17-1~he.2
+            semver: 5.6.17
+        56:
+            phpinfo: 'http://php56.hosteurope-infos.de/phpinfo.php'
+            patch: 17
+            version: 5.6.17-1~he.2
+            semver: 5.6.17
+-
+    name: HostGator
+    url: 'http://www.hostgator.com/shared'
+    default: 5.4.35
+    auto_update: 'Yes'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 28
+            version: 5.3.28
+            semver: 5.3.28
+        54:
+            phpinfo: null
+            patch: 35
+            version: 5.4.35
+            semver: 5.4.35
+        55:
+            phpinfo: null
+            patch: 19
+            version: 5.5.19
+            semver: 5.5.19
+-
+    name: iClickAndHost
+    url: 'https://iclickandhost.com/website-hosting/'
+    php70: 0
+    default: 5.6.16
+    manual_update: 'Yes'
+    auto_update: 'Yes (Patch)'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 39
+            version: 5.4.39
+            semver: 5.4.39
+        55:
+            phpinfo: null
+            patch: 23
+            version: 5.5.23
+            semver: 5.5.23
+        56:
+            phpinfo: null
+            patch: 16
+            version: 5.6.16
+            semver: 5.6.16
+-
+    name: 'InMotion Hosting'
+    url: 'http://www.inmotionhosting.com/'
+    default: 5.5.30
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: null
+            patch: 15
+            version: 5.6.15
+            semver: 5.6.15
+-
+    name: iPage
+    url: 'https://www.ipage.com/'
+    default: 5.3.13
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 13
+            version: 5.3.13
+            semver: 5.3.13
+        54:
+            phpinfo: null
+            patch: '??'
+            version: '5.4.??'
+            semver: '5.4.??'
+        55:
+            phpinfo: null
+            patch: 1
+            version: 5.5.1
+            semver: 5.5.1
+-
+    name: Krystal
+    url: 'https://krystal.co.uk/'
+    default: 5.4.36
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 36
+            version: 5.4.36
+            semver: 5.4.36
+        55:
+            phpinfo: null
+            patch: 20
+            version: 5.5.20
+            semver: 5.5.20
+        56:
+            phpinfo: null
+            patch: 4
+            version: 5.6.4
+            semver: 5.6.4
+-
+    name: LexiConn
+    url: 'http://www.lexiconn.com/'
+    default: 5.5.20
+    manual_update: 'Yes'
+    auto_update: 'Yes'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 28
+            version: 5.3.28
+            semver: 5.3.28
+        54:
+            phpinfo: null
+            patch: 35
+            version: 5.4.35
+            semver: 5.4.35
+        55:
+            phpinfo: null
+            patch: 20
+            version: 5.5.20
+            semver: 5.5.20
+-
+    name: Linuxpl
+    url: 'http://linuxpl.com'
+    php70: 0
+    default: 5.3.28
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 28
+            version: 5.3.28
+            semver: 5.3.28
+        54:
+            phpinfo: null
+            patch: 7
+            version: 5.4.7
+            semver: 5.4.7
+        55:
+            phpinfo: null
+            patch: 25
+            version: 5.5.25
+            semver: 5.5.25
+        56:
+            phpinfo: null
+            patch: 8
+            version: 5.6.8
+            semver: 5.6.8
+-
+    name: Liquidweb
+    url: 'http://www.liquidweb.com/?RID=phpversions'
+    default: 5.5.18
+    versions:
+        52:
+            phpinfo: null
+            patch: '??'
+            version: '5.2.??'
+            semver: '5.2.??'
+        53:
+            phpinfo: null
+            patch: '??'
+            version: '5.3.??'
+            semver: '5.3.??'
+        54:
+            phpinfo: null
+            patch: '??'
+            version: '5.4.??'
+            semver: '5.4.??'
+        55:
+            phpinfo: null
+            patch: '??'
+            version: '5.5.??'
+            semver: '5.5.??'
+-
+    name: Lunarpages
+    url: 'https://support.lunarpages.com/knowledge_bases/article/326?fallback=true'
+    default: 5.3.27
+    manual_update: 'No'
+    versions:
+        53:
+            phpinfo: null
+            patch: 27
+            version: 5.3.27
+            semver: 5.3.27
+-
+    name: 'MediaTemple (GS)'
+    url: 'http://mediatemple.net/webhosting/shared/'
+    default: 5.3.29
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        55:
+            phpinfo: null
+            patch: 21
+            version: 5.5.21
+            semver: 5.5.21
+-
+    name: Monarobase
+    url: 'https://monarobase.net/hebergement.php'
+    default: 5.6.17
+    manual_update: 'Yes'
+    auto_update: 'Yes'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 31
+            version: 5.5.31
+            semver: 5.5.31
+        56:
+            phpinfo: null
+            patch: 17
+            version: 5.6.17
+            semver: 5.6.17
+        70:
+            phpinfo: null
+            patch: 2
+            version: 7.0.2
+            semver: 7.0.2
+-
+    name: names.co.uk
+    url: 'https://www.awin1.com/awclick.php?mid=897&id=253713'
+    default: 5.6.17
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        55:
+            phpinfo: null
+            patch: 31
+            version: 5.5.31
+            semver: 5.5.31
+        56:
+            phpinfo: null
+            patch: 17
+            version: 5.6.17
+            semver: 5.6.17
+        70:
+            phpinfo: null
+            patch: 2
+            version: 7.0.2
+            semver: 7.0.2
+-
+    name: NearlyFreeSpeech.NET
+    url: 'https://www.nearlyfreespeech.net/'
+    default: 5.5.20
+    manual_update: 'Yes (Major)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 36
+            version: 5.4.36
+            semver: 5.4.36
+        55:
+            phpinfo: null
+            patch: 20
+            version: 5.5.20
+            semver: 5.5.20
+        56:
+            phpinfo: null
+            patch: 4
+            version: 5.6.4
+            semver: 5.6.4
+-
+    name: Nexcess
+    url: 'https://www.nexcess.net/'
+    default: 5.4.45
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 29
+            version: 5.5.29
+            semver: 5.5.29
+        56:
+            phpinfo: null
+            patch: 13
+            version: 5.6.13
+            semver: 5.6.13
+-
+    name: 'Ngage Hosting'
+    url: 'https://www.ngagehosting.uk'
+    php70: 0
+    default: 5.6.16
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: null
+            patch: 16
+            version: 5.6.16
+            semver: 5.6.16
+-
+    name: 'Nucleus BVBA'
+    url: 'https://www.nucleus.be/en/webhosting/linux/'
+    php70: 0
+    default: 5.6.16
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: null
+            patch: 16
+            version: 5.6.16
+            semver: 5.6.16
+-
+    name: 'Onlime Webhosting'
+    url: 'https://www.onlime.ch/'
+    default: 5.6.17
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        55:
+            phpinfo: 'https://php55.onlime.ch/'
+            patch: 32
+            version: 5.5.32
+            semver: 5.5.32
+        56:
+            phpinfo: 'https://php56.onlime.ch/'
+            patch: 17
+            version: 5.6.17
+            semver: 5.6.17
+        70:
+            phpinfo: 'https://php70.onlime.ch/'
+            patch: 3
+            version: 7.0.3
+            semver: 7.0.3
+-
+    name: OVH
+    url: 'https://www.ovh.ie/web-hosting/'
+    php70: 0
+    default: 5.4.34
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: 'http://fpm5.3-check.cluster015.ovh.net/phpinfo.php'
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: 'http://fpm5.4-check.cluster015.ovh.net/phpinfo.php'
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: 'http://fpm5.5-check.cluster015.ovh.net/phpinfo.php'
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: 'http://fpm5.6-check.cluster015.ovh.net/phpinfo.php'
+            patch: 15
+            version: 5.6.15
+            semver: 5.6.15
+        70:
+            phpinfo: 'http://fpm7.0-check.cluster015.ovh.net/phpinfo.php'
+            version: 7.0.0
+            patch: 0
+            semver: 7.0.0
+-
+    name: 'Rackspace (Cloud Sites)'
+    url: 'http://www.rackspace.com/cloud/sites'
+    default: 5.3.20
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: null
+            patch: 20
+            version: 5.3.20
+            semver: 5.3.20
+        54:
+            phpinfo: null
+            patch: 10
+            version: 5.4.10
+            semver: 5.4.10
+-
+    name: Register365
+    url: 'https://www.register365.com/web-hosting/'
+    default: 5.6.17
+    manual_update: 'Yes (Minor)'
+    auto_update: 'Yes (Patch)'
+    versions:
+        55:
+            phpinfo: null
+            patch: 31
+            version: 5.5.31
+            semver: 5.5.31
+        56:
+            phpinfo: null
+            patch: 17
+            version: 5.6.17
+            semver: 5.6.17
+        70:
+            phpinfo: null
+            patch: 2
+            version: 7.0.2
+            semver: 7.0.2
+-
+    name: PCextreme
+    url: 'https://www.pcextreme.com/webhosting/classic'
+    php70: 0
+    default: 5.5.9
+    manual_update: 'Yes'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: null
+            patch: 10
+            version: 5.3.10
+            semver: 5.3.10
+        55:
+            phpinfo: null
+            patch: 9
+            version: 5.5.9
+            semver: 5.5.9
+        56:
+            phpinfo: null
+            patch: 7
+            version: 5.6.7
+            semver: 5.6.7
+-
+    name: 'Seeweb (Cloud Server)'
+    url: 'http://www.seeweb.it/'
+    default: 5.3.29
+    manual_update: 'No'
+    auto_update: 'Yes (Patch)'
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+-
+    name: ServerGrove
+    url: 'http://servergrove.com/sharedhosting'
+    default: 5.5.16
+    versions:
+        52:
+            phpinfo: null
+            patch: '??'
+            version: '5.2.??'
+            semver: '5.2.??'
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: '??'
+            version: '5.4.??'
+            semver: '5.4.??'
+        55:
+            phpinfo: null
+            patch: 16
+            version: 5.5.16
+            semver: 5.5.16
+-
+    name: Site5
+    url: 'http://www.site5.com/hosting/web/#programming_languages'
+    default: 5.3.29
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 35
+            version: 5.4.35
+            semver: 5.4.35
+-
+    name: 'SiteGround Shared Plans'
+    url: 'http://www.siteground.com/web-hosting.htm?afcode=f04013fa78e942eb9675eb7497fea9e6'
+    php70: 0
+    default: 5.6.12
+    manual_update: 'Yes'
+    auto_update: 'Yes'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: null
+            patch: 16
+            version: 5.6.16
+            semver: 5.6.16
+-
+    name: STRATO
+    url: 'http://www.strato.de'
+    default: 5.3.29
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        55:
+            phpinfo: null
+            patch: 18
+            version: 5.5.18
+            semver: 5.5.18
+        56:
+            phpinfo: null
+            patch: 2
+            version: 5.6.2
+            semver: 5.6.2
+-
+    name: TigerTech
+    url: 'https://tigertech.net'
+    php70: 0
+    default: 7.0.0
+    auto_update: 'Yes'
+    versions:
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 30
+            version: 5.5.30
+            semver: 5.5.30
+        56:
+            phpinfo: null
+            patch: 16
+            version: 5.6.16
+            semver: 5.6.16
+-
+    name: TsoHost
+    url: 'https://www.tsohost.com'
+    php70: 0
+    default: 5.4.42
+    versions:
+        52:
+            phpinfo: null
+            patch: 6
+            version: 5.2.6
+            semver: 5.2.6
+        53:
+            phpinfo: null
+            patch: 28
+            version: 5.3.28
+            semver: 5.3.28
+        54:
+            phpinfo: null
+            patch: 42
+            version: 5.4.42
+            semver: 5.4.42
+        55:
+            phpinfo: null
+            patch: 26
+            version: 5.5.26
+            semver: 5.5.26
+        56:
+            phpinfo: null
+            patch: 8
+            version: 5.6.8
+            semver: 5.6.8
+-
+    name: Uberspace.de
+    url: 'https://uberspace.de'
+    php70: 0
+    default: 5.6.12
+    manual_update: 'Yes'
+    auto_update: 'Yes'
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 44
+            version: 5.4.44
+            semver: 5.4.44
+        55:
+            phpinfo: null
+            patch: 28
+            version: 5.5.28
+            semver: 5.5.28
+        56:
+            phpinfo: null
+            patch: 12
+            version: 5.6.12
+            semver: 5.6.12
+-
+    name: VidaHost
+    url: 'https://www.vidahost.com/cloud-web-hosting'
+    default: 5.3.28
+    versions:
+        52:
+            phpinfo: null
+            patch: 6
+            version: 5.2.6
+            semver: 5.2.6
+        53:
+            phpinfo: null
+            patch: 28
+            version: 5.3.28
+            semver: 5.3.28
+        54:
+            phpinfo: null
+            patch: 28
+            version: 5.4.28
+            semver: 5.4.28
+        55:
+            phpinfo: null
+            patch: 12
+            version: 5.5.12
+            semver: 5.5.12
+-
+    name: WebFaction
+    url: 'https://www.webfaction.com'
+    php70: 0
+    default: 5.6.4
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 27
+            version: 5.3.27
+            semver: 5.3.27
+        54:
+            phpinfo: null
+            patch: 17
+            version: 5.4.17
+            semver: 5.4.17
+        55:
+            phpinfo: null
+            patch: 7
+            version: 5.5.7
+            semver: 5.5.7
+        56:
+            phpinfo: null
+            patch: 4
+            version: 5.6.4
+            semver: 5.6.4
+-
+    name: WebhostOne
+    url: 'https://www.webhostone.de'
+    default: 5.5.30
+    versions:
+        52:
+            phpinfo: null
+            patch: 17
+            version: 5.2.17
+            semver: 5.2.17
+        53:
+            phpinfo: null
+            patch: 29
+            version: 5.3.29
+            semver: 5.3.29
+        54:
+            phpinfo: null
+            patch: 45
+            version: 5.4.45
+            semver: 5.4.45
+        55:
+            phpinfo: null
+            patch: 31
+            version: 5.5.31
+            semver: 5.5.31
+        56:
+            phpinfo: null
+            patch: 16
+            version: 5.6.16
+            semver: 5.6.16
+        70:
+            phpinfo: null
+            patch: 2
+            version: 7.0.2
+            semver: 7.0.2

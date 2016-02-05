@@ -842,9 +842,9 @@
             semver: 5.5.32
         56:
             phpinfo: 'https://php56.onlime.ch/'
-            patch: 17
-            version: 5.6.17
-            semver: 5.6.17
+            patch: 18
+            version: 5.6.18
+            semver: 5.6.18
         70:
             phpinfo: 'https://php70.onlime.ch/'
             patch: 3

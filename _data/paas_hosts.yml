@@ -53,19 +53,19 @@
     versions:
         55:
             phpinfo: null
-            patch: 31
-            version: 5.5.31
-            semver: 5.5.31
+            patch: 32
+            version: 5.5.32
+            semver: 5.5.32
         56:
             phpinfo: null
-            patch: 17
-            version: 5.6.17
-            semver: 5.6.17
+            patch: 18
+            version: 5.6.18
+            semver: 5.6.18
         70:
             phpinfo: null
-            patch: 2
-            version: 7.0.2
-            semver: 7.0.2
+            patch: 3
+            version: 7.0.3
+            semver: 7.0.3
 -
     name: 'IBM Bluemix Cloud Foundry'
     url: 'https://bluemix.net'

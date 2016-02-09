@@ -1005,8 +1005,7 @@
 -
     name: 'SiteGround Shared Plans'
     url: 'http://www.siteground.com/web-hosting.htm?afcode=f04013fa78e942eb9675eb7497fea9e6'
-    php70: 0
-    default: 5.6.12
+    default: 5.6.17
     manual_update: 'Yes'
     auto_update: 'Yes'
     versions:
@@ -1027,14 +1026,19 @@
             semver: 5.4.45
         55:
             phpinfo: null
-            patch: 30
-            version: 5.5.30
-            semver: 5.5.30
+            patch: 31
+            version: 5.5.31
+            semver: 5.5.31
         56:
             phpinfo: null
-            patch: 16
-            version: 5.6.16
-            semver: 5.6.16
+            patch: 17
+            version: 5.6.17
+            semver: 5.6.17
+        70:
+            phpinfo: null
+            patch: 2
+            version: 7.0.2
+            semver: 7.0.2
 -
     name: STRATO
     url: 'http://www.strato.de'

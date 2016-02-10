@@ -46,6 +46,7 @@ function readDistroPackageVersion($url, $distro)
 {
   switch ($distro) {
     case 'ubuntu':
+    case 'debian':
       $xpath = '//*[@id="content"]/h1';
       $regex = '/\(([^\)]+)/';
     break;

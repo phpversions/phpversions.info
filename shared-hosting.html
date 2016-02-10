@@ -27,25 +27,25 @@ layout: default
         {% for host in hosts reversed %}
           <tr>
             <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
-            <td class="host-info">
+            <td class="host-info version">
                 {% if host.versions[70] %}{{ host.versions[70].version }}{% else %}-{% endif %}
             </td>
-            <td class="host-info">
+            <td class="host-info version">
                 {% if host.versions[56] %}{{ host.versions[56].version }}{% else %}-{% endif %}
             </td>
-            <td class="host-info">
+            <td class="host-info version">
                 {% if host.versions[55] %}{{ host.versions[55].version }}{% else %}-{% endif %}
             </td>
-            <td class="host-info">
+            <td class="host-info version">
                 {% if host.versions[54] %}{{ host.versions[54].version }}{% else %}-{% endif %}
             </td>
-            <td class="host-info">
+            <td class="host-info version">
                 {% if host.versions[53] %}{{ host.versions[53].version }}{% else %}-{% endif %}
             </td>
-            <td class="host-info">
+            <td class="host-info version">
                 {% if host.versions[52] %}{{ host.versions[52].version }}{% else %}-{% endif %}
             </td>
-            <td class="host-info">{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
+            <td class="host-info version">{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
           </tr>
         {% endfor %}
         </tbody>

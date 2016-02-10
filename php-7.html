@@ -26,8 +26,8 @@ layout: default
         {% if host.versions[70] %}
         <tr>
           <td class="host-name"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
-          <td class="host-info">{{ host.versions[70].version }}</td>
-          <td class="host-info">{{ host.default }}</td>
+          <td class="host-info version">{{ host.versions[70].version }}</td>
+          <td class="host-info version">{{ host.default }}</td>
         </tr>
         {% endif %}
       {% endfor %}

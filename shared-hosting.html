@@ -20,8 +20,6 @@ layout: default
             <th>5.3</th>
             <th>5.2</th>
             <th>Default</th>
-            <th>Manual </br> Upgrade</th>
-            <th>Auto </br> Upgrade</th>
           </tr>
         </thead>
         <tbody>
@@ -48,8 +46,6 @@ layout: default
                 {% if host.versions[52] %}{{ host.versions[52].version }}{% else %}-{% endif %}
             </td>
             <td class="host-info">{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
-            <td class="host-info">{% if host.manual_update %}{{ host.manual_update }}{% endif %}</td>
-            <td class="host-info">{% if host.auto_update %}{{ host.auto_update }}{% endif %}</td>
           </tr>
         {% endfor %}
         </tbody>

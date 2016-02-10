@@ -4,10 +4,10 @@ As a PHP developer, we are often stuck with hosts that support insanely old vers
 projects end up supporting those insanely old versions, and we all get stuck in this "Mexican Standoff" situation.
 
 Some developers force their requirements to be much higher than these default versions in a bid to force the hosting
-companies to upgrade, but in reality we just end up with people reducing their software to try and get it onto old 
+companies to upgrade, but in reality we just end up with people reducing their software to try and get it onto old
 servers.
 
-Let's keep close tabs on who is offering which versions of PHP, so we can help those less in the know find 
+Let's keep close tabs on who is offering which versions of PHP, so we can help those less in the know find
 good companies to host their stuff on.
 
 **Website:** [phpversions.info](http://phpversions.info)
@@ -16,9 +16,8 @@ good companies to host their stuff on.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## TODO 
+## TODO
 
-- [ ] Automate as many hosts as possible with [phparse](https://github.com/philsturgeon/phparse)
 - [ ] Rebuild so it's not a silly Jekyll site [#82](https://github.com/philsturgeon/phpversions.info/issues/82)
 - [ ] Add EOL indicators so you know a version is not just bad but really bad [#25](https://github.com/philsturgeon/phpversions.info/issues/25)
 - [ ] Add indicated for security breached versions [#56](https://github.com/philsturgeon/phpversions.info/issues/56)

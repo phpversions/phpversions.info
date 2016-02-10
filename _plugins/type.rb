@@ -1,5 +1,3 @@
-require 'semantic'
-
 module Jekyll
   module TypeFilter
     def filter_by_type(input, type)

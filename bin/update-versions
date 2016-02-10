@@ -1,19 +1,18 @@
 <?php
 
+$dataFileName = __DIR__.'/../_data/hosts.yml';
+
 require "vendor/autoload.php";
 
 use Sturgeon\PHPArse\Parser;
 use Symfony\Component\Yaml\Yaml;
 
-function readYamlFile($fileName) {
-  $yamlFile = __DIR__.'/../_data/'.$fileName.'.yml';
+function readYamlFile($yamlFile) {
   return YAML::parse(file_get_contents($yamlFile));
 }
 
-function saveYamlFile($fileName, $array) {
+function saveYamlFile($yamlFile, $array) {
   $newYaml = Yaml::dump($array, 4);
-
-  $yamlFile = __DIR__.'/../_data/'.$fileName.'.yml';
   file_put_contents($yamlFile, $newYaml);
 }
 
@@ -38,8 +37,6 @@ function updateHostVersionArray($array) {
   return $array;
 }
 
-foreach (['shared_hosts', 'paas_hosts'] as $dataFileName) {
-  $existingArray = readYamlFile($dataFileName);
-  $updatedArray = updateHostVersionArray($existingArray);
-  saveYamlFile($dataFileName, $updatedArray);
-}
+$existingArray = readYamlFile($dataFileName);
+$updatedArray = updateHostVersionArray($existingArray);
+saveYamlFile($dataFileName, $updatedArray);

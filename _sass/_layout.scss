@@ -95,14 +95,14 @@ ul li.nav-link {
     border-right: dotted;
     border-color: $action-color;
     border-width: 3px;
-    width: 24%;
+    width: 19%;
     text-align: center;
     &:last-child{
       border-right: none;
     }
   }
   @media (min-width: $large-screen) {
-    width: 24.5%;
+    width: 19.5%;
   }
   a {
     display: inline-block;
@@ -175,7 +175,7 @@ footer {
     @media (min-width: $medium-screen) {
       @include clearfix;
       float: left;
-      width: 33.33%;
+      width: 25%;
       margin: 0 auto;
       height: 400px;
       padding: 0;

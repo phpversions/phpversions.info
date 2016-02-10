@@ -23,7 +23,7 @@ layout: default
               </tr>
             </thead>
             <tbody>
-            {% assign hosts = (site.data.paas_hosts | semver_sort_by: 'default') %}
+            {% assign hosts = (site.data.hosts | filter_by_type: 'paas' | semver_sort_by: 'default') %}
             {% for host in hosts reversed %}
               <tr>
                 <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>

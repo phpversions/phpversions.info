@@ -2,14 +2,7 @@
 layout: default
 ---
 
-{% assign all_hosts = "" | split: "" %}
-{% for host in site.data.shared_hosts %}
-{% assign all_hosts = all_hosts | push: host %}
-{% endfor %}
-{% for host in site.data.paas_hosts %}
-{% assign all_hosts = all_hosts | push: host %}
-{% endfor %}
-
+{% assign all_hosts = site.data.hosts %}
 {% assign sorted_hosts = (all_hosts | semver_sort_by: 'default') %}
 
 <article class="hosts">
@@ -30,13 +23,13 @@ layout: default
       </thead>
       <tbody>
       {% for host in sorted_hosts reversed %}
+        {% if host.versions[70] %}
         <tr>
-          {% if host.versions[70] %}
           <td class="host-name"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
           <td class="host-info">{{ host.versions[70].version }}</td>
           <td class="host-info">{{ host.default }}</td>
-          {% endif %}
         </tr>
+        {% endif %}
       {% endfor %}
       </tbody>
     </table>

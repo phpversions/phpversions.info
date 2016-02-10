@@ -391,6 +391,17 @@ article.hosts {
       }
     }
   }
+
+  .good-version {
+    color: #0c0;
+  }
+  .bad-version {
+    color: #c00;
+  }
+  .unknown-version {
+    color: #999;
+    font-style: italic;
+  }
 }
 
 .tables__scrollbar {

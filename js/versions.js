@@ -67,7 +67,7 @@ if (document.getElementsByClassName('tables').length > 0) {
     getBadVersions(function (badVersions) {
         var versionCells = document.querySelectorAll('.tables .version');
         Array.prototype.forEach.call(versionCells, function (el) {
-            var version = el.innerText.trim();
+            var version = el.textContent.trim();
             if (version === '' || version === '-') {
                 return;
             }

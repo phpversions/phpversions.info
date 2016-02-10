@@ -2,14 +2,7 @@
 layout: default
 ---
 
-{% assign all_hosts = "" | split: "" %}
-{% for host in site.data.shared_hosts %}
-{% assign all_hosts = all_hosts | push: host %}
-{% endfor %}
-{% for host in site.data.paas_hosts %}
-{% assign all_hosts = all_hosts | push: host %}
-{% endfor %}
-
+{% assign all_hosts = site.data.hosts %}
 {% assign sorted_hosts = (all_hosts | semver_sort_by: 'default') %}
 
 <article class="hosts">

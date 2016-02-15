@@ -1,10 +1,14 @@
 machine:
+  php:
+    version: 7.0.0RC7
   ruby:
-    version: 2.2.3
+    version: 2.3.0
 
 dependencies:
   pre:
     - bundle install
+    - composer install --prefer-source --no-interaction
+    - php ./bin/update-versions
 
 test:
   post:

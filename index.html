@@ -19,6 +19,13 @@ layout: index
     </a>
   </div>
   <div class="grid-item">
+    <a href="/managed-hosting">
+      <h1>Managed Hosting</h1>
+      <p>Not interested in managing servers yourself?</p>
+      <p>Managed hosting providers will keep your server and software up-to-date for you.</p>
+    </a>
+  </div>
+  <div class="grid-item">
     <a href="/operating-systems">
       <h1>Operating Systems</h1>
       <p>Want to know which Linux distribution or OS X version come with what version of PHP?</p>
@@ -28,11 +35,24 @@ layout: index
 </div>
 
 <div class="homepage-faq grid-item-image">
-  <h2>FAQ</h2>
-  <h3>Where do you get the data from?</h3>
-    <p>This is a community managed project. People send the versions in <a href="https://github.com/philsturgeon/phpversions.info/tree/master/_data">via GitHub</a>. We've had a few hosting company employees sending in updates as they deploy them, which is cool.</p>
-  <h3>Any plans to automate this?</h3>
-    <p><a href="https://github.com/philsturgeon/phpversions.info/issues/82">Yeah loads</a>, but for now we still rely on humans.</p>
-  <h3>How do I contribute?</h3>
+    <h2>FAQ</h2>
+
+    <h3>I work for a hosting company that isn't on here, can we get listed?</h3>
+    <p>Sure why not! Shout at <a href="http://twitter.com/philsturgeon">@philsturgeon</a> on Twitter, or send a pull request to the <a href="https://github.com/philsturgeon/phpversions.info/blob/master/_data/hosts.yml">GitHub repo</a>.</p>
+
+    <h3>Where do you get the data from?</h3>
+    <p>This used to be entirely manual, which was a horrendous to keep up to date. Now we parse phpinfo() on public URLs that hosts make available, like this:</p>
+
+    <p><a href="http://php70.hosteurope-infos.de/phpinfo.php">http://php70.hosteurope-infos.de/phpinfo.php</a></p>
+
+    <p>Not all hosts have them so some are still entirely manual. Either way, sending us patch version changes, changes in the default versions, or new public phpinfo URLs can be done via updating <a href="https://github.com/philsturgeon/phpversions.info/tree/master/_data">hosts.yml</a>.</p>
+
+    <h3>How do I contribute?</h3>
+
     <p>Read the <a href="https://github.com/philsturgeon/phpversions.info/blob/master/CONTRIBUTING.md">contributing guide on GitHub</a>.</p>
+
+    <h3>Do you intend to implement X or Y?</h3>
+
+    <p>I have a bit of a <a href="https://github.com/philsturgeon/phpversions.info#todo">todo list</a>, and I would love help if you're bored.</p>
+
 </div>

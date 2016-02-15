@@ -24,12 +24,12 @@ layout: default
         </tr>
       </thead>
       <tbody>
-      {% assign operating_systems = (site.data.operating_systems | semver_sort_by: 'default') %}
+      {% assign operating_systems = (site.data.operating_systems | semver_sort_by: 'semver') %}
       {% for system in operating_systems reversed %}
         <tr>
           <td class="host-name">{{ system.name }}</td>
           <td class="host-info">{{ system.family }}</td>
-          <td class="host-info">{{ system.default }}</td>
+          <td class="host-info version">{{ system.version }}</td>
         </tr>
       {% endfor %}
       </tbody>

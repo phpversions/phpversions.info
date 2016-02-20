@@ -1,8 +1,53 @@
----
-layout: index
----
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="grid-items">
+  <title>PHP Versions</title>
+  <meta name="description" content="Learn which versions of PHP are available on different web hosting providers, so you can make informed decisions.
+">
+  <link href='//fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://phpversions.info/">
+</head>
+
+<body>
+
+    
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo home">
+      <img src="/php-versions.png" alt="Logo Image">
+    </a>
+    <nav role="navigation">
+      <ul class="navigation-menu show">
+        <li class="nav-link"><a href="/shared-hosting">Shared Hosts</a></li>
+        <li class="nav-link"><a href="/paas-hosting">PaaS Hosts</a></li>
+        <li class="nav-link"><a href="/managed-hosting">Managed Hosts</a></li>
+        <li class="nav-link"><a href="/operating-systems">Operating Systems</a></li>
+        <li class="nav-link"><a href="/php-7">PHP 7</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </div>
+</header>
+
+
+    <div class="hero">
+    	<div class="hero-inner">
+    		<div class="hero-copy">
+                <p>Don't get stuck on crap old versions of PHP just because your host does not support it. Keep using the newest version, and if you gotta switch... maybe you gotta switch.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="wrapper">
+            <div class="grid-items">
   <div class="grid-item">
     <a href="/shared-hosting">
       <h1>Shared Hosting</h1>
@@ -56,3 +101,32 @@ layout: index
     <p>I have a bit of a <a href="https://github.com/philsturgeon/phpversions.info#todo">todo list</a>, and I would love help if you're bored.</p>
 
 </div>
+
+        </div>
+    </section>
+
+    <!--<div class="wrapper-for-content-outside-of-footer">
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+</div>-->
+
+<footer>
+    <p>Copyright © 2015 <a href="https://philsturgeon.uk/">Phil Sturgeon</a>. <a href="https://github.com/philsturgeon/phpversions.info/">Contributions</a> from the <a href="https://github.com/philsturgeon/phpversions.info/graphs/contributors">community</a>.</p>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sortable/0.6.0/js/sortable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.min.js"></script>
+<script src="/js/versions.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69566063-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

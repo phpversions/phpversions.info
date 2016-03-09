@@ -4,4 +4,5 @@ source 'https://rubygems.org' do
   gem 'jekyll'
   gem 'semantic'
   gem 'html-proofer'
+  gem 'jekyll-timeago'
 end

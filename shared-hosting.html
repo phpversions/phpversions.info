@@ -13,12 +13,12 @@ layout: default
         <thead>
           <tr>
             <th>Host</th>
+            <th>Last Scanned</th>
             <th>7.0</th>
             <th>5.6</th>
             <th>5.5</th>
             <th>5.4</th>
             <th>5.3</th>
-            <th>5.2</th>
             <th>Default</th>
           </tr>
         </thead>
@@ -27,6 +27,9 @@ layout: default
         {% for host in hosts reversed %}
           <tr>
             <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
+            <td class="host-info">
+                {% if host.last_scanned_at %}{{ host.last_scanned_at | timeago }}{% else %}<i class="fa fa-times"></i>{% endif %}
+            </td>
             <td class="host-info version">
                 {% if host.versions[70] %}{{ host.versions[70].version }}{% else %}-{% endif %}
             </td>
@@ -41,9 +44,6 @@ layout: default
             </td>
             <td class="host-info version">
                 {% if host.versions[53] %}{{ host.versions[53].version }}{% else %}-{% endif %}
-            </td>
-            <td class="host-info version">
-                {% if host.versions[52] %}{{ host.versions[52].version }}{% else %}-{% endif %}
             </td>
             <td class="host-info version">{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
           </tr>

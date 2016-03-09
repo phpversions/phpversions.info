@@ -29,6 +29,8 @@ function updateHostVersionArray($array) {
         continue;
       }
 
+      $hostMeta['last_scanned_at'] = (new DateTime('now'))->format(DateTime::ISO8601);
+
       echo "Parsing {$hostMeta['name']} PHP {$versionKey} from: {$versionMeta['phpinfo']}".PHP_EOL;
 
       $parser = Parser::readFromUrl($versionMeta['phpinfo']);
@@ -73,7 +75,7 @@ function updateOperatingSystem($os)
   $version = readDistroPackageVersion($os['package_url'], $os['distro']);
 
   if ($version === $os['version']) {
-    echo "Looks like {$os['name']} hasn't changed from {$version}".PHP_EOL;
+    echo "- No change for {$os['name']}, stil {$version}".PHP_EOL;
     return $os;
   }
 

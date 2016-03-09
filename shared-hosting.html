@@ -23,8 +23,8 @@ layout: default
           </tr>
         </thead>
         <tbody>
-        {% assign hosts = (site.data.hosts | filter_by_type: 'shared' | semver_sort_by: 'default') %}
-        {% for host in hosts reversed %}
+        {% assign hosts = (site.data.hosts | filter_by_type: 'shared' | sort: 'name') %}
+        {% for host in hosts %}
           <tr>
             <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
             <td class="host-info">
@@ -45,7 +45,7 @@ layout: default
             <td class="host-info version">
                 {% if host.versions[53] %}{{ host.versions[53].version }}{% else %}-{% endif %}
             </td>
-            <td class="host-info version">{% if host.default %}{{ host.default }}{% else %}<em>???</em>{% endif %}</td>
+            <td class="host-info version">{% if host.default %}{{ host.versions[host.default].version }}{% else %}<em>???</em>{% endif %}</td>
           </tr>
         {% endfor %}
         </tbody>

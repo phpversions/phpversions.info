@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign all_hosts = site.data.hosts %}
-{% assign sorted_hosts = (all_hosts | semver_sort_by: 'default') %}
+{% assign sorted_hosts = (all_hosts | sort: 'name') %}
 
 <article class="hosts">
   <section>
@@ -17,17 +17,21 @@ layout: default
       <thead>
         <tr>
           <th>Host</th>
+          <th>Last Scanned</th>
           <th>7.0</th>
           <th>Default</th>
         </tr>
       </thead>
       <tbody>
-      {% for host in sorted_hosts reversed %}
+      {% for host in sorted_hosts %}
         {% if host.versions[70] %}
         <tr>
           <td class="host-name"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
+          <td class="host-info">
+              {% if host.last_scanned_at %}{{ host.last_scanned_at | timeago }}{% else %}<i class="fa fa-times"></i>{% endif %}
+          </td>
           <td class="host-info version">{{ host.versions[70].version }}</td>
-          <td class="host-info version">{{ host.default }}</td>
+          <td class="host-info version">{% if host.default %}{{ host.versions[host.default].version }}{% else %}<em>???</em>{% endif %}</td>
         </tr>
         {% endif %}
       {% endfor %}

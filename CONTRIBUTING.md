@@ -13,8 +13,71 @@ We use Jekyll for this, which yep, trollolol is Ruby I know. We did this because
 Send a PR adding or updating records in `./data/`, listing which versions of PHP they support, and which
 version is installed by default when new plans are created.
 
-Keep in mind, if the value of any versions `phpinfo` is a URL (not `null`) then whatever number you put in will be overridden. We used to ask for version numbers manually, but we're trying to switch towards automation now, so getting us a phpinfo URL would be the most useful thing to do.
+### Hosts
 
-We use a semver-based sorting algorithm as PHP has been semver-ish for a while now. That means if the numbers you put into `default` are not proper [SemVer](http://semver.org/), then it'll fall over.
+You can add and update hosts by editing the `./data/hosts.yml` file, which is written in [YAML](http://www.yaml.org/).
 
-Please ensure that hosting company names are in alphabetical order, and look out for duplicates by updating your branch before you commit. Send a pull request when it's done.
+The format looks like this:
+
+```
+-
+    name: '1&1'
+    url: 'http://www.1and1.com/web-hosting#info-list'
+    type: shared
+    default: 55
+    versions:
+        54:
+            phpinfo: null
+            patch: 35
+            version: 5.4.35
+            semver: 5.4.35
+        55:
+            phpinfo: null
+            patch: 20
+            version: 5.5.20
+            semver: 5.5.20
+        56:
+            phpinfo: null
+            patch: 4
+            version: 5.6.4
+            semver: 5.6.4
+```
+
+The `name` field is the name of the hosting company as you'd like it to show to humans. We'll auto-escape any special HTML characters don't worry. 
+
+The you have `type`, which can be `shared`, `managed` or `paas`. If you provide multiple, make multiple host entries, and change the name to contain "Shared" at the end or something logical like that.
+
+The remaining stuff is `default`, which points to one of the `versions` below. Here are the supported versions:
+
+- 52
+- 53
+- 54
+- 55
+- 56
+- 70
+
+Probably don't bother listing PHP 5.2.x versions because we'll probably remove them soon, _as should you as any sort of responsible hosting company!_ :) 
+
+The version information should contain the patch number, which in PHP 7.0.4 would be `4`. In that example `semver` would be `7.0.4` and so - hopefully - it would be for version. I say hopefully because some nutty hosts supply their own custom builds of PHP, which sometimes contain security patches but generally are a really bad idea and a headache. Either way, if you have something like `5.6.18-1~he.0` then that is what you put in `version`. 
+
+If you provide us with a `phpinfo` URL [like this](http://php56.hosteurope-infos.de/phpinfo.php) we'll be able to automatically update your patch versions, and you'll only ever need to come back to add a new major/minor version (PHP 7.1) or change your default. That doesn't happen often, so shouldn't be too much of a hardship.
+
+If you leave phpinfo blank, we might mark you as having an insecure version of PHP on your website, which might not look great. If you want to password protect your phpinfo URLs or provide us with a secret one then get in touch, and we can sort that out. 
+
+### Operating Systems
+
+We store operating system data in `./data/operating_systems.yml` surprisingly enough. :D
+
+```
+-
+    name: 'CentOS 7'
+    family: linux
+    distro: centos
+    version: 5.4.16
+    semver: 5.4.16
+    patch: 16
+```
+
+Similar sort of thing. Shove anyting you want in family/distro at this point, it's not important. We'll standardize it and add icons or something flashy sometime.
+
+These versions should be _what is available in the standard official repository_, no third-party stuff, no hacking your sources, no bleeding edge nonsense, etc. Just normal, official, stable stuff. 

@@ -14,9 +14,3 @@ markdown: kramdown
 permalink: pretty
 
 exclude: [bin, vendor, php-vendor]
-gems: [jekyll-timeago]
-
-jekyll_timeago:
-  depth: 1
-  today: 'Today'
-  yesterday: 'Yesterday'

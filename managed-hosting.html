@@ -27,8 +27,8 @@ layout: default
                 {% for host in hosts %}
                 <tr>
                     <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
-                    <td class="host-info">
-                        {% if host.last_scanned_at %}{{ host.last_scanned_at | timeago }}{% else %}<i class="fa fa-times"></i>{% endif %}
+                    <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
+                        <i class="fa fa-times"></i>
                     </td>
                     <td class="host-info version">
                         {% if host.versions[70] %}{{ host.versions[70].version }}{% else %}-{% endif %}

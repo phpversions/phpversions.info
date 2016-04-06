@@ -29,16 +29,21 @@ function updateHostVersionArray($array) {
         continue;
       }
 
-      $hostMeta['last_scanned_at'] = (new DateTime('now'))->format(DateTime::ISO8601);
-
       echo "Parsing {$hostMeta['name']} PHP {$versionKey} from: {$versionMeta['phpinfo']}".PHP_EOL;
 
-      $parser = Parser::readFromUrl($versionMeta['phpinfo']);
-      $info = $parser->parse();
+      try {
+        $parser = Parser::readFromUrl($versionMeta['phpinfo']);
+        $info = $parser->parse();
 
-      $versionMeta['patch'] = $info->phpSemanticVersion()->getPatch();
-      $versionMeta['semver'] = (string) $info->phpSemanticVersion();
-      $versionMeta['version'] = $info->phpVersion();
+        $versionMeta['patch'] = $info->phpSemanticVersion()->getPatch();
+        $versionMeta['semver'] = (string) $info->phpSemanticVersion();
+        $versionMeta['version'] = $info->phpVersion();
+
+        // Update this to show a successful scan happened
+        $hostMeta['last_scanned_at'] = (new DateTime('now'))->format(DateTime::ISO8601);
+      } catch (Exception $e) {
+        echo "-- ERROR: Failed to parse {$hostMeta['name']}\n\n".$e->getMessage();
+      }
     }
   }
   return $array;

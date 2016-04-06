@@ -19,7 +19,6 @@ layout: default
           <th>Host</th>
           <th>Last Scanned</th>
           <th>7.0</th>
-          <th>Default</th>
         </tr>
       </thead>
       <tbody>
@@ -31,7 +30,6 @@ layout: default
               <i class="fa fa-times"></i>
           </td>
           <td class="host-info version">{{ host.versions[70].version }}</td>
-          <td class="host-info version">{% if host.default %}{{ host.versions[host.default].version }}{% else %}<em>???</em>{% endif %}</td>
         </tr>
         {% endif %}
       {% endfor %}

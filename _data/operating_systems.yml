@@ -23,7 +23,7 @@
     name: 'Debian 6 (Squeeze)'
     family: linux
     distro: debian
-    package_url: 'https://packages.debian.org/squeeze/php5'
+    package_url: null
     version: 5.3.3-7+squeeze19
     semver: 5.3.3
     patch: 3
@@ -40,9 +40,9 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/jessie/php5'
-    version: 5.6.17+dfsg-0+deb8u1
-    semver: 5.6.17
-    patch: 17
+    version: 5.6.19+dfsg-0+deb8u1
+    semver: 5.6.19
+    patch: 19
 -
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux

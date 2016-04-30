@@ -113,3 +113,11 @@
     version: 5.6.11+dfsg-1ubuntu3.1
     semver: 5.6.11
     patch: 11
+-
+    name: 'Ubuntu 16.04 LTS (Xenial)'
+    family: linux
+    distro: ubuntu
+    package_url: 'http://packages.ubuntu.com/xenial/php/php7.0'
+    version: 7.0.4-7ubuntu2
+    semver: 7.0.4
+    patch: 4

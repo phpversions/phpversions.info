@@ -57,6 +57,10 @@ function readDistroPackageVersion($url, $distro)
       $xpath = '//*[@id="content"]/h1';
       $regex = '/\(([^\)]+)/';
     break;
+    case 'centos':
+      $xpath = '//a[matches(@href, "^php-\d+")]';
+      $regex = '/(.+)\.src\.rpm$/';
+    break;
   }
 
   $crawler = new Crawler(file_get_contents($url));

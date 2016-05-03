@@ -2,21 +2,24 @@
     name: 'CentOS 7'
     family: linux
     distro: centos
-    version: 5.4.16
+    package_url: 'http://vault.centos.org/centos/7/os/Source/SPackages/'
+    version: 5.4.16-36.el7_1
     semver: 5.4.16
     patch: 16
 -
     name: 'CentOS 6'
     family: linux
     distro: centos
-    version: 5.3.3
+    package_url: http://vault.centos.org/centos/6/os/Source/SPackages/
+    version: 5.3.3-40.el6_6
     semver: 5.3.3
     patch: 3
 -
     name: 'CentOS 5'
     family: linux
     distro: centos
-    version: 5.1.6
+    package_url: http://vault.centos.org/centos/5/os/Source/
+    version: 5.1.6-44.el5_10
     semver: 5.1.6
     patch: 6
 -

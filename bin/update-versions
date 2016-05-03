@@ -59,7 +59,7 @@ function readDistroPackageVersion($url, $distro)
     break;
     case 'centos':
       $xpath = '//a[starts-with(@href, "php-") and number(substring(@href, 5, 1))>0 and number(substring(@href, 5, 1))<=9]';
-      $regex = '/(.+)\.src\.rpm$/';
+      $regex = '/php-(.+)\.src\.rpm$/';
     break;
   }
 

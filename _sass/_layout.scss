@@ -435,11 +435,11 @@ table[data-sortable] {
       visibility: visible;
       display: inline-block;
       vertical-align: middle;
-      height: 2px;
-      width: 2px;
+      height: 0px;
+      width: 0px;
       border-width: 5px;
       border-style: dotted;
-      border-color: $marker-color;
+      border-color: transparent;
       margin-right: 5px;
       margin-left: 10px;
   }

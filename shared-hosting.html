@@ -12,8 +12,8 @@ layout: default
         <table class="tables tables__scrollbar" data-sortable>
         <thead>
           <tr>
-            <th>Host</th>
-            <th>Last Scanned</th>
+            <th data-sortable-type="alpha">Host</th>
+            <th data-sortable-type="alpha">Last Scanned</th>
             <th>7.0</th>
             <th>5.6</th>
             <th>5.5</th>
@@ -27,7 +27,7 @@ layout: default
         {% for host in hosts %}
           <tr>
             <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
-            <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
+            <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}" data-value="{{ host.last_scanned_at }}">
                 <i class="fa fa-times"></i>
             </td>
             <td class="host-info version">

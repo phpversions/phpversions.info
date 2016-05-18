@@ -10,7 +10,7 @@
     name: 'CentOS 6'
     family: linux
     distro: centos
-    package_url: http://vault.centos.org/centos/6/os/Source/SPackages/
+    package_url: 'http://vault.centos.org/centos/6/os/Source/SPackages/'
     version: 5.3.3-40.el6_6
     semver: 5.3.3
     patch: 3
@@ -18,7 +18,7 @@
     name: 'CentOS 5'
     family: linux
     distro: centos
-    package_url: http://vault.centos.org/centos/5/os/Source/
+    package_url: 'http://vault.centos.org/centos/5/os/Source/'
     version: 5.1.6-44.el5_10
     semver: 5.1.6
     patch: 6
@@ -43,9 +43,9 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/jessie/php5'
-    version: 5.6.19+dfsg-0+deb8u1
-    semver: 5.6.19
-    patch: 19
+    version: 5.6.20+dfsg-0+deb8u1
+    semver: 5.6.20
+    patch: 20
 -
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux
@@ -89,7 +89,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/precise/php/php5'
-    version: 5.3.10-1ubuntu3.21
+    version: 5.3.10-1ubuntu3.22
     semver: 5.3.10
     patch: 10
 -
@@ -97,7 +97,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/trusty/php/php5'
-    version: 5.5.9+dfsg-1ubuntu4.14
+    version: 5.5.9+dfsg-1ubuntu4.16
     semver: 5.5.9
     patch: 9
 -
@@ -113,7 +113,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/wily/php/php5'
-    version: 5.6.11+dfsg-1ubuntu3.1
+    version: 5.6.11+dfsg-1ubuntu3.3
     semver: 5.6.11
     patch: 11
 -

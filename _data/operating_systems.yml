@@ -11,7 +11,7 @@
     family: linux
     distro: centos
     package_url: 'http://vault.centos.org/centos/6/os/Source/SPackages/'
-    version: 5.3.3-40.el6_6
+    version: 5.3.3-47.el6
     semver: 5.3.3
     patch: 3
 -
@@ -35,7 +35,7 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/wheezy/php5'
-    version: 5.4.45-0+deb7u2
+    version: 5.4.45-0+deb7u4
     semver: 5.4.45
     patch: 45
 -
@@ -43,9 +43,9 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/jessie/php5'
-    version: 5.6.20+dfsg-0+deb8u1
-    semver: 5.6.20
-    patch: 20
+    version: 5.6.22+dfsg-0+deb8u1
+    semver: 5.6.22
+    patch: 22
 -
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux
@@ -89,7 +89,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/precise/php/php5'
-    version: 5.3.10-1ubuntu3.22
+    version: 5.3.10-1ubuntu3.23
     semver: 5.3.10
     patch: 10
 -
@@ -97,7 +97,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/trusty/php/php5'
-    version: 5.5.9+dfsg-1ubuntu4.16
+    version: 5.5.9+dfsg-1ubuntu4.17
     semver: 5.5.9
     patch: 9
 -
@@ -113,7 +113,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/wily/php/php5'
-    version: 5.6.11+dfsg-1ubuntu3.3
+    version: 5.6.11+dfsg-1ubuntu3.4
     semver: 5.6.11
     patch: 11
 -
@@ -121,6 +121,6 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/xenial/php/php7.0'
-    version: 7.0.4-7ubuntu2
+    version: 7.0.4-7ubuntu2.1
     semver: 7.0.4
     patch: 4

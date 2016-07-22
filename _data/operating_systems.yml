@@ -43,9 +43,9 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/jessie/php5'
-    version: 5.6.22+dfsg-0+deb8u1
-    semver: 5.6.22
-    patch: 22
+    version: 5.6.23+dfsg-0+deb8u1
+    semver: 5.6.23
+    patch: 23
 -
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux

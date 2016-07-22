@@ -8,9 +8,9 @@ layout: default
 <article class="hosts">
   <section>
     <div class="host-description">
-      <h2>PHP 7</h2>
-      <p>PHP 7 is the new hotness, and it is finally <a href="http://php.net/archive/2015.php#id2015-12-03-1">ready for the world to use</a>!! It's <a href="http://www.infoworld.com/article/2947680/web-development/lightning-fast-php-7-reaches-beta.html">blazing fast</a>, it has a bunch of <a href="http://www.sitepoint.com/php-7-revolution-return-types-removed-artifacts/">cool new features</a> and it's just <a href="https://www.digitalocean.com/company/blog/getting-ready-for-php-7/">generally a lot better</a>.
-      <p>To install PHP 7.0 locally, check out the installation instructions on <a href="http://www.phptherightway.com/#use_the_current_stable_version">PHP The Right Way: Getting Started</a>.</p>
+      <h2>PHP 7.1</h2>
+      <p>With the excellent new PHP 7.0 out and about the last 7 months, PHP 7.1 is heading to a server near you. PHP 7.1 is <a href="http://php.net/archive/2016.php#id2016-07-21-1">only a beta right now</a>, but you can keep an eye on this page to find out when exactly PHP 7.1 is ready for use.</p>
+      <p>If you want something stable, stick to PHP 7.0 with help from <a href="http://www.phptherightway.com/#use_the_current_stable_version">PHP The Right Way: Getting Started</a>, or you can get a bit more adventurous and install whichever version you like <a href="https://github.com/php/php-src">from source</a>.</p>
       <hr>
     </div>
     <table class="tables">
@@ -18,21 +18,24 @@ layout: default
         <tr>
           <th>Host</th>
           <th>Last Scanned</th>
-          <th>7.0</th>
+          <th>7.1</th>
         </tr>
       </thead>
       <tbody>
       {% for host in sorted_hosts %}
-        {% if host.versions[70] %}
+        {% if host.versions[71] %}
         <tr>
           <td class="host-name"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
           <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
               <i class="fa fa-times"></i>
           </td>
-          <td class="host-info version">{{ host.versions[70].version }}</td>
+          <td class="host-info version">{{ host.versions[71].version }}</td>
         </tr>
         {% endif %}
       {% endfor %}
+        <tr>
+          <td colspan="3">Want to contribute to this list? This site is up on GitHub, so head over to our <a href="https://github.com/philsturgeon/phpversions.info/">contribution instructions</a>.
+        </tr>
       </tbody>
     </table>
   </section>

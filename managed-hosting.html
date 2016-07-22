@@ -14,6 +14,7 @@ layout: default
                 <tr>
                     <th>Host</th>
                     <th>Last Scanned</th>
+                    <th>7.1</th>
                     <th>7.0</th>
                     <th>5.6</th>
                     <th>5.5</th>
@@ -31,6 +32,9 @@ layout: default
                         <i class="fa fa-times"></i>
                     </td>
                     <td class="host-info version">
+                        {% if host.versions[71] %}{{ host.versions[71].version }}{% else %}-{% endif %}
+                    </td>
+                    <td class="host-info version">
                         {% if host.versions[70] %}{{ host.versions[70].version }}{% else %}-{% endif %}
                     </td>
                     <td class="host-info version">
@@ -41,9 +45,6 @@ layout: default
                     </td>
                     <td class="host-info version">
                         {% if host.versions[54] %}{{ host.versions[54].version }}{% else %}-{% endif %}
-                    </td>
-                    <td class="host-info version">
-                        {% if host.versions[53] %}{{ host.versions[53].version }}{% else %}-{% endif %}
                     </td>
                     <td class="host-info version">{% if host.default %}{{ host.versions[host.default].version }}{% else %}<em>???</em>{% endif %}</td>
                 </tr>

@@ -35,7 +35,7 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/wheezy/php5'
-    version: 5.4.45-0+deb7u4
+    version: 5.4.45-0+deb7u5
     semver: 5.4.45
     patch: 45
 -

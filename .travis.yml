@@ -1,0 +1,15 @@
+language: php
+php:
+  - '7.0'
+before_install:
+  - rvm install 2.3.1
+  - bundle install
+  - composer install --prefer-source --no-interaction
+  - php ./bin/update-versions
+script:
+  - bundle exec jekyll build
+after_success:
+  - bash ./bin/deploy.sh
+env:
+  global:
+    secure: 3ttSxsQeuEQVeyR+jlz6h0aGd7sqzPwPu8C+FGrzPtluam0pwx+qV2TZjGmLV3UbOoQ8gZfQoWlebWkY8qG2jC0nA4rjR+ZulZmIH+W5EVQaxu+7s0HQhZKuqLOYh1/03MJPMocBXT4cVvnygNrTIXZ1TRGpLz4ZsyRpNEWND/0=

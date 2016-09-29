@@ -1,41 +1,27 @@
 #!/bin/bash
 
-# Automated deploy script with Circle CI.
+set -o errexit -o nounset
 
-# Exit if any subcommand fails.
-set -e
-
-# Variables
-ORIGIN_URL=`git config --get remote.origin.url`
-
-echo "Started deploying"
-
-# Checkout gh-pages branch.
-if [ `git branch | grep gh-pages` ]
+if [ "$TRAVIS_BRANCH" != "master" ]
 then
-  git branch -D gh-pages
+  echo "This commit was made against the $TRAVIS_BRANCH and not the master! No deploy!"
+  exit 0
 fi
-git checkout -b gh-pages
 
-# Build site.
-bundle exec jekyll build
+rev=$(git rev-parse --short HEAD)
 
-# Delete and move files.
-find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
-mv _site/* .
-rm -R _site/
+cd _site
 
-# Push to gh-pages.
-git config user.name "$USER_NAME"
-git config user.email "$USER_EMAIL"
+git init
+git config user.name "Phil Sturgeon"
+git config user.email "me@philsturgeon.uk"
 
-git add -fA
-git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
-git push -f $ORIGIN_URL gh-pages
+git remote add upstream "https://$GH_TOKEN@github.com/philsturgeon/phpversions.info.git"
+git fetch upstream
+git reset upstream/gh-pages
 
-# Move back to previous branch.
-git checkout -
+touch .
 
-echo "Deployed Successfully!"
-
-exit 0
+git add -A .
+git commit -m "rebuild pages at ${rev}"
+git push -q upstream HEAD:gh-pages

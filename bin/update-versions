@@ -63,7 +63,11 @@ function readDistroPackageVersion($url, $distro)
     break;
   }
 
-  $crawler = new Crawler(file_get_contents($url));
+  try {
+    $crawler = new Crawler(file_get_contents($url));
+  } catch (InvalidArgumentException $e) {
+    throw new Exception("Invalid HTML from {$url} for {$distro}");
+  }
   $nodeValue = $crawler->filterXPath($xpath)->text();
   preg_match($regex, $nodeValue, $matches);
   if (empty($matches[1])) {

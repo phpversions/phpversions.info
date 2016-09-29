@@ -3,7 +3,7 @@ php:
   - '7.0'
 before_install:
   - rvm install 2.3.1
-  - bundle install
+  - gem update bundler && bundle install
   - composer install
   - php ./bin/update-versions
 script:

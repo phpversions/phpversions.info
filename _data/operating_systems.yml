@@ -124,3 +124,27 @@
     version: 7.0.8-0ubuntu0.16.04.2
     semver: 7.0.8
     patch: 8
+-
+    name: 'Ubuntu 16.10 (Yakkety)'
+    family: linux
+    distro: ubuntu
+    package_url: 'http://packages.ubuntu.com/yakkety/php/php7.0'
+    version: 7.0.8-3ubuntu3
+    semver: 7.0.8
+    patch: 8
+-
+    name: 'ppenSUSE Tumbleweed'
+    family: linux
+    distro: opensuse
+    package_url: 'https://software.opensuse.org/package/php7'
+    version: 7.0.12
+    semver: 7.0.12
+    patch: 12
+-
+    name: 'ppenSUSE Leap 42.1'
+    family: linux
+    distro: opensuse
+    package_url: 'https://software.opensuse.org/package/php5'
+    version: 5.5.14
+    semver: 5.5.14
+    patch: 14

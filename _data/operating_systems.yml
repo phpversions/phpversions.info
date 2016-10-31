@@ -133,18 +133,18 @@
     semver: 7.0.8
     patch: 8
 -
-    name: 'ppenSUSE Tumbleweed'
+    name: 'openSUSE Tumbleweed'
     family: linux
     distro: opensuse
-    package_url: 'https://software.opensuse.org/package/php7'
+    #package_url: 'https://software.opensuse.org/package/php7'
     version: 7.0.12
     semver: 7.0.12
     patch: 12
 -
-    name: 'ppenSUSE Leap 42.1'
+    name: 'openSUSE Leap 42.1'
     family: linux
     distro: opensuse
-    package_url: 'https://software.opensuse.org/package/php5'
+    #package_url: 'https://software.opensuse.org/package/php5'
     version: 5.5.14
     semver: 5.5.14
     patch: 14

@@ -152,7 +152,7 @@
     name: 'Arch Linux'
     family: linux
     distro: arch
-    package_url: https://www.archlinux.org/packages/?name=php
+    package_url: 'https://www.archlinux.org/packages/extra/x86_64/php/'
     version: 7.0.12-1
     semver: 7.0.12
     patch: 12

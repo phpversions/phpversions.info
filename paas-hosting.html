@@ -31,22 +31,12 @@ layout: default
                 <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
                     <i class="fa fa-times"></i>
                 </td>
-                <td class="host-info version">
-                    {% if host.versions[71] %}{{ host.versions[71].version }}{% else %}-{% endif %}
-                </td>
-                <td class="host-info version">
-                    {% if host.versions[70] %}{{ host.versions[70].version }}{% else %}-{% endif %}
-                </td>
-                <td class="host-info version">
-                    {% if host.versions[56] %}{{ host.versions[56].version }}{% else %}-{% endif %}
-                </td>
-                <td class="host-info version">
-                    {% if host.versions[55] %}{{ host.versions[55].version }}{% else %}-{% endif %}
-                </td>
-                <td class="host-info version">
-                    {% if host.versions[54] %}{{ host.versions[54].version }}{% else %}-{% endif %}
-                </td>
-                <td class="host-info version">{% if host.default %}{{ host.versions[host.default].version }}{% else %}<em>???</em>{% endif %}</td>
+                <td class="host-info version">{{ host.versions[71] | format_version }}</td>
+                <td class="host-info version">{{ host.versions[70] | format_version }}</td>
+                <td class="host-info version">{{ host.versions[56] | format_version }}</td>
+                <td class="host-info version">{{ host.versions[55] | format_version }}</td>
+                <td class="host-info version">{{ host.versions[54] | format_version }}</td>
+                <td class="host-info version">{% if host.default %}{{ host.versions[host.default] | format_version }}{% else %}<em>???</em>{% endif %}</td>
               </tr>
             {% endfor %}
             </tbody>

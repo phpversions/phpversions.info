@@ -29,7 +29,7 @@ layout: default
           <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
               <i class="fa fa-times"></i>
           </td>
-          <td class="host-info version">{{ host.versions[71].version }}</td>
+          <td class="host-info version">{{ host.versions[71] | format_version }}</td>
         </tr>
         {% endif %}
       {% endfor %}

@@ -85,6 +85,12 @@
     semver: 5.5.29
     patch: 29
 -
+    name: 'OSX 10.12 (Sierra)'
+    family: osx
+    version: 5.6.24
+    semver: 5.6.24 
+    patch: 24
+-
     name: 'Ubuntu 12.04 LTS (Precise)'
     family: linux
     distro: ubuntu

@@ -43,9 +43,9 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/jessie/php5'
-    version: 5.6.24+dfsg-0+deb8u1
-    semver: 5.6.24
-    patch: 24
+    version: 5.6.27+dfsg-0+deb8u1
+    semver: 5.6.27
+    patch: 27
 -
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux
@@ -88,14 +88,14 @@
     name: 'OSX 10.12 (Sierra)'
     family: osx
     version: 5.6.24
-    semver: 5.6.24 
+    semver: 5.6.24
     patch: 24
 -
     name: 'Ubuntu 12.04 LTS (Precise)'
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/precise/php/php5'
-    version: 5.3.10-1ubuntu3.24
+    version: 5.3.10-1ubuntu3.25
     semver: 5.3.10
     patch: 10
 -
@@ -103,7 +103,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/trusty/php/php5'
-    version: 5.5.9+dfsg-1ubuntu4.19
+    version: 5.5.9+dfsg-1ubuntu4.20
     semver: 5.5.9
     patch: 9
 -
@@ -127,7 +127,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/xenial/php/php7.0'
-    version: 7.0.8-0ubuntu0.16.04.2
+    version: 7.0.8-0ubuntu0.16.04.3
     semver: 7.0.8
     patch: 8
 -
@@ -142,7 +142,6 @@
     name: 'openSUSE Tumbleweed'
     family: linux
     distro: opensuse
-    #package_url: 'https://software.opensuse.org/package/php7'
     version: 7.0.12
     semver: 7.0.12
     patch: 12
@@ -150,7 +149,6 @@
     name: 'openSUSE Leap 42.1'
     family: linux
     distro: opensuse
-    #package_url: 'https://software.opensuse.org/package/php5'
     version: 5.5.14
     semver: 5.5.14
     patch: 14
@@ -159,6 +157,6 @@
     family: linux
     distro: arch
     package_url: 'https://www.archlinux.org/packages/extra/x86_64/php/'
-    version: 7.0.12-1
-    semver: 7.0.12
-    patch: 12
+    version: 7.0.13-2
+    semver: 7.0.13
+    patch: 13

@@ -35,7 +35,7 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/wheezy/php5'
-    version: 5.4.45-0+deb7u5
+    version: 5.4.45-0+deb7u6
     semver: 5.4.45
     patch: 45
 -
@@ -43,9 +43,9 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/jessie/php5'
-    version: 5.6.27+dfsg-0+deb8u1
-    semver: 5.6.27
-    patch: 27
+    version: 5.6.29+dfsg-0+deb8u1
+    semver: 5.6.29
+    patch: 29
 -
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux
@@ -157,6 +157,6 @@
     family: linux
     distro: arch
     package_url: 'https://www.archlinux.org/packages/extra/x86_64/php/'
-    version: 7.0.13-2
-    semver: 7.0.13
-    patch: 13
+    version: 7.0.14-1
+    semver: 7.0.14
+    patch: 14

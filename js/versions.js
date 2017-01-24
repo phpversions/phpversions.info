@@ -21,7 +21,7 @@ function parseMinorVersion(version) {
     return version.substring(0, version.lastIndexOf('.'));
 }
 
-function getBadVersions(callback) {
+function getFixedVersions(callback) {
     var request = new XMLHttpRequest();
     request.open('GET', 'https://raw.githubusercontent.com/psecio/versionscan/master/src/Psecio/Versionscan/checks.json', true);
 
@@ -31,7 +31,7 @@ function getBadVersions(callback) {
                 // Success!
                 var data = JSON.parse(this.responseText);
 
-                badVersions = _.chain(data.checks)
+                fixedVersions = _.chain(data.checks)
                     // Extract the version numbers from each check
                     .map(function(check){
                         return check.fixVersions.base;
@@ -53,7 +53,7 @@ function getBadVersions(callback) {
                     // Un-chain so we get the final results
                     .value();
 
-                callback(badVersions);
+                callback(fixedVersions);
             }
         }
     };
@@ -64,7 +64,7 @@ function getBadVersions(callback) {
 
 // Only execute this code on pages which have version tables
 if (document.getElementsByClassName('tables').length > 0) {
-    getBadVersions(function (badVersions) {
+    getFixedVersions(function (fixedVersions) {
         var versionCells = document.querySelectorAll('.tables .version');
         Array.prototype.forEach.call(versionCells, function (el) {
             var version = el.textContent.trim();
@@ -82,9 +82,9 @@ if (document.getElementsByClassName('tables').length > 0) {
             var fullVersion = version[0];
             var minorVersion = version[1];
 
-            if (typeof badVersions[minorVersion] === 'undefined') {
+            if (typeof fixedVersions[minorVersion] === 'undefined') {
                 el.classList.add('good-version');
-            } else if (cmpVersions(fullVersion, badVersions[minorVersion]) > 0) {
+            } else if (cmpVersions(fullVersion, fixedVersions[minorVersion]) >= 0) {
                 el.classList.add('good-version');
             } else {
                 el.classList.add('bad-version');

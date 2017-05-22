@@ -15,14 +15,6 @@
     semver: 5.3.3
     patch: 3
 -
-    name: 'CentOS 5'
-    family: linux
-    distro: centos
-    package_url: 'http://vault.centos.org/centos/5/os/Source/'
-    version: 5.1.6-44.el5_10
-    semver: 5.1.6
-    patch: 6
--
     name: 'Debian 6 (Squeeze)'
     family: linux
     distro: debian

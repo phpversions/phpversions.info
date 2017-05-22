@@ -144,11 +144,3 @@
     version: 7.0.14-1
     semver: 7.0.14
     patch: 14
--
-    name: 'Alpine Linux 3.5'
-    family: linux
-    distro: alpine
-    package_url: 'https://pkgs.alpinelinux.org/package/v3.5/main/x86_64/php5'
-    version: 5.6.30-r0
-    semver: 5.6.30
-    patch: 30

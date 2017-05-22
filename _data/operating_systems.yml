@@ -15,14 +15,6 @@
     semver: 5.3.3
     patch: 3
 -
-    name: 'CentOS 5'
-    family: linux
-    distro: centos
-    package_url: 'http://vault.centos.org/centos/5/os/Source/'
-    version: 5.1.6-44.el5_10
-    semver: 5.1.6
-    patch: 6
--
     name: 'Debian 6 (Squeeze)'
     family: linux
     distro: debian
@@ -91,14 +83,6 @@
     semver: 5.6.24
     patch: 24
 -
-    name: 'Ubuntu 12.04 LTS (Precise)'
-    family: linux
-    distro: ubuntu
-    package_url: 'http://packages.ubuntu.com/precise/php/php5'
-    version: 5.3.10-1ubuntu3.25
-    semver: 5.3.10
-    patch: 10
--
     name: 'Ubuntu 14.04 LTS (Trusty)'
     family: linux
     distro: ubuntu
@@ -160,11 +144,3 @@
     version: 7.0.14-1
     semver: 7.0.14
     patch: 14
--
-    name: 'Alpine Linux 3.5'
-    family: linux
-    distro: alpine
-    package_url: 'https://pkgs.alpinelinux.org/package/v3.5/main/x86_64/php5'
-    version: 5.6.30-r0
-    semver: 5.6.30
-    patch: 30

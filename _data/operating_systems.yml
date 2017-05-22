@@ -83,14 +83,6 @@
     semver: 5.6.24
     patch: 24
 -
-    name: 'Ubuntu 12.04 LTS (Precise)'
-    family: linux
-    distro: ubuntu
-    package_url: 'http://packages.ubuntu.com/precise/php/php5'
-    version: 5.3.10-1ubuntu3.25
-    semver: 5.3.10
-    patch: 10
--
     name: 'Ubuntu 14.04 LTS (Trusty)'
     family: linux
     distro: ubuntu

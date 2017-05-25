@@ -3,7 +3,7 @@
     family: linux
     distro: centos
     package_url: 'http://vault.centos.org/centos/7/os/Source/SPackages/'
-    version: 5.4.16-36.el7_1
+    version: 5.4.16-42.el7
     semver: 5.4.16
     patch: 16
 -
@@ -11,7 +11,7 @@
     family: linux
     distro: centos
     package_url: 'http://vault.centos.org/centos/6/os/Source/SPackages/'
-    version: 5.3.3-47.el6
+    version: 5.3.3-49.el6
     semver: 5.3.3
     patch: 3
 -
@@ -27,7 +27,7 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/wheezy/php5'
-    version: 5.4.45-0+deb7u6
+    version: 5.4.45-0+deb7u8
     semver: 5.4.45
     patch: 45
 -
@@ -35,9 +35,9 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/jessie/php5'
-    version: 5.6.29+dfsg-0+deb8u1
-    semver: 5.6.29
-    patch: 29
+    version: 5.6.30+dfsg-0+deb8u1
+    semver: 5.6.30
+    patch: 30
 -
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux
@@ -87,7 +87,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/trusty/php/php5'
-    version: 5.5.9+dfsg-1ubuntu4.20
+    version: 5.5.9+dfsg-1ubuntu4.21
     semver: 5.5.9
     patch: 9
 -
@@ -111,17 +111,17 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/xenial/php/php7.0'
-    version: 7.0.8-0ubuntu0.16.04.3
-    semver: 7.0.8
-    patch: 8
+    version: 7.0.15-0ubuntu0.16.04.4
+    semver: 7.0.15
+    patch: 15
 -
     name: 'Ubuntu 16.10 (Yakkety)'
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/yakkety/php/php7.0'
-    version: 7.0.8-3ubuntu3
-    semver: 7.0.8
-    patch: 8
+    version: 7.0.15-0ubuntu0.16.10.4
+    semver: 7.0.15
+    patch: 15
 -
     name: 'openSUSE Tumbleweed'
     family: linux
@@ -141,6 +141,6 @@
     family: linux
     distro: arch
     package_url: 'https://www.archlinux.org/packages/extra/x86_64/php/'
-    version: 7.0.14-1
-    semver: 7.0.14
-    patch: 14
+    version: 7.1.5-1
+    semver: 7.1.5
+    patch: 5

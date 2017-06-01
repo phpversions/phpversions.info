@@ -1,15 +1,20 @@
 language: php
 php:
-  - '7.0'
+- '7.0'
 before_install:
-  - rvm install 2.3.1
-  - gem update bundler && bundle install
-  - composer install
+- rvm install 2.3.1
+- gem update bundler && bundle install
+- composer install
 script:
-  - php ./bin/update-versions
-  - bundle exec jekyll build
-after_success:
-  - ./bin/deploy
+- php ./bin/update-versions
+- bundle exec jekyll build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  target_branch: gh-pages
+  local_dir: _site
+  on:
+    branch: master
 env:
-  global:
-    secure: 3ttSxsQeuEQVeyR+jlz6h0aGd7sqzPwPu8C+FGrzPtluam0pwx+qV2TZjGmLV3UbOoQ8gZfQoWlebWkY8qG2jC0nA4rjR+ZulZmIH+W5EVQaxu+7s0HQhZKuqLOYh1/03MJPMocBXT4cVvnygNrTIXZ1TRGpLz4ZsyRpNEWND/0=
+  secure: 6l62BVXSEaQFC9SjIwtz6T8kVsd0RymMiO1YO9BwiV435yOpwfBqXl83rhCOkxCJ0w3q5QZDk3sILNup18lq9E0yhrVGDIJgKFpTsU/XS/dymu8EYmWixC09L0laf9BDsYetSML/SPJhz54f6sFvIkD+t5f2dtzPmte+2tzAYB8=

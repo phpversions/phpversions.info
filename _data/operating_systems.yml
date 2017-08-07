@@ -39,6 +39,14 @@
     semver: 5.6.30
     patch: 30
 -
+    name: 'Debian 9 (Stretch)'
+    family: linux
+    distro: debian
+    package_url: 'https://packages.debian.org/stretch/php7.0'
+    version: 7.0.19-1
+    semver: 7.0.19
+    patch: 19
+-
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux
     distro: redhat

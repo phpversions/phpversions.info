@@ -95,7 +95,7 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/trusty/php/php5'
-    version: 5.5.9+dfsg-1ubuntu4.21
+    version: 5.5.9-1ubuntu4.22
     semver: 5.5.9
     patch: 9
 -
@@ -103,7 +103,7 @@
     family: linux
     distro: ubuntu
     package_url: null
-    version: 5.6.4+dfsg-4ubuntu6.4
+    version: 5.6.4-4ubuntu6.4
     semver: 5.6.4
     patch: 4
 -
@@ -111,7 +111,7 @@
     family: linux
     distro: ubuntu
     package_url: null
-    version: 5.6.11+dfsg-1ubuntu3.4
+    version: 5.6.11-1ubuntu3.4
     semver: 5.6.11
     patch: 11
 -
@@ -119,17 +119,17 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/xenial/php/php7.0'
-    version: 7.0.15-0ubuntu0.16.04.4
-    semver: 7.0.15
-    patch: 15
+    version: 7.0.22-0ubuntu0.16.04.1
+    semver: 7.0.22
+    patch: 22
 -
     name: 'Ubuntu 16.10 (Yakkety)'
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/yakkety/php/php7.0'
-    version: 7.0.15-0ubuntu0.16.10.4
-    semver: 7.0.15
-    patch: 15
+    version: 7.0.18-0ubuntu0.16.10.1
+    semver: 7.0.18
+    patch: 18
 -
     name: 'openSUSE Tumbleweed'
     family: linux

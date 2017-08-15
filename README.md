@@ -20,4 +20,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - [ ] Rebuild so it's not a silly Jekyll site [#82](https://github.com/philsturgeon/phpversions.info/issues/82)
 - [ ] Add EOL indicators so you know a version is not just bad but really bad [#25](https://github.com/philsturgeon/phpversions.info/issues/25)
-- [ ] Add indicated for security breached versions [#56](https://github.com/philsturgeon/phpversions.info/issues/56)

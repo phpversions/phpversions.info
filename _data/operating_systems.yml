@@ -126,7 +126,7 @@
     name: 'Ubuntu 16.10 (Yakkety)'
     family: linux
     distro: ubuntu
-    package_url: 'http://packages.ubuntu.com/yakkety/php/php7.0'
+    package_url: null
     version: 7.0.18-0ubuntu0.16.10.1
     semver: 7.0.18
     patch: 18

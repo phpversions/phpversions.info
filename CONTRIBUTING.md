@@ -55,8 +55,11 @@ The remaining stuff is `default`, which points to one of the `versions` below. H
 - 55
 - 56
 - 70
+- 71
 
 Probably don't bother listing PHP 5.2.x versions because we'll probably remove them soon, _as should you as any sort of responsible hosting company!_ :) 
+
+Moving forward, we will try to remove anything under 5.6. This is supposed to be a list of current versions :)
 
 The version information should contain the patch number, which in PHP 7.0.4 would be `4`. In that example `semver` would be `7.0.4` and so - hopefully - it would be for version. I say hopefully because some nutty hosts supply their own custom builds of PHP, which sometimes contain security patches but generally are a really bad idea and a headache. Either way, if you have something like `5.6.18-1~he.0` then that is what you put in `version`. 
 

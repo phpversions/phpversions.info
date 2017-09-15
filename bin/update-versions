@@ -61,9 +61,17 @@ function readDistroPackageVersion($url, $distro)
       $xpath = '//a[starts-with(@href, "php-") and number(substring(@href, 5, 1))>0 and number(substring(@href, 5, 1))<=9]';
       $regex = '/php-(.+)\.src\.rpm$/';
     break;
+    case 'arch':
+      $xpath = '//div[@id="pkgdetails"]/h2';
+      $regex = '/php ([0-9.-]+)$/';
+    break;
   }
 
-  $crawler = new Crawler(file_get_contents($url));
+  try {
+    $crawler = new Crawler(file_get_contents($url));
+  } catch (InvalidArgumentException $e) {
+    throw new Exception("Invalid HTML from {$url} for {$distro}");
+  }
   $nodeValue = $crawler->filterXPath($xpath)->text();
   preg_match($regex, $nodeValue, $matches);
   if (empty($matches[1])) {

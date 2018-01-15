@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+{% assign all_hosts = site.data.hosts %}
+{% assign sorted_hosts = (all_hosts | sort: 'name') %}
+
+<article class="hosts">
+  <section>
+    <div class="host-description">
+      <h2>PHP 7.2</h2>
+      <p>PHP 7.2 is out! After maturing like a fine artisanal cheese in through months of release candidates, it's now <a href="http://php.net/releases/7_2_0.php">officially released</a> and heading to a server near you.</p>
+      <p>Upgrading from PHP 7.1 is <a href="http://php.net/manual/en/migration72.php">really easy</a>, and installing locally is explained over on <a href="http://www.phptherightway.com/#use_the_current_stable_version">PHP The Right Way: Getting Started</a>. If you're feeling a bit more adventurous, you can install <a href="https://github.com/php/php-src">from source</a> to see some of the features coming in <a href="https://wiki.php.net/rfc#php_73">PHP 7.3</a></p>
+      <hr>
+    </div>
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>Host</th>
+          <th>Last Scanned</th>
+          <th>7.2</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for host in sorted_hosts %}
+        {% if host.versions[72] %}
+        <tr>
+          <td class="host-name"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
+          <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
+              <i class="fa fa-times"></i>
+          </td>
+          <td class="host-info version">{{ host.versions[72] | format_version }}</td>
+        </tr>
+        {% endif %}
+      {% endfor %}
+        <tr>
+          <td colspan="3">Want to contribute to this list? This site is up on GitHub, so head over to our <a href="https://github.com/philsturgeon/phpversions.info/">contribution instructions</a>.
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>

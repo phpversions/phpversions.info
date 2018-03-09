@@ -139,6 +139,14 @@
     semver: 7.1.11
     patch: 11
 -
+    name: 'Ubuntu 18.04 (Bionic)'
+    family: linux
+    distro: ubuntu
+    package_url: https://packages.ubuntu.com/bionic/php7.2
+    version: 7.2.2-1ubuntu2
+    semver: 7.2.2
+    patch: 2
+-
     name: 'openSUSE Tumbleweed'
     family: linux
     distro: opensuse

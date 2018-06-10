@@ -1,0 +1,170 @@
+-
+    name: 'CentOS 7'
+    family: linux
+    distro: centos
+    package_url: 'http://vault.centos.org/centos/7/os/Source/SPackages/'
+    version: 5.4.16-42.el7
+    semver: 5.4.16
+    patch: 16
+-
+    name: 'CentOS 6'
+    family: linux
+    distro: centos
+    package_url: 'http://vault.centos.org/centos/6/os/Source/SPackages/'
+    version: 5.3.3-49.el6
+    semver: 5.3.3
+    patch: 3
+-
+    name: 'Debian 6 (Squeeze)'
+    family: linux
+    distro: debian
+    package_url: null
+    version: 5.3.3-7+squeeze19
+    semver: 5.3.3
+    patch: 3
+-
+    name: 'Debian 7 (Wheezy)'
+    family: linux
+    distro: debian
+    package_url: 'https://packages.debian.org/wheezy/php5'
+    version: 5.4.45-0+deb7u8
+    semver: 5.4.45
+    patch: 45
+-
+    name: 'Debian 8 (Jessie)'
+    family: linux
+    distro: debian
+    package_url: 'https://packages.debian.org/jessie/php5'
+    version: 5.6.30+dfsg-0+deb8u1
+    semver: 5.6.30
+    patch: 30
+-
+    name: 'Debian 9 (Stretch)'
+    family: linux
+    distro: debian
+    package_url: 'https://packages.debian.org/stretch/php7.0'
+    version: 7.0.27-0+deb9u1
+    semver: 7.0.27
+    patch: 27
+-
+    name: 'Red Hat Enterprise Linux (RHEL) 6.7'
+    family: linux
+    distro: redhat
+    version: 5.3.3
+    semver: 5.3.3
+    patch: 3
+-
+    name: 'Red Hat Enterprise Linux (RHEL) 7.1'
+    family: linux
+    distro: redhat
+    version: 5.4.16
+    semver: 5.4.16
+    patch: 16
+-
+    name: 'OSX 10.8 (Mountain Lion)'
+    family: osx
+    version: 5.3.10
+    semver: 5.3.10
+    patch: 10
+-
+    name: 'OSX 10.9 (Mavericks)'
+    family: osx
+    version: 5.4.17
+    semver: 5.4.17
+    patch: 17
+-
+    name: 'OSX 10.10 (Yosemite)'
+    family: osx
+    version: 5.5.9
+    semver: 5.5.9
+    patch: 9
+-
+    name: 'OSX 10.11 (El Capitan)'
+    family: osx
+    version: 5.5.29
+    semver: 5.5.29
+    patch: 29
+-
+    name: 'OSX 10.12 (Sierra)'
+    family: osx
+    version: 5.6.24
+    semver: 5.6.24
+    patch: 24
+-
+    name: 'Ubuntu 14.04 LTS (Trusty)'
+    family: linux
+    distro: ubuntu
+    package_url: 'http://packages.ubuntu.com/trusty/php/php5'
+    version: 5.5.9-1ubuntu4.22
+    semver: 5.5.9
+    patch: 9
+-
+    name: 'Ubuntu 15.04 (Vivid)'
+    family: linux
+    distro: ubuntu
+    package_url: null
+    version: 5.6.4-4ubuntu6.4
+    semver: 5.6.4
+    patch: 4
+-
+    name: 'Ubuntu 15.10 (Wily)'
+    family: linux
+    distro: ubuntu
+    package_url: null
+    version: 5.6.11-1ubuntu3.4
+    semver: 5.6.11
+    patch: 11
+-
+    name: 'Ubuntu 16.04 LTS (Xenial)'
+    family: linux
+    distro: ubuntu
+    package_url: 'http://packages.ubuntu.com/xenial/php/php7.0'
+    version: 7.0.25-0ubuntu0.16.04.1
+    semver: 7.0.25
+    patch: 25
+-
+    name: 'Ubuntu 16.10 (Yakkety)'
+    family: linux
+    distro: ubuntu
+    package_url: null
+    version: 7.0.18-0ubuntu0.16.10.1
+    semver: 7.0.18
+    patch: 18
+-
+    name: 'Ubuntu 17.10 (Artful)'
+    family: linux
+    distro: ubuntu
+    package_url: null
+    version: 7.1.11-0ubuntu0.17.10.1
+    semver: 7.1.11
+    patch: 11
+-
+    name: 'Ubuntu 18.04 (Bionic)'
+    family: linux
+    distro: ubuntu
+    package_url: https://packages.ubuntu.com/bionic/php7.2
+    version: 7.2.2-1ubuntu2
+    semver: 7.2.2
+    patch: 2
+-
+    name: 'openSUSE Tumbleweed'
+    family: linux
+    distro: opensuse
+    version: 7.0.12
+    semver: 7.0.12
+    patch: 12
+-
+    name: 'openSUSE Leap 42.1'
+    family: linux
+    distro: opensuse
+    version: 5.5.14
+    semver: 5.5.14
+    patch: 14
+-
+    name: 'Arch Linux'
+    family: linux
+    distro: arch
+    package_url: 'https://www.archlinux.org/packages/extra/x86_64/php/'
+    version: 7.1.5-1
+    semver: 7.1.5
+    patch: 5

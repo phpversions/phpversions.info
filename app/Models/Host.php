@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Interfaces\Hostable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -41,5 +42,14 @@ class Host extends Model implements Hostable
     public function events() : HasMany
     {
         return $this->hasMany(HostEvent::class, 'id', 'host_id');
+    }
+
+    public function hasName() : bool
+    {
+        if ($this->name) {
+            return true;
+        }
+
+        return false;
     }
 }

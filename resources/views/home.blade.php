@@ -1,23 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
+<div class="container mx-auto">
+    <div class="flex justify-center">
+        <img src="/images/php-versions.png" class="h-64 w-64" alt="PHPVersions.info logo">
     </div>
+    <router-view></router-view>
 </div>
 @endsection

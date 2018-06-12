@@ -47,4 +47,13 @@ class Distribution extends Model
     {
         return $query->where('url', '=', $url);
     }
+
+    public function hasName() : bool
+    {
+        if ($this->name) {
+            return true;
+        }
+
+        return false;
+    }
 }

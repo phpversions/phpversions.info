@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -82,5 +83,10 @@ class HostEvent extends Model
     public function host() : BelongsTo
     {
         return $this->belongsTo(Host::class, 'id', 'host_id');
+    }
+
+    public function scopeByCurrentVersion(Builder $query, string $version)
+    {
+        return $query->where('php_version', '=', $version);
     }
 }

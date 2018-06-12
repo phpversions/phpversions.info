@@ -19,61 +19,40 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script>
+      window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+        <nav class="bg-white px-8 pt-2 shadow-md">
+            <div class="-mb-px flex justify-center">
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-indigo-dark hover:border-indigo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    Shared Hosts
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    PaaS
+                </a>
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    Managed Hosts
+                </a>
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    Operating Systems
+                </a>
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    PHP 7.2
+                </a>
             </div>
         </nav>
-
         <main class="py-4">
             @yield('content')
         </main>
+        <footer class="flex justify-center pb-8">
+            <p class="align-center text-grey-darker font-sans text-xs">Copyright © 2018 Matt Trask. Contributions from the community.</p>
+        </footer>
     </div>
 </body>
 </html>

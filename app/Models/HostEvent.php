@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class HostEvent extends Model
 {
+    private const CURRENT_VERSION = 7.2;
+
     protected $fillable = [
         'host_id',
         'is_shared_host',
@@ -17,7 +19,8 @@ class HostEvent extends Model
         'default_php_version',
         'patch_policy',
         'manual_update_major_minor',
-        'is_confirmed'
+        'is_confirmed',
+        'semver',
     ];
 
     public function setIsSharedHost(bool $isSharedHost) : void
@@ -80,12 +83,22 @@ class HostEvent extends Model
         return $this->is_confirmed;
     }
 
+    public function setSemver(string $semver) : void
+    {
+        $this->semver = $semver;
+    }
+
+    public function getSemver() : ? string
+    {
+        return $this->semver;
+    }
+
     public function host() : BelongsTo
     {
         return $this->belongsTo(Host::class, 'id', 'host_id');
     }
 
-    public function scopeByCurrentVersion(Builder $query, string $version)
+    public function scopeByVersion(Builder $query, string $version) : Builder
     {
         return $query->where('php_version', '=', $version);
     }

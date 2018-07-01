@@ -2,15 +2,21 @@
 
 namespace App\Transformers\Api\v2;
 
+
 use App\Models\Host;
 use League\Fractal\TransformerAbstract;
 
-class HostTransformer extends TransformerAbstract
+class CurrentPhpVersionTransformer extends TransformerAbstract
 {
     protected $availableIncludes = [
-        'events',
+        'currentVersionEvent'
     ];
 
+    /**
+     * A Fractal transformer.
+     *
+     * @return array
+     */
     public function transform(Host $host)
     {
         return [
@@ -20,12 +26,12 @@ class HostTransformer extends TransformerAbstract
         ];
     }
 
-    public function includeEvents(Host $host)
+    public function includeCurrentVersionEvent(Host $host)
     {
-        if (!$host->events) {
+        if (!$host->event) {
             return $this->null();
         }
 
-        return $this->collection($host->events, new EventsTransformer);
+        return $this->item($host->event, new CurrentVersionEventTransformer());
     }
 }

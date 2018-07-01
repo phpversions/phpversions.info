@@ -7,7 +7,7 @@ use App\Transformers\Api\v2\HostTransformer;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
 
-class HostsController extends Controller
+class SharedHostsController extends Controller
 {
     /** @var Response */
     private $response;
@@ -26,7 +26,7 @@ class HostsController extends Controller
 
     public function index() : Response
     {
-        $data = $this->repository->get();
+        $data = $this->repository->findSharedHosts();
 
         return $this->response
             ->setStatusCode(200)

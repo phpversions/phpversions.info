@@ -11,7 +11,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -54,5 +53,6 @@
             <p class="align-center text-grey-darker font-sans text-xs">Copyright © 2018 Matt Trask. Contributions from the community.</p>
         </footer>
     </div>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

@@ -43,6 +43,8 @@ class DistributionRepository implements Storable
             'family' => $object->family ?? null,
             'default_php_version' => $object->version,
             'is_confirmed' => 0,
+            'semver' => $object->semver ?? null,
+
         ];
 
         $distribution->events()->create($distributionEvent);

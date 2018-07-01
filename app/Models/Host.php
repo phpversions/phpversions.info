@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use App\Models\Interfaces\Hostable;
+use DateTime;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Host extends Model implements Hostable
 {
@@ -39,9 +41,19 @@ class Host extends Model implements Hostable
         $this->url = $url;
     }
 
+    public function getUpdatedAt() : DateTime
+    {
+       return $this->updated_at;
+    }
+
     public function events() : HasMany
     {
-        return $this->hasMany(HostEvent::class, 'id', 'host_id');
+        return $this->hasMany(HostEvent::class, 'host_id', 'id');
+    }
+
+    public function event() : HasOne
+    {
+        return $this->hasOne(HostEvent::class, 'host_id', 'id');
     }
 
     public function hasName() : bool
@@ -51,5 +63,10 @@ class Host extends Model implements Hostable
         }
 
         return false;
+    }
+
+    public function scopeFilterSharedHosts(Builder $query) : Builder
+    {
+        return $query->where('is_shared_host', '=', 1);
     }
 }

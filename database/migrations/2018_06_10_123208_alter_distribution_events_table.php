@@ -17,6 +17,7 @@ class AlterDistributionEventsTable extends Migration
             $table->string('distro')->after('distribution_id')->nullable();
             $table->string('package_url')->after('distro')->nullable();
             $table->string('family')->after('package_url')->nullable();
+            $table->string('semver')->after('family')->nullable();
         });
     }
 

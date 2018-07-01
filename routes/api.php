@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\v2\CurrentPhpVersionController;
 use Illuminate\Http\Request;
 
 /*
@@ -17,4 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/hosts', ['uses' => 'Api/v2/HostsController@index']);
+Route::get('/hosts/shared', ['uses' => 'Api\v2\SharedHostsController@index']);
+Route::get('/hosts/managed', ['uses' => 'Api\v2\ManagedHostsController@index']);
+Route::get('/versions/current', ['uses' => 'Api\v2\CurrentPhpVersionController@index']);
+Route::get('/versions/deprecated', ['uses' => 'Api\v2\DeprecatedPhpVersionController@index']);
+Route::get('/distros', ['uses' => 'Api\v2\DistroController@index']);

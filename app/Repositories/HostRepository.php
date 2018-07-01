@@ -46,6 +46,7 @@ class HostRepository implements Storable
                 'patch_policy' => ($object->type === 'shared') ? 'host' : 'user',
                 'manual_update_major_minor' => ($object->type === 'shared') ? 0 : 1,
                 'is_confirmed' => 0,
+                'semver' => $version->semver ?? null,
             ]);
         }
     }
@@ -58,5 +59,10 @@ class HostRepository implements Storable
     public function destroy(int $id) : void
     {
         // TODO: Implement destroy() method.
+    }
+
+    public function findSharedHosts()
+    {
+        $hosts = $this->host->get();
     }
 }

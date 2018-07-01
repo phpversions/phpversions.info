@@ -13,7 +13,8 @@ class DistributionEvent extends Model
         'package_url',
         'family',
         'default_php_version',
-        'is_confirmed'
+        'is_confirmed',
+        'semver',
     ];
 
     public function getDefaultPhpVersion() : string
@@ -63,6 +64,16 @@ class DistributionEvent extends Model
     public function setIsConfirmed(int $isConfirmed) : void
     {
         $this->is_confirmed = $isConfirmed;
+    }
+
+    public function setSemver(string $semver) : void
+    {
+        $this->semver = $semver;
+    }
+
+    public function getSemver() : string
+    {
+        return $this->semver;
     }
 
     public function distribution() : BelongsTo

@@ -32,11 +32,11 @@
             <h2 class="font-sans tracking-wide text-grey-darker font-bold font-3xl pb-4">FAQ</h2>
 
             <p class="pb-4 font-sans text-grey-darker tracking-wide">
-                <span class="font-bold">I work for a hosting company that isn't on here, can we get listed?</span>
+                <span class="font-bold pb-2">I work for a hosting company that isn't on here, can we get listed?</span><br>
                 Sure why not! Shout at @matthewtrask on Twitter, or send a pull request to the GitHub repo.
             </p>
             <p class="pb-4 font-sans text-grey-darker tracking-wide">
-                <span class="font-bold">Where do you get the data from?</span>
+                <span class="font-bold pb-2">Where do you get the data from?</span><br>
                 This used to be entirely manual, which was a horrendous to keep up to date. Now we parse phpinfo() on public URLs that hosts make available, like this:
                 <br><br/>
                 <span class="pt-4 pb-4 italic">http://php70.webhosting.be/phpinfo.php</span>
@@ -44,11 +44,11 @@
                 Not all hosts have them so some are still entirely manual. Either way, sending us patch version changes, changes in the default versions, or new public phpinfo URLs can be done via updating hosts.yml.
             </p>
             <p class="pb-4 font-sans text-grey-darker tracking-wide">
-                <span class="font-bold">How do I contribute?</span>
+                <span class="font-bold pb-2">How do I contribute?</span><br>
                 Read the contributing guide on GitHub.
             </p>
             <p class="pb-4 font-sans text-grey-darker tracking-wide">
-                <span class="font-bold">Do you intend to implement X or Y?</span>
+                <span class="font-bold pb-2">Do you intend to implement X or Y?</span><br>
                 I have a bit of a todo list, and I would love help if you're bored.
             </p>
         </div>

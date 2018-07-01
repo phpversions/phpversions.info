@@ -15,6 +15,7 @@ class AlterHostingTable extends Migration
     {
         Schema::table('host_events', function (Blueprint $table) {
             $table->string('php_version')->after('is_shared_host');
+            $table->string('semver')->after('php_version')->nullable();
         });
     }
 

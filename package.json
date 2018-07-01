@@ -20,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "moment": "^2.22.2",
         "tailwindcss": "^0.5.3",
         "vue-resource": "^1.5.1",
         "vue-router": "^3.0.1"

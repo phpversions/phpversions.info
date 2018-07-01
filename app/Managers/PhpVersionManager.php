@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Managers;
 
 use App\Repositories\CurrentPhpVersionRepository;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 
-class CurrentPhpVersionManager
+class PhpVersionManager
 {
     /** @var CurrentPhpVersionRepository */
     private $repository;
@@ -17,7 +17,7 @@ class CurrentPhpVersionManager
         $this->repository = $repository;
     }
 
-    public function getCurrentVersionSupportedHosts() : Collection
+    public function getCurrentVersionSupportedHosts()
     {
         return $this->repository->findCurrentPhpVersionHosts();
     }

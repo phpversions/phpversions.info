@@ -15,6 +15,7 @@ class EventsTransformer extends TransformerAbstract
     public function transform(HostEvent $event)
     {
         return [
+            'default' => $event->getDefaultPhpVersion(),
             'semver' => $event->getSemver(),
             'isShared' => $event->getIsSharedHost(),
         ];

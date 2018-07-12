@@ -33,7 +33,7 @@ class HostEvent extends Model
         return $this->is_shared_host;
     }
 
-    public function setLatestPatchVersion(int $version)
+    public function setLatestPatchVersion(int $version) : void
     {
         $this->latest_patch_version = $version;
     }
@@ -43,17 +43,17 @@ class HostEvent extends Model
         return $this->latest_patch_version;
     }
 
-    public function setDefaultPhpVersion(int $version)
+    public function setDefaultPhpVersion(int $version) : void
     {
         $this->default_php_version = $version;
     }
 
-    public function getDefaultPhpVersion() : int
+    public function getDefaultPhpVersion() : ? int
     {
         return $this->default_php_version;
     }
 
-    public function setPatchPolicy(string $policySetter)
+    public function setPatchPolicy(string $policySetter) : void
     {
         $this->patch_policy = $policySetter;
     }
@@ -63,7 +63,7 @@ class HostEvent extends Model
         return $this->patch_policy;
     }
 
-    public function setManualUpdatePolicy(bool $updatePolicy)
+    public function setManualUpdatePolicy(bool $updatePolicy) : void
     {
         $this->manual_update_policy = $updatePolicy;
     }
@@ -73,7 +73,7 @@ class HostEvent extends Model
         return $this->manual_update_policy;
     }
 
-    public function setIsConfirmed(bool $isConfirmed)
+    public function setIsConfirmed(bool $isConfirmed) : void
     {
         $this->is_confirmed = $isConfirmed;
     }
@@ -98,8 +98,13 @@ class HostEvent extends Model
         return $this->belongsTo(Host::class, 'id', 'host_id');
     }
 
-    public function scopeByVersion(Builder $query, string $version) : Builder
+    public function scopeByVersion(Builder $query, int $version) : Builder
     {
         return $query->where('php_version', '=', $version);
+    }
+
+    public function scopeBySharedHost(Builder $query) : Builder
+    {
+        return $query->where('is_shared_host', '=', 1);
     }
 }

@@ -61,8 +61,12 @@ class HostRepository implements Storable
         // TODO: Implement destroy() method.
     }
 
-    public function findSharedHosts()
+    public function findSharedHosts() : Collection
     {
-        $hosts = $this->host->get();
+        return $this->host->whereHas('events', function ($query) {
+            $query->bySharedHost();
+        })->with(['event' => function ($query) {
+            $query->bySharedHost();
+        }])->get();
     }
 }

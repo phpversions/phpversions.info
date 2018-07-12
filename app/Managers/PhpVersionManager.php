@@ -21,4 +21,9 @@ class PhpVersionManager
     {
         return $this->repository->findCurrentPhpVersionHosts();
     }
+
+    public function getDeprecatedVersionHosts()
+    {
+
+    }
 }

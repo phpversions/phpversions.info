@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use DateTime;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Distribution extends Model
 {
-    public function getName() : string
+    public function getName() : ? string
     {
         return $this->name;
     }
@@ -18,7 +20,7 @@ class Distribution extends Model
         $this->name = $name;
     }
 
-    public function getUrl() : string
+    public function getUrl() : ? string
     {
         return $this->url;
     }
@@ -28,9 +30,19 @@ class Distribution extends Model
         $this->url = $url;
     }
 
+    public function getLastScanned() : DateTime
+    {
+        return $this->created_at;
+    }
+
     public function events() : HasMany
     {
         return $this->hasMany(DistributionEvent::class, 'distribution_id', 'id');
+    }
+
+    public function event() : HasOne
+    {
+        return $this->hasOne(DistributionEvent::class, 'distribution_id', 'id');
     }
 
     public function scopeById(Builder $query, int $id)

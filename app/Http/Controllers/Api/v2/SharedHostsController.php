@@ -22,6 +22,7 @@ class SharedHostsController extends Controller
     {
         $this->response = $response;
         $this->repository = $repository;
+        $this->transformer = $transformer;
     }
 
     public function index() : Response
@@ -31,6 +32,11 @@ class SharedHostsController extends Controller
         return $this->response
             ->setStatusCode(200)
             ->setClientTtl(900)
-            ->setContent(fractal($data)->transformWith($this->transformer)->toArray());
+            ->setContent(
+                fractal($data)
+                    ->transformWith($this->transformer)
+                    ->includeEvents()
+                    ->toArray()
+            );
     }
 }

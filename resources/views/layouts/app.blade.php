@@ -14,6 +14,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
@@ -29,19 +30,19 @@
     <div id="app">
         <nav class="bg-white px-8 pt-2 shadow-md">
             <div class="-mb-px flex justify-center">
-                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-indigo-dark hover:border-indigo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-indigo-dark hover:border-indigo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" href="/shared-hosts">
                     Shared Hosts
                 </a>
-                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="/paas-hosts">
                     PaaS
                 </a>
-                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="/managed-hosts">
                     Managed Hosts
                 </a>
-                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="/operating-systems">
                     Operating Systems
                 </a>
-                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                <a class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" href="/new-and-shiny">
                     PHP 7.2
                 </a>
             </div>

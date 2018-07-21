@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/hosts/shared', ['uses' => 'Api\v2\SharedHostsController@index']);
 Route::get('/hosts/managed', ['uses' => 'Api\v2\ManagedHostsController@index']);
+Route::get('/hosts/paas', ['uses' => 'Api\v2\PaasHostsController@index']);
 Route::get('/hosts/distros', ['uses' => 'Api\v2\OperatingSystemsController@index']);
 Route::get('/versions/current', ['uses' => 'Api\v2\CurrentPhpVersionController@index']);
 Route::get('/versions/deprecated', ['uses' => 'Api\v2\DeprecatedPhpVersionController@index']);

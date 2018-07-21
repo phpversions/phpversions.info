@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Host extends Model implements Hostable
 {
+    private $default = '';
+
     public function getId() : int
     {
         return $this->id;
@@ -68,5 +70,21 @@ class Host extends Model implements Hostable
     public function scopeFilterSharedHosts(Builder $query) : Builder
     {
         return $query->where('is_shared_host', '=', 1);
+    }
+
+    public function scopeFilterManagedHosts(Builder $query) : Builder
+    {
+        return $query->where('is_shared_host', '=', 0);
+    }
+
+    public function getDefaultPhpVersion() : ? string
+    {
+        $this->events->each(function ($event) {
+            if ($this->event->getDefaultPhpVersion() === $event->getPhpVersion()) {
+                $this->default = $event->getSemver();
+            }
+        });
+
+        return $this->default ?? '??';
     }
 }

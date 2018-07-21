@@ -38,7 +38,7 @@ class HostRepository implements Storable
         foreach($object->versions as $key => $version) {
             $host->events()->create([
                 'host_id' => $host->id,
-                'is_shared_host' => ($object->type === 'shared') ? 1 : 0,
+                'host_type' => $object->type,
                 'php_versions_url' => $version->phpinfo,
                 'php_version' => $key,
                 'latest_patch_version' => $version->patch ?? null,
@@ -67,6 +67,24 @@ class HostRepository implements Storable
             $query->bySharedHost();
         })->with(['event' => function ($query) {
             $query->bySharedHost();
+        }])->get();
+    }
+
+    public function findManagedHosts() : Collection
+    {
+        return $this->host->whereHas('events', function ($query) {
+            $query->byManagedHost();
+        })->with(['event' => function ($query) {
+            $query->byManagedHost();
+        }])->get();
+    }
+
+    public function findPaasHosts() : Collection
+    {
+        return $this->host->whereHas('events', function ($query) {
+            $query->byPaasHost();
+        })->with(['event' => function ($query) {
+            $query->byPaasHost();
         }])->get();
     }
 }

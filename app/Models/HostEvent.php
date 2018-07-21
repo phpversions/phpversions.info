@@ -12,7 +12,7 @@ class HostEvent extends Model
 
     protected $fillable = [
         'host_id',
-        'is_shared_host',
+        'host_type',
         'php_versions_url',
         'php_version',
         'latest_patch_version',
@@ -23,14 +23,14 @@ class HostEvent extends Model
         'semver',
     ];
 
-    public function setIsSharedHost(bool $isSharedHost) : void
+    public function setHostType(bool $hostType) : void
     {
-        $this->is_shared_host = $isSharedHost;
+        $this->host_type = $hostType;
     }
 
-    public function getIsSharedHost() : bool
+    public function getHostType() : string
     {
-        return $this->is_shared_host;
+        return $this->host_type;
     }
 
     public function setLatestPatchVersion(int $version) : void
@@ -93,6 +93,16 @@ class HostEvent extends Model
         return $this->semver;
     }
 
+    public function getPhpVersion() : ? int
+    {
+        return $this->php_version;
+    }
+
+    public function setPhpVersion(int $phpVersion) : void
+    {
+        $this->php_version = $phpVersion;
+    }
+
     public function host() : BelongsTo
     {
         return $this->belongsTo(Host::class, 'id', 'host_id');
@@ -105,6 +115,16 @@ class HostEvent extends Model
 
     public function scopeBySharedHost(Builder $query) : Builder
     {
-        return $query->where('is_shared_host', '=', 1);
+        return $query->where('host_type', '=', 'shared');
+    }
+
+    public function scopeByManagedHost(Builder $query) : Builder
+    {
+        return $query->where('host_type', '=', 'managed');
+    }
+
+    public function scopeByPaasHost(Builder $query) : Builder
+    {
+        return $query->where('host_type', '=', 'paas');
     }
 }

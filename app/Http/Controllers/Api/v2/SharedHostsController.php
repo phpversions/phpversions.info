@@ -29,9 +29,12 @@ class SharedHostsController extends Controller
     {
         $data = $this->repository->findSharedHosts();
 
+        $etag = md5($data);
+
         return $this->response
             ->setStatusCode(200)
             ->setClientTtl(900)
+            ->setEtag($etag)
             ->setContent(
                 fractal($data)
                     ->transformWith($this->transformer)

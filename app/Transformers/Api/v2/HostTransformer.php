@@ -16,6 +16,7 @@ class HostTransformer extends TransformerAbstract
         return [
             'host' => $host->getName(),
             'url' => $host->getUrl(),
+            'default' => $host->getDefaultPhpVersion(),
             'scannedAt' => $host->getUpdatedAt(),
         ];
     }

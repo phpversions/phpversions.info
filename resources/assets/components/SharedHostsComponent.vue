@@ -18,14 +18,14 @@
                 </tr>
             </thead>
             <tbody>
-            <tr><td>DAFU</td></tr>
                 <tr v-for="host in hosts">
                     <td class="font-sans tracking-wide font-light pb-2">{{ host.host }}</td>
                     <td class="font-sans tracking-wide font-light">{{ host.scannedAt|date }}</td>
-                    <VersionCheck :host="host" :version="7.2" />
-                    <VersionCheck :host="host" :version="7.1" />
-                    <VersionCheck :host="host" :version="7.0" />
-                    <td class="font-sans tracking-wide font-light">{{ host.events.data[0].semver }}</td>
+                    <td class="font-sans tracking-wide font-light">{{ host.default}}</td>
+                    <VersionCheck class="font-sans tracking-wide font-light" :host="host" :version="7.2"></VersionCheck>
+                    <VersionCheck class="font-sans tracking-wide font-light" :host="host" :version="7.1"></VersionCheck>
+                    <VersionCheck class="font-sans tracking-wide font-light" :host="host" :version="7.0"></VersionCheck>
+                    <VersionCheck class="font-sans tracking-wide font-light" :host="host" :version="['5.6', '5.5', '5.4', '5.3', '5.2']"></VersionCheck>
                 </tr>
             </tbody>
         </table>
@@ -34,16 +34,13 @@
 <script>
   import axios from 'axios';
   import moment from 'moment';
-  import VersionCheck from './VersionCheck.vue';
+  import VersionCheck from './VersionCheckComponent.vue';
 
   export default {
     created() {
       this.getSharedHosts();
     },
 
-    mounted() {
-
-    },
     data() {
       return {
         hosts: [],

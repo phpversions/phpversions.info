@@ -17,8 +17,7 @@ layout: default
             <th>7.3</th>
             <th>7.2</th>
             <th>7.1</th>
-            <th>5.6</th>
-            <th colspan="3">End Of Life</th>
+            <th colspan="4">End Of Life</th>
             <th>Default</th>
           </tr>
         </thead>
@@ -33,8 +32,8 @@ layout: default
             <td class="host-info version">{{ host.versions[73] | format_version }}</td>
             <td class="host-info version">{{ host.versions[72] | format_version }}</td>
             <td class="host-info version">{{ host.versions[71] | format_version }}</td>
-            <td class="host-info version">{{ host.versions[56] | format_version }}</td>
             <td class="host-info version">{{ host.versions[70] | format_version }}</td>
+            <td class="host-info version">{{ host.versions[56] | format_version }}</td>
             <td class="host-info version">{{ host.versions[55] | format_version }}</td>
             <td class="host-info version">{{ host.versions[54] | format_version }}</td>
             <td class="host-info version">{% if host.default %}{{ host.versions[host.default] | format_version }}{% else %}<em>???</em>{% endif %}</td>

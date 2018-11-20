@@ -4,7 +4,8 @@ var eolVersions = {
     '5.6': new Date('2018-12-31T23:59:59'),
     '7.0': new Date('2018-12-03T23:59:59'),
     '7.1': new Date('2019-12-01T23:59:59'),
-    '7.2': new Date('2020-11-30T23:59:59')
+    '7.2': new Date('2020-11-30T23:59:59'),
+    '7.3': new Date('2021-12-06T23:59:59')
 };
 
 // Simple function for comparing x.y.z versions

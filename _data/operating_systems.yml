@@ -26,7 +26,7 @@
     name: 'Debian 7 (Wheezy)'
     family: linux
     distro: debian
-    package_url: 'https://packages.debian.org/wheezy/php5'
+    package_url: null
     version: 5.4.45-0+deb7u8
     semver: 5.4.45
     patch: 45

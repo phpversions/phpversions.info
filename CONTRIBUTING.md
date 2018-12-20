@@ -56,6 +56,7 @@ The remaining stuff is `default`, which points to one of the `versions` below. H
 - 56
 - 70
 - 71
+- 72
 
 Probably don't bother listing PHP 5.2.x versions because we'll probably remove them soon, _as should you as any sort of responsible hosting company!_ :) 
 
@@ -63,7 +64,7 @@ Moving forward, we will try to remove anything under 5.6. This is supposed to be
 
 The version information should contain the patch number, which in PHP 7.0.4 would be `4`. In that example `semver` would be `7.0.4` and so - hopefully - it would be for version. I say hopefully because some nutty hosts supply their own custom builds of PHP, which sometimes contain security patches but generally are a really bad idea and a headache. Either way, if you have something like `5.6.18-1~he.0` then that is what you put in `version`. 
 
-If you provide us with a `phpinfo` URL [like this](http://php56.hosteurope-infos.de/phpinfo.php) we'll be able to automatically update your patch versions, and you'll only ever need to come back to add a new major/minor version (PHP 7.1) or change your default. That doesn't happen often, so shouldn't be too much of a hardship.
+If you provide us with a `phpinfo` URL [like this](http://php56.hosteurope-infos.de/phpinfo.php) we'll be able to automatically update your patch versions, and you'll only ever need to come back to add a new major/minor version (PHP 7.2) or change your default. That doesn't happen often, so shouldn't be too much of a hardship.
 
 If you leave phpinfo blank, we might mark you as having an insecure version of PHP on your website, which might not look great. If you want to password protect your phpinfo URLs or provide us with a secret one then get in touch, and we can sort that out. 
 

@@ -49,16 +49,15 @@ The you have `type`, which can be `shared`, `managed` or `paas`. If you provide 
 
 The remaining stuff is `default`, which points to one of the `versions` below. Here are the supported versions:
 
-- 52
-- 53
 - 54
 - 55
 - 56
 - 70
 - 71
 - 72
+- 73
 
-Probably don't bother listing PHP 5.2.x versions because we'll probably remove them soon, _as should you as any sort of responsible hosting company!_ :) 
+Probably don't bother listing PHP 5.x versions because we'll probably remove them soon, _as should you as any sort of responsible hosting company!_ :) 
 
 Moving forward, we will try to remove anything under 5.6. This is supposed to be a list of current versions :)
 

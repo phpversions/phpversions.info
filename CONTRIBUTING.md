@@ -49,8 +49,6 @@ The you have `type`, which can be `shared`, `managed` or `paas`. If you provide 
 
 The remaining stuff is `default`, which points to one of the `versions` below. Here are the supported versions:
 
-- 54
-- 55
 - 56
 - 70
 - 71

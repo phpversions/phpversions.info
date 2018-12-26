@@ -21,26 +21,31 @@ The format looks like this:
 
 ```
 -
-    name: '1&1'
-    url: 'http://www.1and1.com/web-hosting#info-list'
+    name: 'ACME Hosting'
+    url: 'https://www.example.com/hosting'
     type: shared
-    default: 55
+    default: 72
     versions:
-        54:
-            phpinfo: null
-            patch: 35
-            version: 5.4.35
-            semver: 5.4.35
-        55:
-            phpinfo: null
-            patch: 20
-            version: 5.5.20
-            semver: 5.5.20
         56:
             phpinfo: null
-            patch: 4
-            version: 5.6.4
-            semver: 5.6.4
+            patch: 36
+            version: 5.6.36
+            semver: 5.6.36
+        71:
+            phpinfo: null
+            patch: 9
+            version: 7.1.9
+            semver: 7.1.9
+        72:
+            phpinfo: null
+            patch: 0
+            version: 7.2.0
+            semver: 7.2.0
+        73:
+            phpinfo: null
+            patch: 0
+            version: 7.3.0
+            semver: 7.3.0
 ```
 
 The `name` field is the name of the hosting company as you'd like it to show to humans. We'll auto-escape any special HTML characters don't worry. 

@@ -12,11 +12,11 @@
     "require": {
         "php": "^7.0",
         "sturgeon/phparse": "^0.2",
-        "symfony/dom-crawler": "^3.0",
-        "symfony/yaml": "^3.0"
+        "symfony/dom-crawler": "^3.0|^4.0",
+        "symfony/yaml": "^3.0|^4.0"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^2.3"
+        "squizlabs/php_codesniffer": "^2.3|^3.0"
     },
     "scripts": {
         "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 bin",

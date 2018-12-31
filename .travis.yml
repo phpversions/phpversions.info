@@ -6,6 +6,7 @@ before_install:
 - gem update bundler && bundle install
 - composer install
 script:
+- php ./bin/validate-hosts-yml
 - php ./bin/update-versions
 - bundle exec jekyll build
 deploy:

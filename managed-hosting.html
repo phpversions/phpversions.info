@@ -23,7 +23,7 @@ layout: default
                 </tr>
             </thead>
             <tbody>
-                {% assign hosts = (site.data.hosts | filter_by_type: 'managed' | sort: 'name') %}
+                {% assign hosts = (site.data.hosts | filter_by_type: 'managed' | semver_sort) %}
                 {% for host in hosts %}
                 <tr>
                     <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>

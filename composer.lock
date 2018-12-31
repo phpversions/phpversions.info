@@ -1,11 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "411e0ffb64d57403d8bb22b65c604a19",
-    "content-hash": "1fbfee907b482db3dfbeec990781fdfd",
+    "content-hash": "53ee86fa6e00afa716ba458ca434f910",
     "packages": [
         {
             "name": "naneau/semver",
@@ -52,7 +51,7 @@
                 "semver",
                 "versioning"
             ],
-            "time": "2013-01-04 00:00:00"
+            "time": "2013-01-04T00:00:00+00:00"
         },
         {
             "name": "sturgeon/phparse",
@@ -85,7 +84,7 @@
                 "source": "https://github.com/philsturgeon/phparse/tree/0.2.1",
                 "issues": "https://github.com/philsturgeon/phparse/issues"
             },
-            "time": "2016-09-19 21:54:22"
+            "time": "2016-09-19T21:54:22+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -141,7 +140,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2016-08-05 08:37:39"
+            "time": "2016-08-05T08:37:39+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -200,7 +199,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-05-18 14:26:46"
+            "time": "2016-05-18T14:26:46+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -249,7 +248,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-02 02:12:52"
+            "time": "2016-09-02T02:12:52+00:00"
         }
     ],
     "packages-dev": [
@@ -329,7 +328,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-09-01 23:53:02"
+            "time": "2016-09-01T23:53:02+00:00"
         }
     ],
     "aliases": [],

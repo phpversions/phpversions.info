@@ -18,6 +18,7 @@ module Jekyll
         a56 = a['versions'][56] && a['versions'][56]['semver'] ? Semantic::Version.new(a['versions'][56]['semver']) : '0.0.1'
         a55 = a['versions'][55] && a['versions'][55]['semver'] ? Semantic::Version.new(a['versions'][55]['semver']) : '0.0.1'
         a54 = a['versions'][54] && a['versions'][54]['semver'] ? Semantic::Version.new(a['versions'][54]['semver']) : '0.0.1'
+        adefault = a['default'] ? a['default'].to_i : 0
 
         b73 = b['versions'][73] && b['versions'][73]['semver'] ? Semantic::Version.new(b['versions'][73]['semver']) : '0.0.1'
         b72 = b['versions'][72] && b['versions'][72]['semver'] ? Semantic::Version.new(b['versions'][72]['semver']) : '0.0.1'
@@ -26,8 +27,9 @@ module Jekyll
         b56 = b['versions'][56] && b['versions'][56]['semver'] ? Semantic::Version.new(b['versions'][56]['semver']) : '0.0.1'
         b55 = b['versions'][55] && b['versions'][55]['semver'] ? Semantic::Version.new(b['versions'][55]['semver']) : '0.0.1'
         b54 = b['versions'][54] && b['versions'][54]['semver'] ? Semantic::Version.new(b['versions'][54]['semver']) : '0.0.1'
+        bdefault = b['default'] ? b['default'].to_i : 0
 
-        [b73, b72, b71, b70, b56, b55, b54] <=> [a73, a72, a71, a70, a56, a55, a54]
+        [b73, b72, b71, bdefault, b70, b56, b55, b54] <=> [a73, a72, a71, adefault, a70, a56, a55, a54]
       end
     end
 

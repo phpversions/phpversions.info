@@ -6,12 +6,12 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/philsturgeon/phparse"
+            "url": "https://github.com/phpversions/phparse"
         }
     ],
     "require": {
         "php": "^7.0",
-        "sturgeon/phparse": "^0.2",
+        "sturgeon/phparse": "dev-master",
         "symfony/dom-crawler": "^3.0|^4.0",
         "symfony/yaml": "^3.0|^4.0"
     },

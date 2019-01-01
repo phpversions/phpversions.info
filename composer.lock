@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1735c3460e0022ccc49954b6cb1d995b",
+    "content-hash": "83b6d312e0152c684608da2127e07b53",
     "packages": [
         {
             "name": "naneau/semver",
@@ -55,16 +55,16 @@
         },
         {
             "name": "sturgeon/phparse",
-            "version": "0.2.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/philsturgeon/phparse.git",
-                "reference": "13fc38986a7a389f5015040ac4b49b7fcf192ab5"
+                "url": "https://github.com/phpversions/phparse.git",
+                "reference": "d94f38d1210c587a10c27af1e32bf322dff36c85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philsturgeon/phparse/zipball/13fc38986a7a389f5015040ac4b49b7fcf192ab5",
-                "reference": "13fc38986a7a389f5015040ac4b49b7fcf192ab5",
+                "url": "https://api.github.com/repos/phpversions/phparse/zipball/d94f38d1210c587a10c27af1e32bf322dff36c85",
+                "reference": "d94f38d1210c587a10c27af1e32bf322dff36c85",
                 "shasum": ""
             },
             "require": {
@@ -81,10 +81,9 @@
                 }
             },
             "support": {
-                "source": "https://github.com/philsturgeon/phparse/tree/0.2.1",
-                "issues": "https://github.com/philsturgeon/phparse/issues"
+                "source": "https://github.com/phpversions/phparse/tree/master"
             },
-            "time": "2016-09-19T21:54:22+00:00"
+            "time": "2018-12-31T18:58:11+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -375,7 +374,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "sturgeon/phparse": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

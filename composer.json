@@ -10,10 +10,10 @@
         }
     ],
     "require": {
-        "php": "^7.0",
+        "php": "^7.2",
         "sturgeon/phparse": "dev-master",
-        "symfony/dom-crawler": "^3.0|^4.0",
-        "symfony/yaml": "^3.0|^4.0"
+        "symfony/dom-crawler": "^4.0",
+        "symfony/yaml": "^4.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.3|^3.0"

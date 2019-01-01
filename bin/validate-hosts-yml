@@ -32,6 +32,11 @@ foreach ($hosts as $host) {
     if (empty($host['versions'])) {
         fail('Missing "versions"', $host);
     }
+    if (!empty($host['default'])) {
+        if (!preg_match('/^\d{2,}$/', $host['default'])) {
+            fail('Invalid "default" - must be null or digits only', $host);
+        }
+    }
 
     foreach ($host['versions'] as $k => $v) {
         if (!is_numeric($v['patch'])) {

@@ -23,6 +23,11 @@ class HostEvent extends Model
         'semver',
     ];
 
+    public function getId() : int
+    {
+        return $this->id;
+    }
+
     public function setHostType(bool $hostType) : void
     {
         $this->host_type = $hostType;

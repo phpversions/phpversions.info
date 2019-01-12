@@ -26,7 +26,7 @@ class HostRepository implements Storable
         return $this->host->find($id);
     }
 
-    public function create(object $object) : void
+    public function create($object) : void
     {
         $host = new Host();
 

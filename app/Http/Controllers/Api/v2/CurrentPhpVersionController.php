@@ -8,7 +8,7 @@ use App\Transformers\Api\v2\CurrentPhpVersionTransformer;
 use App\Transformers\Api\v2\HostTransformer;
 use Illuminate\Http\Response;
 
-class CurrentPhpVersionController extends Controller
+class CurrentPhpVersionController extends ApiBaseController
 {
     /** @var PhpVersionManager */
     private $versionManager;

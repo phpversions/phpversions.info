@@ -14,6 +14,7 @@ class HostTransformer extends TransformerAbstract
     public function transform(Host $host)
     {
         return [
+            'id' => $host->getId(),
             'host' => $host->getName(),
             'url' => $host->getUrl(),
             'default' => $host->getDefaultPhpVersion(),
@@ -27,6 +28,6 @@ class HostTransformer extends TransformerAbstract
             return $this->null();
         }
 
-        return $this->collection($host->events, new EventsTransformer);
+        return $this->collection($host->events, new EventsTransformer(), 'host-version');
     }
 }

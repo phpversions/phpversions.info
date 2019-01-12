@@ -1,0 +1,33 @@
+language: php
+
+dist: precise
+
+php:
+  - 7.2
+  - 7.3
+  - nightly
+
+before_script:
+  - cp .env.travis .env
+  - composer self-update
+  - composer install --no-interaction
+  - php artisan cache:clear
+  - php artisan config:cache
+
+  script:
+  - vendor/bin/phpunit
+  - vendor/bin/phpcs --standard=Doctrine app/ --colors
+  - vendor/bin/phpstan analyse app tests
+  - vendor/bin/phpcdp ap
+  - vendor/bin/phpmd app text cleancode codesize unusedcode naming
+
+services:
+  - mysql
+
+cache:
+  directories:
+    - node_modules
+    - vendor
+
+env:
+  - TRAVIS_NODE_VERSION="4"

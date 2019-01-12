@@ -23,7 +23,7 @@
             if (semver == this.version) {
               eolVersions =  event.semver;
             } else {
-              eolVersions = 'X';
+              eolVersions = ' ';
             }
           } else {
             if (this.version.includes(semver)) {
@@ -32,7 +32,7 @@
           }
         });
         if (typeof eolVersions === 'object') {
-          return eolVersions.join(' ');
+          return eolVersions.join(', ');
         }
 
         return eolVersions;

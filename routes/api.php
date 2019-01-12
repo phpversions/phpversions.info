@@ -24,3 +24,5 @@ Route::get('/hosts/paas', ['uses' => 'Api\v2\PaasHostsController@index']);
 Route::get('/hosts/distros', ['uses' => 'Api\v2\OperatingSystemsController@index']);
 Route::get('/versions/current', ['uses' => 'Api\v2\CurrentPhpVersionController@index']);
 Route::get('/versions/deprecated', ['uses' => 'Api\v2\DeprecatedPhpVersionController@index']);
+Route::get('/vulnerabilities', ['uses' => 'Api\v2\VulnerabilitiesController@index']);
+Route::get('/vulnerabilities/search', ['uses' => 'Api\v2\VulnerabilitySearchController@index']);

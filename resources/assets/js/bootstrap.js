@@ -10,11 +10,13 @@ window._ = require('lodash');
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import VueMeta from 'vue-meta';
 import Axios from 'axios';
 
 window.Vue = Vue;
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(VueMeta);
 
 window.axios = Axios;
 

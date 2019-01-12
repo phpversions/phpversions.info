@@ -15,7 +15,7 @@ interface Storable
 
     public function fetch(int $id);
 
-    public function create(object $object);
+    public function create($object);
 
     public function edit(object $object);
 

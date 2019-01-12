@@ -6,7 +6,7 @@
         <h2 class="font-sans tracking-wide font-light text-4xl pb-4">PHP {{ currentVersion }}</h2>
         <p class="font-sans tracking-wide font-light pb-4">PHP 7.2 is out! After maturing like a fine artisanal cheese in through months of release candidates, it's now officially released and heading to a server near you.</p>
 
-        <p class="font-sans tracking-wide font-light pb-4">Upgrading from PHP 7.1 is really easy, and installing locally is explained over on PHP The Right Way: Getting Started. If you're feeling a bit more adventurous, you can install from source to see some of the features coming in PHP 7.3</p>
+        <p class="font-sans tracking-wide font-light pb-4">Upgrading from PHP 7.1 is really easy, and installing locally is explained over on <a href="https://phptherightway.com">PHP The Right Way: Getting Started</a>. If you're feeling a bit more adventurous, you can install from source to see some of the features coming in PHP 7.3</p>
         <table class="w-full">
             <thead>
                 <tr>

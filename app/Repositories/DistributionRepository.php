@@ -28,7 +28,7 @@ class DistributionRepository implements Storable
         return $this->distribution->find($id);
     }
 
-    public function create(object $object) : void
+    public function create($object) : void
     {
         $distribution = new Distribution();
 

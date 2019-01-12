@@ -16,7 +16,7 @@ class CreateDistributionsTable extends Migration
         Schema::create('distributions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }

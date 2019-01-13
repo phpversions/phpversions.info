@@ -47,7 +47,8 @@
             @yield('content')
         </main>
         <footer class="flex justify-center pb-4 pt-8 bg-logo">
-            <p class="align-center text-grey-darker font-sans text-xs">Copyright © 2018 Matt Trask. Contributions from the community.</p>
+            <p class="align-center text-white font-sans text-sm">Support The Project | About The Project</p>
+            <p class="align-center text-white font-sans text-sm">Copyright © 2018 Matt Trask. <a class="no-underline text-white" href="https://github.com/phpversions/phpversions.info/graphs/contributors">Contributions from the community.</a></p>
         </footer>
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>

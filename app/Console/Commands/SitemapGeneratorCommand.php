@@ -4,37 +4,25 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
-use Carbon\Carbon;
+use App\Services\SitemapService;
 use Illuminate\Console\Command;
-use Spatie\Sitemap\SitemapGenerator;
-use Spatie\Sitemap\Tags\Url;
 
 class SitemapGeneratorCommand extends Command
 {
-    /** @var SitemapGenerator */
-    private $sitemap;
+    private const PATH = __DIR__ . '/../../../public/sitemap.xml';
 
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
+    /** @var SitemapService */
+    private $sitemapService;
+
     protected $signature = 'phpversions:sitemap';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
     protected $description = 'Generate Sitemap for PhpVersions';
 
-    protected $path = __DIR__ . '/../../../public/sitemap.xml';
-
-    public function __construct(SitemapGenerator $sitemap)
+    public function __construct(SitemapService $sitemapService)
     {
         parent::__construct();
 
-        $this->sitemap = $sitemap;
+        $this->sitemapService = $sitemapService;
     }
 
     /**
@@ -44,33 +32,10 @@ class SitemapGeneratorCommand extends Command
      */
     public function handle() : void
     {
-        $this->sitemap->create('https://phpversions.co')
-            ->getSitemap()
-            ->add(Url::create('/about')
-                ->setLastModificationDate(Carbon::yesterday())
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY)
-                ->setPriority(0.1)
-            )
-            ->add(Url::create('/managed-hosts')
-                ->setLastModificationDate(Carbon::yesterday())
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
-                ->setPriority(0.9)
-            )
-            ->add(Url::create('/shared-hosts')
-                ->setLastModificationDate(Carbon::yesterday())
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
-                ->setPriority(0.9)
-            )
-            ->add(Url::create('/paas-hosts')
-                ->setLastModificationDate(Carbon::yesterday())
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
-                ->setPriority(0.9)
-            )
-            ->add(Url::create('/vulnerabilities')
-                ->setLastModificationDate(Carbon::yesterday())
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
-                ->setPriority(0.9)
-            )
-            ->writeToFile($this->path);
+        $this->info('Writing sitemap for https://phpversions.org');
+
+        $this->sitemapService->writeSitemap(self::PATH);
+
+        $this->info('Sitemap was generated and written to public/sitemap.xml');
     }
 }

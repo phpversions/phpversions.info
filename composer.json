@@ -29,7 +29,8 @@
         "phpmd/phpmd": "^2.6",
         "phpstan/phpstan": "^0.10.5",
         "phpunit/phpunit": "^7.0",
-        "sebastian/phpcpd": "^4.1"
+        "sebastian/phpcpd": "^4.1",
+        "friendsofphp/php-cs-fixer": "~2.0"
     },
     "autoload": {
         "classmap": [

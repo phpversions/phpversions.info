@@ -1,11 +1,14 @@
 <style lang='scss' scoped>
-
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
 </style>
 <template>
     <div>
         <h2 class="font-sans tracking-wide font-light text-4xl pb-4">Operating Systems</h2>
         <p class="font-sans tracking-wide font-light pb-4"> Operating systems are used for both running your computer, and running web servers. Whilst you are not going to base your laptop buying decision based on which PHP version it has by default, knowing what versions are on what operating systems can save you some trouble in the future.</p>
         <p class="font-sans tracking-wide font-light pb-4">  More importantly, picking an OS for your web server with the right version is going to save arsing around trying to install (sometimes unofficial) repos to get it up to date. </p>
+        <input class="mb-4 w-1/5 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="search" type="text" placeholder="Search Hosts" v-model="search">
         <table class="w-full">
             <thead>
                 <tr>
@@ -15,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="distribution in operatingSystems">
+                <tr v-for="distribution in searchedOperatingSystems">
                     <td class="font-sans tracking-wide font-light">{{ distribution.distribution }}</td>
                     <td class="font-sans tracking-wide font-light">{{ distribution.family }}</td>
                     <td class="font-sans tracking-wide font-light">{{ distribution.default }}</td>
@@ -37,8 +40,17 @@
 
     },
 
+    computed: {
+      searchedOperatingSystems() {
+        return this.operatingSystems.filter(host => {
+          return host.distribution.toLowerCase().includes(this.search.toLowerCase());
+        });
+      },
+    },
+
     data() {
       return {
+        search: '',
         operatingSystems: [],
       };
     },

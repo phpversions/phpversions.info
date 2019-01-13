@@ -1,6 +1,6 @@
 <style lang='scss' scoped>
     tr:nth-child(even) {
-        background-color: #f2f2f2
+        background-color: #f2f2f2;
     }
 </style>
 <template>

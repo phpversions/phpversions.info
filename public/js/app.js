@@ -52497,8 +52497,8 @@ module.exports = function spread(callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_PaasHostsComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_PaasHostsComponent_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_VulnerabilitiesComponent_vue__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_VulnerabilitiesComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_VulnerabilitiesComponent_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_NotFoundComponent_vue__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_NotFoundComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_NotFoundComponent_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Errors_NotFoundComponent_vue__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Errors_NotFoundComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_Errors_NotFoundComponent_vue__);
 
 
 
@@ -52510,7 +52510,7 @@ module.exports = function spread(callback) {
 
 
 
-var routes = [{ path: '/', component: __WEBPACK_IMPORTED_MODULE_1__components_HomeComponent_vue___default.a, name: 'Home' }, { path: '/about', component: __WEBPACK_IMPORTED_MODULE_2__components_AboutComponent_vue___default.a, name: 'About' }, { path: '/shared-hosts', component: __WEBPACK_IMPORTED_MODULE_5__components_SharedHostsComponent_vue___default.a, name: 'SharedHosts' }, { path: '/managed-hosts', component: __WEBPACK_IMPORTED_MODULE_6__components_ManagedHostsComponent_vue___default.a, name: 'ManagedHosts' }, { path: '/paas-hosts', component: __WEBPACK_IMPORTED_MODULE_7__components_PaasHostsComponent_vue___default.a, name: 'PaasHosts' }, { path: '/operating-systems', component: __WEBPACK_IMPORTED_MODULE_4__components_OperatingSystemComponent_vue___default.a, name: 'OperatingSystems' }, { path: '/new-and-shiny', component: __WEBPACK_IMPORTED_MODULE_3__components_CurrentPhpVersionComponent_vue___default.a, name: 'CurrentVersion' }, { path: '/vulnerabilities', component: __WEBPACK_IMPORTED_MODULE_8__components_VulnerabilitiesComponent_vue___default.a, name: 'Vulnerabilities' }, { path: '/*', component: __WEBPACK_IMPORTED_MODULE_9__components_NotFoundComponent_vue___default.a, name: 'NotFound' }];
+var routes = [{ path: '/', component: __WEBPACK_IMPORTED_MODULE_1__components_HomeComponent_vue___default.a, name: 'Home' }, { path: '/about', component: __WEBPACK_IMPORTED_MODULE_2__components_AboutComponent_vue___default.a, name: 'About' }, { path: '/shared-hosts', component: __WEBPACK_IMPORTED_MODULE_5__components_SharedHostsComponent_vue___default.a, name: 'SharedHosts' }, { path: '/managed-hosts', component: __WEBPACK_IMPORTED_MODULE_6__components_ManagedHostsComponent_vue___default.a, name: 'ManagedHosts' }, { path: '/paas-hosts', component: __WEBPACK_IMPORTED_MODULE_7__components_PaasHostsComponent_vue___default.a, name: 'PaasHosts' }, { path: '/operating-systems', component: __WEBPACK_IMPORTED_MODULE_4__components_OperatingSystemComponent_vue___default.a, name: 'OperatingSystems' }, { path: '/new-and-shiny', component: __WEBPACK_IMPORTED_MODULE_3__components_CurrentPhpVersionComponent_vue___default.a, name: 'CurrentVersion' }, { path: '/vulnerabilities', component: __WEBPACK_IMPORTED_MODULE_8__components_VulnerabilitiesComponent_vue___default.a, name: 'Vulnerabilities' }, { path: '*', component: __WEBPACK_IMPORTED_MODULE_9__components_Errors_NotFoundComponent_vue___default.a, name: 'NotFound' }];
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
   routes: routes,
@@ -52707,6 +52707,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -52740,7 +52746,234 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "p",
+      {
+        staticClass:
+          "font-sans tracking-wide text-grey-darker leading-normal pb-4 font-2xl"
+      },
+      [
+        _vm._v(
+          "Don't get stuck on crap old versions of PHP just because your host does not support it. Keep using the newest version, and if you gotta switch... maybe you gotta switch."
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "flex content-start flex-wrap mb-8 shadow-md" }, [
+      _c(
+        "div",
+        { staticClass: "w-1/4 p-2 bg-pink no-decoration hover:bg-pink-dark" },
+        [
+          _c(
+            "router-link",
+            {
+              staticClass: "no-underline hover:text-white",
+              attrs: { to: { path: "/shared-hosts" } }
+            },
+            [
+              _c("div", { staticClass: "font-sans text-center p-2" }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "font-sans tracking-wide text-white font-light font-3xl"
+                  },
+                  [_vm._v("Shared Hosting")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "font-sans text-white text-center p-4 tracking-wide tracking-wide leading-normal"
+                },
+                [
+                  _vm._v(
+                    "Need a standard bit of web hosting? Something all set up for you and you just gotta throw your code up there?"
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "font-sans text-white text-center p-2 tracking-wide tracking-wide leading-normal"
+                },
+                [
+                  _vm._v(
+                    "Maybe a bit of SSH, but just a bit? Take a look at these."
+                  )
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "w-1/4 p-2 bg-indigo no-decoration hover:bg-indigo-dark"
+        },
+        [
+          _c(
+            "router-link",
+            {
+              staticClass: "no-underline hover:text-white",
+              attrs: { to: { path: "/paas-hosts" } }
+            },
+            [
+              _c("div", { staticClass: "font-sans text-center p-2" }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "font-sans tracking-wide text-white font-light font-3xl"
+                  },
+                  [_vm._v("PaaS")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "font-sans text-white text-center p-4 tracking-wide tracking-wide leading-normal"
+                },
+                [
+                  _vm._v(
+                    "Gotta get that Git-push fancy goodness, with simple addons?"
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "font-sans text-white text-center p-2 tracking-wide tracking-wide leading-normal"
+                },
+                [
+                  _vm._v(
+                    "Heroku started a trend years ago, and now we have a lot of Platform-as-a-Service systems that take minimal effort to get working."
+                  )
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "w-1/4 p-2 bg-teal no-decoration hover:bg-teal-dark" },
+        [
+          _c(
+            "router-link",
+            {
+              staticClass: "no-underline hover:text-white",
+              attrs: { to: { path: "/managed-hosts" } }
+            },
+            [
+              _c("div", { staticClass: "font-sans text-center p-2" }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "font-sans tracking-wide text-white font-light font-3xl"
+                  },
+                  [_vm._v("Managed Hosting")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "font-sans text-white text-center p-4 tracking-wide leading-normal"
+                },
+                [_vm._v("Not interested in managing servers yourself?")]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "font-sans text-white text-center p-2 tracking-wide leading-normal"
+                },
+                [
+                  _vm._v(
+                    "Managed hosting providers will keep your server and software up-to-date for you."
+                  )
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "w-1/4 p-2 bg-blue no-decoration hover:bg-blue-dark" },
+        [
+          _c(
+            "router-link",
+            {
+              staticClass: "no-underline hover:text-white",
+              attrs: { to: { path: "/operating-systems" } }
+            },
+            [
+              _c("div", { staticClass: "font-sans text-center p-2" }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "font-sans tracking-wide text-white font-light font-3xl"
+                  },
+                  [_vm._v("Operating Systems")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "font-sans text-white text-center p-4 tracking-wide leading-normal"
+                },
+                [
+                  _vm._v(
+                    "Want to know which Linux distribution or OS X version come with what version of PHP?"
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "font-sans text-white text-center p-2 tracking-wide leading-normal"
+                },
+                [
+                  _vm._v(
+                    "Sure, you can upgrade the version, but some folks don't know how, so maybe starting out right is a good move."
+                  )
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(0)
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -52749,264 +52982,87 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c(
-        "p",
+        "h2",
         {
           staticClass:
-            "font-sans tracking-wide text-grey-darker leading-normal pb-4 font-2xl"
+            "font-sans tracking-wide text-grey-darker font-bold font-3xl pb-4"
         },
+        [_vm._v("FAQ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "pb-4 font-sans text-grey-darker tracking-wide" },
         [
+          _c("span", { staticClass: "font-bold pb-2" }, [
+            _vm._v(
+              "I work for a hosting company that isn't on here, can we get listed?"
+            )
+          ]),
+          _c("br"),
+          _vm._v("\n            Sure why not! Shout at "),
+          _c("a", { attrs: { href: "https://twitter.com/matthewtrask" } }, [
+            _vm._v("@matthewtrask")
+          ]),
           _vm._v(
-            "Don't get stuck on crap old versions of PHP just because your host does not support it. Keep using the newest version, and if you gotta switch... maybe you gotta switch."
+            " on Twitter, or send a pull request to the GitHub repo.\n        "
           )
         ]
       ),
       _vm._v(" "),
       _c(
-        "div",
-        { staticClass: "flex content-start flex-wrap mb-8 shadow-md" },
+        "p",
+        { staticClass: "pb-4 font-sans text-grey-darker tracking-wide" },
         [
-          _c("div", { staticClass: "w-1/4 p-2 bg-pink-lighter" }, [
-            _c("div", { staticClass: "text-grey-darker text-center p-2" }, [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "font-sans tracking-wide text-grey-darkest font-light font-3xl"
-                },
-                [_vm._v("Shared Hosting")]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "font-sans text-grey-darker text-center p-4 tracking-wide tracking-wide leading-normal"
-              },
-              [
-                _vm._v(
-                  "\n                Need a standard bit of web hosting? Something all set up for you and you just gotta throw your code up there?"
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "font-sans text-grey-darker text-center p-2 tracking-wide tracking-wide leading-normal"
-              },
-              [
-                _vm._v(
-                  "\n                Maybe a bit of SSH, but just a bit? Take a look at these."
-                )
-              ]
-            )
+          _c("span", { staticClass: "font-bold pb-2" }, [
+            _vm._v("Where do you get the data from?")
+          ]),
+          _c("br"),
+          _vm._v(
+            "\n            This used to be entirely manual, which was a horrendous to keep up to date. Now we parse phpinfo() on public URLs that hosts make available, like this:\n            "
+          ),
+          _c("br"),
+          _c("br"),
+          _vm._v(" "),
+          _c("span", { staticClass: "pt-4 pb-4 italic" }, [
+            _vm._v("http://php70.webhosting.be/phpinfo.php")
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "w-1/4 p-2 bg-indigo-lighter" }, [
-            _c(
-              "div",
-              { staticClass: "font-sans text-grey-darker text-center p-2" },
-              [
-                _c(
-                  "h2",
-                  {
-                    staticClass:
-                      "font-sans tracking-wide text-grey-darkest font-light font-3xl"
-                  },
-                  [_vm._v("PaaS")]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "font-sans text-grey-darker text-center p-4 tracking-wide tracking-wide leading-normal"
-              },
-              [
-                _vm._v(
-                  "Gotta get that Git-push fancy goodness, with simple addons?"
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "font-sans text-grey-darker text-center p-2 tracking-wide tracking-wide leading-normal"
-              },
-              [
-                _vm._v(
-                  "Heroku started a trend years ago, and now we have a lot of Platform-as-a-Service systems that take minimal effort to get working."
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-1/4 p-2 bg-teal-lighter" }, [
-            _c("div", { staticClass: "text-grey-darker text-center p-2" }, [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "font-sans tracking-wide text-grey-darkest font-light font-3xl"
-                },
-                [_vm._v("Managed Hosting")]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "font-sans text-grey-darker text-center p-4 tracking-wide leading-normal"
-              },
-              [_vm._v("Not interested in managing servers yourself?")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "font-sans text-grey-darker text-center p-2 tracking-wide leading-normal"
-              },
-              [
-                _vm._v(
-                  "Managed hosting providers will keep your server and software up-to-date for you."
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-1/4 p-2 bg-blue-lighter" }, [
-            _c("div", { staticClass: "text-grey-darker text-center p-2" }, [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "font-sans tracking-wide text-grey-darkest font-light font-3xl"
-                },
-                [_vm._v("Operating Systems")]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "font-sans text-grey-darker text-center p-4 tracking-wide leading-normal"
-              },
-              [
-                _vm._v(
-                  "Want to know which Linux distribution or OS X version come with what version of PHP?"
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "font-sans text-grey-darker text-center p-2 tracking-wide leading-normal"
-              },
-              [
-                _vm._v(
-                  "Sure, you can upgrade the version, but some folks don't know how, so maybe starting out right is a good move."
-                )
-              ]
-            )
-          ])
+          _c("br"),
+          _c("br"),
+          _vm._v(
+            "\n            Not all hosts have them so some are still entirely manual. Either way, sending us patch version changes, changes in the default versions, or new public phpinfo URLs can be done via updating hosts.yml.\n        "
+          )
         ]
       ),
       _vm._v(" "),
-      _c("div", [
-        _c(
-          "h2",
-          {
-            staticClass:
-              "font-sans tracking-wide text-grey-darker font-bold font-3xl pb-4"
-          },
-          [_vm._v("FAQ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "pb-4 font-sans text-grey-darker tracking-wide" },
-          [
-            _c("span", { staticClass: "font-bold pb-2" }, [
-              _vm._v(
-                "I work for a hosting company that isn't on here, can we get listed?"
-              )
-            ]),
-            _c("br"),
-            _vm._v("\n            Sure why not! Shout at "),
-            _c("a", { attrs: { href: "https://twitter.com/matthewtrask" } }, [
-              _vm._v("@matthewtrask")
-            ]),
-            _vm._v(
-              " on Twitter, or send a pull request to the GitHub repo.\n        "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "pb-4 font-sans text-grey-darker tracking-wide" },
-          [
-            _c("span", { staticClass: "font-bold pb-2" }, [
-              _vm._v("Where do you get the data from?")
-            ]),
-            _c("br"),
-            _vm._v(
-              "\n            This used to be entirely manual, which was a horrendous to keep up to date. Now we parse phpinfo() on public URLs that hosts make available, like this:\n            "
-            ),
-            _c("br"),
-            _c("br"),
-            _vm._v(" "),
-            _c("span", { staticClass: "pt-4 pb-4 italic" }, [
-              _vm._v("http://php70.webhosting.be/phpinfo.php")
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _c("br"),
-            _vm._v(
-              "\n            Not all hosts have them so some are still entirely manual. Either way, sending us patch version changes, changes in the default versions, or new public phpinfo URLs can be done via updating hosts.yml.\n        "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "pb-4 font-sans text-grey-darker tracking-wide" },
-          [
-            _c("span", { staticClass: "font-bold pb-2" }, [
-              _vm._v("How do I contribute?")
-            ]),
-            _c("br"),
-            _vm._v(
-              "\n            Read the contributing guide on GitHub.\n        "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "p",
-          { staticClass: "pb-4 font-sans text-grey-darker tracking-wide" },
-          [
-            _c("span", { staticClass: "font-bold pb-2" }, [
-              _vm._v("Do you intend to implement X or Y?")
-            ]),
-            _c("br"),
-            _vm._v(
-              "\n            I have a bit of a todo list, and I would love help if you're bored.\n        "
-            )
-          ]
-        )
-      ])
+      _c(
+        "p",
+        { staticClass: "pb-4 font-sans text-grey-darker tracking-wide" },
+        [
+          _c("span", { staticClass: "font-bold pb-2" }, [
+            _vm._v("How do I contribute?")
+          ]),
+          _c("br"),
+          _vm._v(
+            "\n            Read the contributing guide on GitHub.\n        "
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "p",
+        { staticClass: "pb-4 font-sans text-grey-darker tracking-wide" },
+        [
+          _c("span", { staticClass: "font-bold pb-2" }, [
+            _vm._v("Do you intend to implement X or Y?")
+          ]),
+          _c("br"),
+          _vm._v(
+            "\n            I have a bit of a todo list, and I would love help if you're bored.\n        "
+          )
+        ]
+      )
     ])
   }
 ]
@@ -53927,7 +53983,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n", ""]);
+exports.push([module.i, "\ntr[data-v-bef5859c]:nth-child(even) {\n  background-color: #f2f2f2;\n}\n", ""]);
 
 // exports
 
@@ -53968,6 +54024,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -53977,8 +54036,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     this.getOperatingSystems();
   },
   mounted: function mounted() {},
+
+
+  computed: {
+    searchedOperatingSystems: function searchedOperatingSystems() {
+      var _this = this;
+
+      return this.operatingSystems.filter(function (host) {
+        return host.distribution.toLowerCase().includes(_this.search.toLowerCase());
+      });
+    }
+  },
+
   data: function data() {
     return {
+      search: '',
       operatingSystems: []
     };
   },
@@ -53986,10 +54058,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     getOperatingSystems: function getOperatingSystems() {
-      var _this = this;
+      var _this2 = this;
 
       return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/hosts/distros').then(function (response) {
-        _this.operatingSystems = response.data.data;
+        _this2.operatingSystems = response.data.data;
       }).catch(function (error) {
         if (error.statusCode() === 500) {
           router.push('Home');
@@ -54029,12 +54101,35 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.search,
+          expression: "search"
+        }
+      ],
+      staticClass:
+        "mb-4 w-1/5 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline",
+      attrs: { id: "search", type: "text", placeholder: "Search Hosts" },
+      domProps: { value: _vm.search },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.search = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
     _c("table", { staticClass: "w-full" }, [
       _vm._m(0),
       _vm._v(" "),
       _c(
         "tbody",
-        _vm._l(_vm.operatingSystems, function(distribution) {
+        _vm._l(_vm.searchedOperatingSystems, function(distribution) {
           return _c("tr", [
             _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
               _vm._v(_vm._s(distribution.distribution))
@@ -55806,7 +55901,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-06855079"
+var __vue_scopeId__ = "data-v-08bd9e2f"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -55817,7 +55912,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/components/NotFoundComponent.vue"
+Component.options.__file = "resources/assets/components/Errors/NotFoundComponent.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -55826,9 +55921,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-06855079", Component.options)
+    hotAPI.createRecord("data-v-08bd9e2f", Component.options)
   } else {
-    hotAPI.reload("data-v-06855079", Component.options)
+    hotAPI.reload("data-v-08bd9e2f", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -55849,13 +55944,13 @@ var content = __webpack_require__(217);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("087fb869", content, false, {});
+var update = __webpack_require__(4)("78079e06", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-06855079\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NotFoundComponent.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-06855079\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NotFoundComponent.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08bd9e2f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NotFoundComponent.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08bd9e2f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NotFoundComponent.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -55894,6 +55989,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -55918,7 +56023,45 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [
+    _c("div", { staticClass: "pb-4" }, [
+      _c(
+        "h1",
+        {
+          staticClass:
+            "font-sans font-light tracking-wide text-5xl pb-2 text-center"
+        },
+        [_vm._v("Oh No!")]
+      ),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "p",
+          {
+            staticClass:
+              "tracking-wide font-light font-sans text-center pb-4 pt-4"
+          },
+          [
+            _vm._v(
+              "\n                You seemed to have stumbled on a link that doesn't go anywhere.\n            "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "p",
+          { staticClass: "tracking-wide font-light font-sans text-center" },
+          [
+            _vm._v("\n               To go back home: "),
+            _c("router-link", { attrs: { to: { path: "/" } } }, [
+              _vm._v("Click Here")
+            ])
+          ],
+          1
+        )
+      ])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -55926,7 +56069,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-06855079", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-08bd9e2f", module.exports)
   }
 }
 

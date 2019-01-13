@@ -21,32 +21,32 @@
 </head>
 <body>
     <div id="app">
-        <nav class="bg-white px-8 pt-2 shadow-md">
+        <nav class="bg-logo px-8 pt-2 shadow-md">
             <div class="-mb-px flex justify-center">
-                <router-link class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-indigo-dark hover:border-indigo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'SharedHosts'}">
+                <router-link class="no-underline text-white hover:text-white active:text-white active:border-b-2 hover:border-b-2 active:border-logo hover:border-logo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'SharedHosts'}">
                     Shared Hosts
                 </router-link>
-                <router-link class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'PaasHosts' }">
+                <router-link class="no-underline text-white hover:text-white active:text-white active:border-b-2 hover:border-b-2 active:border-logo hover:border-logo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'PaasHosts' }">
                     PaaS
                 </router-link>
-                <router-link class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'ManagedHosts' }">
+                <router-link class="no-underline text-white hover:text-white active:text-white active:border-b-2 hover:border-b-2 active:border-logo hover:border-logo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'ManagedHosts' }">
                     Managed Hosts
                 </router-link>
-                <router-link class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'OperatingSystems' }">
+                <router-link class="no-underline text-white hover:text-white active:text-white active:border-b-2 hover:border-b-2 active:border-logo hover:border-logo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'OperatingSystems' }">
                     Operating Systems
                 </router-link>
-                <router-link class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'Vulnerabilities' }">
+                <router-link class="no-underline text-white hover:text-white active:text-white active:border-b-2 hover:border-b-2 active:border-logo hover:border-logo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'Vulnerabilities' }">
                     Vulnerabilities
                 </router-link>
-                <router-link class="no-underline text-grey-dark hover:text-main-purple active:text-main-purple active:border-b-2 hover:border-b-2 active:border-main-purple hover:border-main-purple uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'CurrentVersion' }">
-                    PHP 7.2
+                <router-link class="no-underline text-white hover:text-white active:text-white active:border-b-2 hover:border-b-2 active:border-logo hover:border-logo-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" :to="{ name: 'CurrentVersion' }">
+                    PHP 7.3
                 </router-link>
             </div>
         </nav>
         <main class="py-4">
             @yield('content')
         </main>
-        <footer class="flex justify-center pb-4 pt-8">
+        <footer class="flex justify-center pb-4 pt-8 bg-logo">
             <p class="align-center text-grey-darker font-sans text-xs">Copyright © 2018 Matt Trask. Contributions from the community.</p>
         </footer>
     </div>

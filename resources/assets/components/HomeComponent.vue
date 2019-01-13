@@ -5,27 +5,33 @@
     <div>
         <p class="font-sans tracking-wide text-grey-darker leading-normal pb-4 font-2xl">Don't get stuck on crap old versions of PHP just because your host does not support it. Keep using the newest version, and if you gotta switch... maybe you gotta switch.</p>
         <div class="flex content-start flex-wrap mb-8 shadow-md">
-            <div class="w-1/4 p-2 bg-pink-lighter">
-                <div class="text-grey-darker text-center p-2"><h2 class="font-sans tracking-wide text-grey-darkest font-light font-3xl">Shared Hosting</h2></div>
-                <div class="font-sans text-grey-darker text-center p-4 tracking-wide tracking-wide leading-normal">
-                    Need a standard bit of web hosting? Something all set up for you and you just gotta throw your code up there?</div>
-                <div class="font-sans text-grey-darker text-center p-2 tracking-wide tracking-wide leading-normal">
-                    Maybe a bit of SSH, but just a bit? Take a look at these.</div>
+            <div class="w-1/4 p-2 bg-pink no-decoration hover:bg-pink-dark">
+                <router-link :to="{ path: '/shared-hosts' }" class="no-underline hover:text-white">
+                    <div class="font-sans text-center p-2"><h2 class="font-sans tracking-wide text-white font-light font-3xl">Shared Hosting</h2></div>
+                    <div class="font-sans text-white text-center p-4 tracking-wide tracking-wide leading-normal">Need a standard bit of web hosting? Something all set up for you and you just gotta throw your code up there?</div>
+                    <div class="font-sans text-white text-center p-2 tracking-wide tracking-wide leading-normal">Maybe a bit of SSH, but just a bit? Take a look at these.</div>
+                </router-link>
             </div>
-            <div class="w-1/4 p-2 bg-indigo-lighter">
-                <div class="font-sans text-grey-darker text-center p-2"><h2 class="font-sans tracking-wide text-grey-darkest font-light font-3xl">PaaS</h2></div>
-                <div class="font-sans text-grey-darker text-center p-4 tracking-wide tracking-wide leading-normal">Gotta get that Git-push fancy goodness, with simple addons?</div>
-                <div class="font-sans text-grey-darker text-center p-2 tracking-wide tracking-wide leading-normal">Heroku started a trend years ago, and now we have a lot of Platform-as-a-Service systems that take minimal effort to get working.</div>
+            <div class="w-1/4 p-2 bg-indigo no-decoration hover:bg-indigo-dark">
+                <router-link :to="{ path: '/paas-hosts' }" class="no-underline hover:text-white">
+                    <div class="font-sans text-center p-2"><h2 class="font-sans tracking-wide text-white font-light font-3xl">PaaS</h2></div>
+                    <div class="font-sans text-white text-center p-4 tracking-wide tracking-wide leading-normal">Gotta get that Git-push fancy goodness, with simple addons?</div>
+                    <div class="font-sans text-white text-center p-2 tracking-wide tracking-wide leading-normal">Heroku started a trend years ago, and now we have a lot of Platform-as-a-Service systems that take minimal effort to get working.</div>
+                </router-link>
             </div>
-            <div class="w-1/4 p-2 bg-teal-lighter">
-                <div class="text-grey-darker text-center p-2"><h2 class="font-sans tracking-wide text-grey-darkest font-light font-3xl">Managed Hosting</h2></div>
-                <div class="font-sans text-grey-darker text-center p-4 tracking-wide leading-normal">Not interested in managing servers yourself?</div>
-                <div class="font-sans text-grey-darker text-center p-2 tracking-wide leading-normal">Managed hosting providers will keep your server and software up-to-date for you.</div>
+            <div class="w-1/4 p-2 bg-teal no-decoration hover:bg-teal-dark">
+                <router-link :to="{ path: '/managed-hosts' }" class="no-underline hover:text-white">
+                    <div class="font-sans text-center p-2"><h2 class="font-sans tracking-wide text-white font-light font-3xl">Managed Hosting</h2></div>
+                    <div class="font-sans text-white text-center p-4 tracking-wide leading-normal">Not interested in managing servers yourself?</div>
+                    <div class="font-sans text-white text-center p-2 tracking-wide leading-normal">Managed hosting providers will keep your server and software up-to-date for you.</div>
+                </router-link>
             </div>
-            <div class="w-1/4 p-2 bg-blue-lighter">
-                <div class="text-grey-darker text-center p-2"><h2 class="font-sans tracking-wide text-grey-darkest font-light font-3xl">Operating Systems</h2></div>
-                <div class="font-sans text-grey-darker text-center p-4 tracking-wide leading-normal">Want to know which Linux distribution or OS X version come with what version of PHP?</div>
-                <div class="font-sans text-grey-darker text-center p-2 tracking-wide leading-normal">Sure, you can upgrade the version, but some folks don't know how, so maybe starting out right is a good move.</div>
+            <div class="w-1/4 p-2 bg-blue no-decoration hover:bg-blue-dark">
+                <router-link :to="{ path: '/operating-systems' }" class="no-underline hover:text-white">
+                    <div class="font-sans text-center p-2"><h2 class="font-sans tracking-wide text-white font-light font-3xl">Operating Systems</h2></div>
+                    <div class="font-sans text-white text-center p-4 tracking-wide leading-normal">Want to know which Linux distribution or OS X version come with what version of PHP?</div>
+                    <div class="font-sans text-white text-center p-2 tracking-wide leading-normal">Sure, you can upgrade the version, but some folks don't know how, so maybe starting out right is a good move.</div>
+                </router-link>
             </div>
         </div>
         <div>

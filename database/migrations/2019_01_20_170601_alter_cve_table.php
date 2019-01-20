@@ -14,7 +14,7 @@ class AlterCveTable extends Migration
      */
     public function up()
     {
-        DB::statement('ALTER TABLE `vulnerabilities` CHANGE  `cve_id` VARCHAR(45) NOT NULL;');
+        DB::statement('ALTER TABLE `vulnerabilities` CHANGE  `cve_id` TEXT');
     }
 
     /**
@@ -24,6 +24,6 @@ class AlterCveTable extends Migration
      */
     public function down()
     {
-        DB::statement('ALTER TABLE `vulnerabilities` CHANGE  `cve_id` INT(11) NOT NULL;');
+        DB::statement('ALTER TABLE `vulnerabilities` CHANGE  `cve_id` TEXT');
     }
 }

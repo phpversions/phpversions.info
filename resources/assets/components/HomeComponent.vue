@@ -19,7 +19,7 @@
                     <div class="font-sans text-white text-center p-2 tracking-wide tracking-wide leading-normal">Heroku started a trend years ago, and now we have a lot of Platform-as-a-Service systems that take minimal effort to get working.</div>
                 </router-link>
             </div>
-            <div class="w-1/4 p-2 bg-teal no-decoration hover:bg-teal-dark">
+            <div class="w-1/4 p-2 bg-logo-dark no-decoration hover:bg-logo-darker">
                 <router-link :to="{ path: '/managed-hosts' }" class="no-underline hover:text-white">
                     <div class="font-sans text-center p-2"><h2 class="font-sans tracking-wide text-white font-light font-3xl">Managed Hosting</h2></div>
                     <div class="font-sans text-white text-center p-4 tracking-wide leading-normal">Not interested in managing servers yourself?</div>

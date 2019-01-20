@@ -3,35 +3,42 @@
     <url>
     
     <loc>http://localhost/about</loc>
-        <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+        <lastmod>2019-01-13T00:00:00+00:00</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>
     </url>
     <url>
     
+    <loc>http://localhost/blog</loc>
+        <lastmod>2019-01-13T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+    
     <loc>http://localhost/managed-hosts</loc>
-        <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+        <lastmod>2019-01-13T00:00:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
     
     <loc>http://localhost/paas-hosts</loc>
-        <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+        <lastmod>2019-01-13T00:00:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
     
     <loc>http://localhost/shared-hosts</loc>
-        <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+        <lastmod>2019-01-13T00:00:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
     
     <loc>http://localhost/vulnerabilities</loc>
-        <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+        <lastmod>2019-01-13T00:00:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>

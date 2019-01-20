@@ -27,7 +27,7 @@ class VulnerabilitiesController extends ApiBaseController
 
     public function __construct(Response $response, VulnerabilityRepository $vulnerabilityRepository, VulnerabilitiesTransformer $transformer)
     {
-        $this->response = $response;
+        parent::__construct($response);
         $this->vulnerabilityRepository = $vulnerabilityRepository;
         $this->transformer = $transformer;
     }
@@ -44,14 +44,8 @@ class VulnerabilitiesController extends ApiBaseController
 
         $data = $manager->createData($resources)->toArray();
 
-        $etag = md5($vulnerabilities);
+        $etag = md5(json_encode($vulnerabilities));
 
-        return $this->response
-            ->setStatusCode(200)
-            ->setEtag($etag)
-            ->header('Content-type', 'application/json')
-            ->header('accept', 'application/json')
-            ->header('accept-encoding', 'identity')
-            ->setContent($data);
+        return $this->createSuccessResponse($data, $etag);
     }
 }

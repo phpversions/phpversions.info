@@ -48,7 +48,7 @@ class ApiBaseController extends Controller
         ];
     }
 
-    public function createSuccessResponse($data, $etag) : Response
+    protected function createSuccessResponse($data, $etag) : Response
     {
         return $this->response
             ->header('content-type', ConstantService::ACCEPT_TYPE)
@@ -60,7 +60,7 @@ class ApiBaseController extends Controller
             ->setContent($data);
     }
 
-    public function createResourceNotFoundResponse() : Response
+    protected function createResourceNotFoundResponse() : Response
     {
 
     }

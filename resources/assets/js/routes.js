@@ -7,6 +7,8 @@ import SharedHostsComponent from '../components/SharedHostsComponent.vue';
 import ManagedHostsComponent from '../components/ManagedHostsComponent.vue';
 import PaasHostsComponent from '../components/PaasHostsComponent.vue';
 import VulnerabilitiesComponent from '../components/VulnerabilitiesComponent.vue';
+import PostsComponent from '../components/Blog/PostsComponent.vue';
+import PostComponent from '../components/Blog/PostComponent.vue';
 import NotFoundComponent from '../components/Errors/NotFoundComponent.vue';
 
 const routes = [
@@ -18,6 +20,8 @@ const routes = [
   { path: '/operating-systems', component: OperatingSystemComponent, name: 'OperatingSystems'},
   { path: '/new-and-shiny', component: CurrentPhpVersionComponent, name: 'CurrentVersion'},
   { path: '/vulnerabilities', component: VulnerabilitiesComponent, name: 'Vulnerabilities'},
+  { path: '/blog', component: PostsComponent, name: 'Posts' },
+  { path: '/blog/:slug', component: PostComponent, name: 'Post'},
   { path: '*', component: NotFoundComponent, name: 'NotFound'},
 ];
 

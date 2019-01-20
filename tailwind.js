@@ -48,6 +48,8 @@ let colors = {
 
   'logo': '#B0D7DA',
   'logo-dark': '#88C6C7',
+  'logo-darker': '#7AB2B3',
+  'logo-darkest': '#6C9E9F',
 
   'black': '#22292f',
   'grey-darkest': '#3d4852',

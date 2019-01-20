@@ -26,3 +26,6 @@ Route::get('/versions/current', ['uses' => 'Api\v2\CurrentPhpVersionController@i
 Route::get('/versions/deprecated', ['uses' => 'Api\v2\DeprecatedPhpVersionController@index']);
 Route::get('/vulnerabilities', ['uses' => 'Api\v2\VulnerabilitiesController@index']);
 Route::get('/vulnerabilities/search', ['uses' => 'Api\v2\VulnerabilitySearchController@index']);
+
+Route::get('/blog/posts', ['uses' => 'Api\v2\Blog\PostsController@index']);
+Route::get('/blog/posts/{slug}', ['uses' => 'Api\v2\Blog\PostsController@fetch']);

@@ -6,7 +6,6 @@
 <template>
     <div>
         <h2 class="font-sans tracking-wide font-light text-4xl pb-4">Managed Hosting</h2>
-        <p class="font-sans tracking-wide font-light pb-4">Managed hosts generally handle all maintenance of the server and web sites. This includes tasks like configuring services, installing software, deploying the site, upgrading the CMS/framework, etc.</p>
         <input class="mb-4 w-1/5 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="search" type="text" placeholder="Search Hosts" v-model="search">
         <table class="w-full">
             <thead>

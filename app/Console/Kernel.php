@@ -38,10 +38,6 @@ class Kernel extends ConsoleKernel
         if (getenv('APP_ENV') === self::ENV_PROD) {
             $schedule->command(CveCheckCommand::class)
                 ->hourlyAt(12);
-            $schedule->command(ReadHostDataCommand::class)
-                ->hourlyAt(2);
-            $schedule->command(ReadOperatingSystemDataCommand::class)
-                ->hourlyAt(3);
             $schedule->command(SitemapGeneratorCommand::class)
                 ->weekends();
         }

@@ -46,6 +46,11 @@ class SitemapService
                 ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
                 ->setPriority(0.9)
             )
+            ->add(Url::create('/blog')
+                ->setLastModificationDate(Carbon::yesterday())
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+                ->setPriority(0.7)
+            )
             ->writeToFile($path);
     }
 }

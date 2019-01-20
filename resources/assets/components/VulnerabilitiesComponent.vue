@@ -5,7 +5,7 @@
     <div>
         <h2 class="font-sans tracking-wide font-light text-4xl pb-4">PHP Vulnerabilities</h2>
         <p class="font-sans tracking-wide font-light pb-4">PHP has had its share of vulnerabilities pop up. Check back here as we update this daily.</p>
-        <input class="mb-4 w-1/5 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="search" type="text" placeholder="Search PHP Versions" v-model="search">
+        <input class="mb-4 w-1/5 shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="search" type="text" placeholder="Search CVEs" v-model="search">
         <table class="w-full table-auto">
             <thead>
             <tr>
@@ -85,16 +85,16 @@
       getVulnerabilities() {
         axios.get('/api/vulnerabilities').then(response => {
           this.vulnerabilities = response.data.data;
-          this.links = response.meta.pagination.links;
+          this.links = response.data.meta.pagination.links;
         }).catch(err => {
           console.log(err);
         });
       },
 
       getPreviousPage() {
-        axios.get(this.links.prev).then(response => {
+        axios.get(this.links.previous).then(response => {
           this.vulnerabilities = response.data.data;
-          this.links = response.meta.pagination.links;
+          this.links = response.data.meta.pagination.links;
           this.currentPage = this.currentPage - 1;
         }).catch(err => {
           console.log(err);
@@ -104,7 +104,7 @@
       getNextPage() {
         axios.get(this.links.next).then(response => {
           this.vulnerabilities = response.data.data;
-          this.links = response.meta.pagination.links;
+          this.links = response.data.meta.pagination.links;
           this.currentPage = this.currentPage + 1;
         }).catch(err => {
           console.log(err);

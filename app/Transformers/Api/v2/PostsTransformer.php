@@ -17,6 +17,7 @@ class PostsTransformer extends TransformerAbstract
             'headline' => $post->getHeadline(),
             'post' => $post->getPost(),
             'slug' => $post->getSlug(),
+            'readTime' => intval(round(str_word_count(strip_tags($post->getPost())) / 200)),
             'publishedAt' => $post->getPublishedAt(),
         ];
     }

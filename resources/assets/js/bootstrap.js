@@ -11,12 +11,18 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import VueMeta from 'vue-meta';
+import VueAnalytics from 'vue-analytics';
 import Axios from 'axios';
+import router from './routes';
 
 window.Vue = Vue;
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(VueMeta);
+Vue.use(VueAnalytics, {
+  id: 'UA-64167405-3',
+  router,
+});
 
 window.axios = Axios;
 

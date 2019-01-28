@@ -55,10 +55,13 @@
             </div>
             @yield('content')
         </main>
-        <footer class="flex justify-center pb-4 pt-8 bg-logo">
-            <p class="align-center text-white font-sans text-sm">Support The Project | About The Project</p>
-            <br><br>
-            <p class="align-center text-white font-sans text-sm">Copyright © 2018 Matt Trask. <a class="no-underline text-white" href="https://github.com/phpversions/phpversions.info/graphs/contributors">Contributions from the community.</a></p>
+        <footer class="block justify-center pb-4 pt-8 bg-logo">
+            <div class="flex-1 justify-center">
+                <p class="text-center block align-center text-white font-sans text-md"><a class="no-underline text-white" href="https://paypal.me/matthewtrask?locale.x=en_US">Support The Project</a> | <router-link class="no-underline text-white" :to="{ name: 'About' }">About The Project</router-link></p>
+            </div>
+            <div class="flex-1 justify-center">
+                <p class="text-center align-center text-white font-sans text-md">Copyright © 2018 PhpVersions. <a class="no-underline text-white" href="https://github.com/phpversions/phpversions.info/graphs/contributors">Contributions from the community.</a></p>
+            </div>
         </footer>
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>

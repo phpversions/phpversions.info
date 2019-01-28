@@ -21,6 +21,20 @@
             </div>
         </div>
         <div>
+            <h2 class="font-sans font-light tracking-wide text-1xl pb-2">Special Thanks</h2>
+            <div>
+                <p class="tracking-wide font-light font-sans">
+                    While working on this project several people helped out making sure we could do our best work. They are, in particular order:
+                </p>
+                <ul class="pt-2">
+                    <li class="pb-2"><a href="https://twitter.com/colinodell">Colin O'Dell - Maintaining the current version of the project.</a></li>
+                    <li class="pb-2"><a href="https://twitter.com/luketlancaster">Luke Lancaster - JS and PHP help</a></li>
+                    <li class="pb-2"><a href="http://laurapinell.com">Laura Pinell - Design advice</a></li>
+                    <li class="pb-2"><a href="mailto:SarahYoderDesigns@gmail.com?subject=PhpVersions logo work.">Sarah Yoder - Logo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
             <h2 class="font-sans font-light tracking-wide text-1xl pb-2">Colophon</h2>
             <div>
                 <p class="tracking-wide font-light font-sans">

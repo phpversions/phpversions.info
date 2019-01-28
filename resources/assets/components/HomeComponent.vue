@@ -62,6 +62,7 @@
 </template>
 <script>
   import axios from 'axios';
+  import { page } from 'vue-analytics';
 
   export default {
     metaInfo: {

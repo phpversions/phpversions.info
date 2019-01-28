@@ -55485,20 +55485,18 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("VersionCheck", {
-                staticClass:
-                  "font-sans tracking-wide font-light text-green-darker",
+                staticClass: "font-sans tracking-wide font-light text-green",
                 attrs: { host: host, version: 7.3 }
               }),
               _vm._v(" "),
               _c("VersionCheck", {
-                staticClass:
-                  "font-sans tracking-wide font-light text-green-darker",
+                staticClass: "font-sans tracking-wide font-light text-green",
                 attrs: { host: host, version: 7.2 }
               }),
               _vm._v(" "),
               _c("VersionCheck", {
                 staticClass:
-                  "font-sans tracking-wide font-light text-yellow-darker",
+                  "font-sans tracking-wide font-light text-yellow-dark",
                 attrs: { host: host, version: 7.1 }
               }),
               _vm._v(" "),

@@ -1,9 +1,16 @@
-<style lang='scss' scoped>
-
-</style>
 <template>
     <div>
-
+        <div class="pb-4">
+            <h1 class="font-sans font-light tracking-wide text-5xl pb-2 text-center">Oh No!</h1>
+            <div>
+                <p class="tracking-wide font-light font-sans text-center pb-4 pt-4 text-grey-darker">
+                   You need to log in to see that page.
+                </p>
+                <p class="tracking-wide font-light font-sans text-center text-grey-darker">
+                    To log in: <router-link :to="{ path: '/login' }">Click Here</router-link>
+                </p>
+            </div>
+        </div>
     </div>
 </template>
 <script>

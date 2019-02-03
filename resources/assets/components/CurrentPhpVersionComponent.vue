@@ -4,9 +4,9 @@
 <template>
     <div>
         <h2 class="font-sans tracking-wide font-light text-4xl pb-4">PHP {{ currentVersion }}</h2>
-        <p class="font-sans tracking-wide font-light pb-4">PHP 7.2 is out! After maturing like a fine artisanal cheese in through months of release candidates, it's now officially released and heading to a server near you.</p>
+        <p class="font-sans tracking-wide font-light pb-4">PHP {{ currentVersion }} is out! After maturing like a fine artisanal cheese in through months of release candidates, it's now officially released and heading to a server near you.</p>
 
-        <p class="font-sans tracking-wide font-light pb-4">Upgrading from PHP 7.1 is really easy, and installing locally is explained over on <a href="https://phptherightway.com">PHP The Right Way: Getting Started</a>. If you're feeling a bit more adventurous, you can install from source to see some of the features coming in PHP 7.3</p>
+        <p class="font-sans tracking-wide font-light pb-4">Upgrading to PHP {{ currentVersion }} is <a href="http://php.net/manual/en/migration73.php" accesskey="1">really easy</a>, and installing locally is explained over on <a href="http://www.phptherightway.com/#use_the_current_stable_version" accesskey="2">PHP The Right Way: Getting Started</a>. If you're feeling a bit more adventurous, you can install <a href="https://github.com/php/php-src" accesskey="3">from source</a> to see some of the features coming in <a href="https://wiki.php.net/rfc#php_74" accesskey="4">PHP {{ nextVersion }}</a></p>
         <table class="w-full">
             <thead>
                 <tr>
@@ -40,7 +40,8 @@
 
     data() {
       return {
-        currentVersion: 7.2,
+        currentVersion: process.env.MIX_LATEST_PHP_VERSION,
+        nextVersion: process.env.MIX_NEXT_PHP_VERSION,
         hosts: [],
       };
     },
@@ -54,7 +55,7 @@
             router.push('ServerErrorComponent');
           }
 
-          if (error.statusCode() >= 400) {
+          if (error.statusCode() >= 400 && error.statusCode() <= 499) {
             router.push('HomeComponent');
           }
         })

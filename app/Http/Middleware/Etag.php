@@ -5,18 +5,17 @@ declare(strict_types=1);
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\Response;
 
 class ETag
 {
-    public function handle($request, Closure $next)
-
+    public function handle($request, Closure $next) : Response
     {
         // Get response
         $response = $next($request);
 
         // If this was a GET request...
         if ($request->isMethod('get')) {
-
             // Generate Etag
             $etag = md5($response->getContent());
 

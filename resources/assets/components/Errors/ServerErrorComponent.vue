@@ -1,9 +1,16 @@
-<style lang='scss' scoped>
-
-</style>
 <template>
     <div>
-
+        <div class="pb-4">
+            <h1 class="font-sans font-light tracking-wide text-5xl pb-2 text-center">Oh No!</h1>
+            <div>
+                <p class="tracking-wide font-light font-sans text-center pb-4 pt-4 text-grey-darker">
+                    Our server seems to have had a hard time dealing with that last request.
+                </p>
+                <p class="tracking-wide font-light font-sans text-center text-grey-darker">
+                    To go back home: <router-link :to="{ path: '/' }">Click Here</router-link>
+                </p>
+            </div>
+        </div>
     </div>
 </template>
 <script>

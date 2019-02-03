@@ -66,13 +66,13 @@
 
   export default {
     metaInfo: {
-      title: 'PHPVersions.info',
+      title: 'PHP Versions',
       meta: [
           { charset: 'utf-8' },
           { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],
       links: [
-        {rel: 'canonical', href: 'https://phpversions.info'}
+        {rel: 'canonical', href: 'https://phpversions.org'}
       ],
       htmlAttrs: {
         lang: 'en',

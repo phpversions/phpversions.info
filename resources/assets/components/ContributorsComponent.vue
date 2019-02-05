@@ -59,7 +59,7 @@
         axios.get('/api/contributors').then(response => {
           this.contributors = response.data.data;
         }).catch(error => {
-          router.push('ServerError');
+          console.log(error);
         })
       }
     },

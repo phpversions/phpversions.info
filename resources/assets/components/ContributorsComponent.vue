@@ -59,9 +59,7 @@
         axios.get('/api/contributors').then(response => {
           this.contributors = response.data.data;
         }).catch(error => {
-          if (error.statusCode() >= 400 && error.statusCode() <= 499) {
-            router.push('NotFound');
-          }
+          router.push('ServerError');
         })
       }
     },

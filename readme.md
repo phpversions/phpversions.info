@@ -17,9 +17,10 @@ Once inside of Vagrant, run:
 
 ```bash
 cd code
-php artisan migrate:refresh
+php artisan migrate:fresh
 php artisan import:hosts
 php artisan import:operating-systems
+php artisan cve:check
 ```
 
 You can now access the site at <http://phpversions.test>!

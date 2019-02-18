@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Host;
 use App\Repositories\HostRepository;
+use App\Services\HostManager;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
 use Monolog\Logger;
@@ -26,15 +27,14 @@ class ReadHostDataCommand extends Command
     protected $description = 'Import data from the hosts.yml file nightly';
 
     /** @var HostRepository */
-    protected $hostRepository;
+    protected $hostManager;
 
-    public function __construct(HostRepository $hostRepository)
+    public function __construct(HostManager $hostManager)
     {
         parent::__construct();
 
-        $this->hostRepository = $hostRepository;
+        $this->hostManager = $hostManager;
     }
-
     /**
      * Execute the console command.
      *
@@ -44,19 +44,15 @@ class ReadHostDataCommand extends Command
     {
         $start = microtime(true);
 
-        $data = file_get_contents(__DIR__ . '/../../../data/hosts.yml');
+        $this->output->writeln('Importing host data from hosts.yml file');
 
-        $parsedData = Yaml::parse($data, Yaml::PARSE_OBJECT_FOR_MAP);
-
-        $count = count($parsedData);
-
-        foreach($parsedData as $data) {
-            $this->hostRepository->create($data);
-        }
+        $count = $this->hostManager->readHostData();
 
         $end = microtime(true);
 
         $time = ($end - $start);
+
+        $this->output->writeln(sprintf('Imported %s hosting records in %s seconds', $count, $time));
 
         Log::info(sprintf('Imported %s hosting records in %s seconds', $count, $time));
     }

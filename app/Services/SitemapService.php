@@ -51,6 +51,11 @@ class SitemapService
                 ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
                 ->setPriority(0.7)
             )
+            ->add(Url::create('/contributors')
+                ->setLastModificationDate(Carbon::yesterday())
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+                ->setPriority(0.5)
+            )
             ->writeToFile($path);
     }
 }

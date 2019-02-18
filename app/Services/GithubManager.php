@@ -8,7 +8,7 @@ use App\Dto\Contributor;
 use GuzzleHttp\Client;
 use Illuminate\Database\Eloquent\Collection;
 
-class GithubService
+class GithubManager
 {
     private const CONTRIBUTORS_URI = '/repos/phpversions/phpversions.info/contributors';
 

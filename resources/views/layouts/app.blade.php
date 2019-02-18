@@ -71,81 +71,12 @@
             @yield('content')
         </main>
         <footer role="contentinfo" class="block justify-center pb-4 pt-8 bg-logo">
-            <section class="py-8 w-full">
-                <div class="container mx-auto px-8">
-                    <div class="table w-full">
-                        <div class="block sm:table-cell">
-                            <p class="uppercase text-white text-sm sm:mb-6">Links</p>
-                            <ul class="list-reset text-xs mb-6">
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">FAQ</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Help</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Support</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="block sm:table-cell">
-                            <p class="uppercase text-white text-sm sm:mb-6">Legal</p>
-                            <ul class="list-reset text-xs mb-6">
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Terms</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Privacy</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="block sm:table-cell">
-                            <p class="uppercase text-white text-sm sm:mb-6">Social</p>
-                            <ul class="list-reset text-xs mb-6">
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Facebook</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Linkedin</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Twitter</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="block sm:table-cell">
-                            <p class="uppercase text-white text-sm sm:mb-6">Company</p>
-                            <ul class="list-reset text-xs mb-6">
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Official Blog</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">About Us</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="block sm:table-cell">
-                            <p class="uppercase text-white text-sm sm:mb-6">Company</p>
-                            <ul class="list-reset text-xs mb-6">
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Official Blog</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">About Us</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 sm:block sm:mr-0">
-                                    <a href="#" class="text-white hover:text-white">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <div class="flex-1 justify-center">
-                <p class="text-center block align-center text-white font-sans text-md"><a class="no-underline text-white" href="https://paypal.me/matthewtrask?locale.x=en_US">Support The Project</a> | <router-link class="no-underline text-white" :to="{ name: 'About' }">About The Project</router-link></p>
+                <p class="text-center block align-center text-white font-sans text-md">
+                    <a class="no-underline text-white" href="https://paypal.me/matthewtrask?locale.x=en_US">Support The Project</a> |
+                    <router-link class="no-underline text-white" :to="{ name: 'About' }">About The Project</router-link> |
+                    <router-link class="no-underline font-sans tracking-wide text-white" :to="{ name: 'Contributors' }">Contributors</router-link>
+                </p>
             </div>
             <div class="flex-1 justify-center">
                 <p class="text-center align-center text-white font-sans text-md">Copyright © 2018 PhpVersions. <a class="no-underline text-white" href="https://github.com/phpversions/phpversions.info/graphs/contributors">Contributions from the community.</a></p>

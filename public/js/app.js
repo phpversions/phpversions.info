@@ -25777,12 +25777,10 @@ module.exports = Cancel;
 
 
 
-var routes = [{ path: '/', component: __WEBPACK_IMPORTED_MODULE_1__components_HomeComponent_vue___default.a, name: 'Home' }, { path: '/about', component: __WEBPACK_IMPORTED_MODULE_2__components_AboutComponent_vue___default.a, name: 'About' }, { path: '/contributors', component: __WEBPACK_IMPORTED_MODULE_3__components_ContributorsComponent_vue___default.a, name: 'Contributors' }, { path: '/shared-hosts', component: __WEBPACK_IMPORTED_MODULE_6__components_SharedHostsComponent_vue___default.a, name: 'SharedHosts' }, { path: '/managed-hosts', component: __WEBPACK_IMPORTED_MODULE_7__components_ManagedHostsComponent_vue___default.a, name: 'ManagedHosts' }, { path: '/paas-hosts', component: __WEBPACK_IMPORTED_MODULE_8__components_PaasHostsComponent_vue___default.a, name: 'PaasHosts' }, { path: '/operating-systems', component: __WEBPACK_IMPORTED_MODULE_5__components_OperatingSystemComponent_vue___default.a, name: 'OperatingSystems' }, { path: '/new-and-shiny', component: __WEBPACK_IMPORTED_MODULE_4__components_CurrentPhpVersionComponent_vue___default.a, name: 'CurrentVersion' }, { path: '/vulnerabilities', component: __WEBPACK_IMPORTED_MODULE_9__components_VulnerabilitiesComponent_vue___default.a, name: 'Vulnerabilities' }, { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_10__components_Blog_PostsComponent_vue___default.a, name: 'Posts' }, { path: '/blog/:slug', component: __WEBPACK_IMPORTED_MODULE_11__components_Blog_PostComponent_vue___default.a, name: 'Post' }, { path: '/error', component: __WEBPACK_IMPORTED_MODULE_12__components_Errors_ServerErrorComponent_vue___default.a, name: 'ServerError' }, { path: '*', component: __WEBPACK_IMPORTED_MODULE_13__components_Errors_NotFoundComponent_vue___default.a, name: 'NotFound' }];
+var routes = [{ path: '/', component: __WEBPACK_IMPORTED_MODULE_1__components_HomeComponent_vue___default.a, name: 'Home' }, { path: '/about', component: __WEBPACK_IMPORTED_MODULE_2__components_AboutComponent_vue___default.a, name: 'About' }, { path: '/contributors', component: __WEBPACK_IMPORTED_MODULE_3__components_ContributorsComponent_vue___default.a, name: 'Contributors' }, { path: '/shared-hosts', component: __WEBPACK_IMPORTED_MODULE_6__components_SharedHostsComponent_vue___default.a, name: 'SharedHosts' }, { path: '/managed-hosts', component: __WEBPACK_IMPORTED_MODULE_7__components_ManagedHostsComponent_vue___default.a, name: 'ManagedHosts' }, { path: '/paas-hosts', component: __WEBPACK_IMPORTED_MODULE_8__components_PaasHostsComponent_vue___default.a, name: 'PaasHosts' }, { path: '/operating-systems', component: __WEBPACK_IMPORTED_MODULE_5__components_OperatingSystemComponent_vue___default.a, name: 'OperatingSystems' }, { path: '/new-and-shiny', component: __WEBPACK_IMPORTED_MODULE_4__components_CurrentPhpVersionComponent_vue___default.a, name: 'CurrentVersion' }, { path: '/vulnerabilities', component: __WEBPACK_IMPORTED_MODULE_9__components_VulnerabilitiesComponent_vue___default.a, name: 'Vulnerabilities' }, { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_10__components_Blog_PostsComponent_vue___default.a, name: 'Posts' }, { path: '/blog/:slug', component: __WEBPACK_IMPORTED_MODULE_11__components_Blog_PostComponent_vue___default.a, name: 'Post' }, { path: '/server-error', component: __WEBPACK_IMPORTED_MODULE_12__components_Errors_ServerErrorComponent_vue___default.a, name: 'ServerError' }, { path: '*', component: __WEBPACK_IMPORTED_MODULE_13__components_Errors_NotFoundComponent_vue___default.a, name: 'NotFound' }];
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
   routes: routes,
-  hashbang: false,
-  linkActiveClass: 'active',
   mode: 'history'
 }));
 
@@ -54047,9 +54045,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/contributors').then(function (response) {
         _this2.contributors = response.data.data;
       }).catch(function (error) {
-        if (error.statusCode() >= 400 && error.statusCode() <= 499) {
-          router.push('NotFound');
-        }
+        console.log(error);
       });
     }
   },
@@ -55642,6 +55638,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__VersionCheckComponent_vue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__VersionCheckComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__VersionCheckComponent_vue__);
+//
+//
+//
+//
 //
 //
 //

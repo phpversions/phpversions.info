@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\v2;
 
-use App\Services\GithubService;
+use App\Services\GithubManager;
 use App\Transformers\Api\v2\ContributorsTransformer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,13 +11,13 @@ use League\Fractal\Resource\Collection;
 
 class ContributorsController extends ApiBaseController
 {
-    /** @var GithubService */
+    /** @var GithubManager */
     private $service;
 
     /** @var ContributorsTransformer */
     private $transformer;
 
-    public function __construct(Response $response, GithubService $service, ContributorsTransformer $transformer)
+    public function __construct(Response $response, GithubManager $service, ContributorsTransformer $transformer)
     {
         parent::__construct($response);
         $this->service = $service;

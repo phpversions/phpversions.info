@@ -29,6 +29,6 @@ class CreateDistrubtionEventsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('distrubtion_events');
+        Schema::dropIfExists('distribution_events');
     }
 }

@@ -9,9 +9,10 @@ use Illuminate\Support\Collection;
 
 class CurrentPhpVersionRepository
 {
-    private const LATEST_VERSION = 72;
+    private const LATEST_VERSION = 73;
 
     private const DEPRECATED_VERSIONS = [
+        '70',
         '56',
         '55',
         '54',

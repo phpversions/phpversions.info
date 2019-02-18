@@ -23,4 +23,4 @@ php artisan import:operating-systems
 php artisan cve:check
 ```
 
-You can now access the site at <http://phpversions.test>!
+You can now access the site at <http://phpversions.test>, or whatever you entered as your site name in the yaml!

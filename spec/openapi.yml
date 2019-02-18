@@ -42,16 +42,13 @@ paths:
         200:
           $ref: '#/components/responses/SharedHostsResponse'
         400:
-          $ref: '#/components/responses/400Response'
-          description: The server could not complete your request, please try a different request.
-        401:
-          description: User is not authorized to make the request.
+          description: 'The request could not be fulfilled due to bad syntax'
         404:
-          description: Resource not found.
+          description: 'The server could not find the data requested'
         418:
-          description: I'm a teapot
+          description: 'I am a teapot'
         500:
-          description: The server can not complete the request right now.
+          description: 'The server can not complete the request'
   /hosts/managed:
     get:
       summary: A list of resources that are considered managed hosts.
@@ -63,8 +60,13 @@ paths:
         200:
           $ref: '#/components/responses/ManagedHostsResponse'
         400:
-          description:
-
+          description: 'The request could not be fulfilled due to bad syntax'
+        404:
+          description: 'The server could not find the data requested'
+        418:
+          description: 'I am a teapot'
+        500:
+          description: 'The server can not complete the request'
 
 components:
   responses:

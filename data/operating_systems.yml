@@ -26,7 +26,7 @@
     name: 'Debian 7 (Wheezy)'
     family: linux
     distro: debian
-    package_url: 'https://packages.debian.org/wheezy/php5'
+    package_url: null
     version: 5.4.45-0+deb7u8
     semver: 5.4.45
     patch: 45
@@ -119,9 +119,9 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/xenial/php/php7.0'
-    version: 7.0.25-0ubuntu0.16.04.1
-    semver: 7.0.25
-    patch: 25
+    version: 7.0.32-0ubuntu0.16.04.1
+    semver: 7.0.32
+    patch: 32
 -
     name: 'Ubuntu 16.10 (Yakkety)'
     family: linux
@@ -135,17 +135,25 @@
     family: linux
     distro: ubuntu
     package_url: null
-    version: 7.1.11-0ubuntu0.17.10.1
-    semver: 7.1.11
-    patch: 11
+    version: 7.1.17-0ubuntu0.17.10.1
+    semver: 7.1.17
+    patch: 17
 -
     name: 'Ubuntu 18.04 (Bionic)'
     family: linux
     distro: ubuntu
     package_url: https://packages.ubuntu.com/bionic/php7.2
-    version: 7.2.2-1ubuntu2
-    semver: 7.2.2
-    patch: 2
+    version: 7.2.10-0ubuntu0.18.04.1
+    semver: 7.2.10
+    patch: 10
+-
+    name: 'Ubuntu 18.10 (Cosmic)'
+    family: linux
+    distro: ubuntu
+    package_url: https://packages.ubuntu.com/cosmic/php7.2
+    version: 7.2.10-0ubuntu1,
+    semver: 7.2.10
+    patch: 10
 -
     name: 'openSUSE Tumbleweed'
     family: linux
@@ -165,6 +173,6 @@
     family: linux
     distro: arch
     package_url: 'https://www.archlinux.org/packages/extra/x86_64/php/'
-    version: 7.1.5-1
-    semver: 7.1.5
-    patch: 5
+    version: 7.3.0-1
+    semver: 7.3.0
+    patch: 0

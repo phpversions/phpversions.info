@@ -2,7 +2,7 @@ openapi: "3.0.1"
 info:
   title: "PHPVersions API"
   description: An api that centers around hosts and what versions of PHP they support. This API details managed hosts, shared hosts, operating systems as well as detailing CVE's against PHP.
-  version: "0.1.0"
+  version: "0.9.0"
   contact:
     name: Developer Support
     url: phpversions.io/support
@@ -11,7 +11,7 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
-- url: https://phpversions.io/api
+- url: https://phpversions.org/api
   description: Production Server
 - url: http://localhost/api
   description: Local Server
@@ -28,6 +28,8 @@ tags:
     description: Grouping for resources that are listed on the CVE list for PHP.
   - name: CurrentVersion
     description: Grouping for resources that support the current version of PHP.
+  - name: Contributors
+    description: Grouping for resources that support contributors to the project on Github.
 paths:
   /hosts/shared:
     get:
@@ -39,20 +41,44 @@ paths:
       responses:
         200:
           $ref: '#/components/responses/SharedHostsResponse'
+        400:
+          $ref: '#/components/responses/400Response'
+          description: The server could not complete your request, please try a different request.
+        401:
+          description: User is not authorized to make the request.
+        404:
+          description: Resource not found.
+        418:
+          description: I'm a teapot
+        500:
+          description: The server can not complete the request right now.
+  /hosts/managed:
+    get:
+      summary: A list of resources that are considered managed hosts.
+      description: A non-paginated list of resources that are considered managed hosts.
+      operationId: getManagedHosts
+      tags:
+        - ManagedHosts
+      responses:
+        200:
+          $ref: '#/components/responses/ManagedHostsResponse'
+        400:
+          description:
+
 
 components:
   responses:
     SharedHostsResponse:
       description: A list a resorts at Walt Disney World
-            content:
-              application/json:
-                schema:
-                  type: object
-                  properties:
-                    data:
-                      type: array
-                      items:
-                        $ref: '#/components/schemas/Resorts'
-                examples:
-                  resortsArray:
-      $ref: '#/components/examples/ResortsResponse'
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Resorts'
+            examples:
+              sharedHostsResponse:
+                $ref: '#/components/examples/SharedHostsResponse'

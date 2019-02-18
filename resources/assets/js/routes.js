@@ -25,13 +25,11 @@ const routes = [
   { path: '/vulnerabilities', component: VulnerabilitiesComponent, name: 'Vulnerabilities'},
   { path: '/blog', component: PostsComponent, name: 'Posts' },
   { path: '/blog/:slug', component: PostComponent, name: 'Post'},
-  { path: '/error', component: ServerErrorComponent, name: 'ServerError'},
+  { path: '/server-error', component: ServerErrorComponent, name: 'ServerError'},
   { path: '*', component: NotFoundComponent, name: 'NotFound'},
 ];
 
 export default new VueRouter({
   routes,
-  hashbang: false,
-  linkActiveClass: 'active',
   mode: 'history',
 });

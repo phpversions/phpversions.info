@@ -27,7 +27,11 @@
                 <VersionCheck class="font-sans tracking-wide font-light text-green" :host="host" :version="7.3"></VersionCheck>
                 <VersionCheck class="font-sans tracking-wide font-light text-green" :host="host" :version="7.2"></VersionCheck>
                 <VersionCheck class="font-sans tracking-wide font-light text-yellow-dark" :host="host" :version="7.1"></VersionCheck>
-                <VersionCheck class="font-sans tracking-wide font-light text-red" :host="host" :version="['7.0', '5.6', '5.5', '5.4', '5.3', '5.2']"></VersionCheck>
+                <VersionCheck
+                        class="font-sans tracking-wide font-light text-red"
+                        :host="host"
+                        :version="['7.0', '5.6', '5.5', '5.4', '5.3', '5.2']"
+                ></VersionCheck>
             </tr>
             </tbody>
         </table>

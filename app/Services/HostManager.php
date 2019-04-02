@@ -14,12 +14,14 @@ class HostManager
     /** @var HostRepository */
     protected $hostRepository;
 
+    protected $readHosts = [];
+
     public function __construct(HostRepository $hostRepository)
     {
         $this->hostRepository = $hostRepository;
     }
 
-    public function readHostData() : int
+    public function readBaseHostData() : int
     {
         $data = file_get_contents(__DIR__ . '/../../data/hosts.yml');
 
@@ -35,6 +37,11 @@ class HostManager
         }
 
         return (int) $count;
+    }
+
+    public function readRemoteHostData()
+    {
+        //
     }
 
     private function truncateHostData() : void

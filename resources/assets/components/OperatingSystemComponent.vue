@@ -21,7 +21,7 @@
                 <tr v-for="distribution in searchedOperatingSystems">
                     <td class="font-sans tracking-wide font-light">{{ distribution.distribution }}</td>
                     <td class="font-sans tracking-wide font-light">{{ distribution.family }}</td>
-                    <td class="font-sans tracking-wide font-light">{{ distribution.default }}</td>
+                    <td class="font-sans tracking-wide font-light" v-bind:class="{ 'text-green': distribution.supported === true, 'text-red': distribution.supported === false }">{{ distribution.default }}</td>
                 </tr>
             </tbody>
         </table>
@@ -42,10 +42,22 @@
 
     computed: {
       searchedOperatingSystems() {
-        return this.operatingSystems.filter(host => {
-          return host.distribution.toLowerCase().includes(this.search.toLowerCase());
+        return this.operatingSystems.filter(os => {
+          return os.distribution.toLowerCase().includes(this.search.toLowerCase());
+        }).map(os => {
+          if (os.default >= process.env.MIX_LOWEST_SUPPORTED_VERSION) {
+            return Object.assign({ supported: true }, os);
+          } else {
+            return Object.assign({ supported: false }, os);
+          }
         });
       },
+
+      supportedVersions() {
+        return this.operatingSystems.map(os => {
+
+        })
+      }
     },
 
     data() {

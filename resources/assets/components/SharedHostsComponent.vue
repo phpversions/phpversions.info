@@ -14,9 +14,9 @@
                     <th class="text-left font-sans tracking-wide font-light text-2xl">Host</th>
                     <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">Last Scanned</th>
                     <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">Default Version</th>
+                    <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">7.3</th>
                     <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">7.2</th>
                     <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">7.1</th>
-                    <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">7.0</th>
                     <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">EOL</th>
                 </tr>
             </thead>
@@ -35,6 +35,7 @@
     </div>
 </template>
 <script>
+  import { sort }  from 'lodash';
   import axios from 'axios';
   import moment from 'moment';
   import VersionCheck from './VersionCheckComponent.vue';
@@ -48,6 +49,8 @@
       searchedHosts() {
         return this.hosts.filter(host => {
           return host.host.toLowerCase().includes(this.search.toLowerCase());
+        }).sort(host => {
+
         });
       },
     },

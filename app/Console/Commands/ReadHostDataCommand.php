@@ -44,15 +44,15 @@ class ReadHostDataCommand extends Command
     {
         $start = microtime(true);
 
-        $this->output->writeln('Importing host data from hosts.yml file');
+        $this->info('Importing host data from hosts.yml file');
 
-        $count = $this->hostManager->readHostData();
+        $count = $this->hostManager->readBaseHostData();
 
         $end = microtime(true);
 
         $time = ($end - $start);
 
-        $this->output->writeln(sprintf('Imported %s hosting records in %s seconds', $count, $time));
+        $this->info(sprintf('Imported %s hosting records in %s seconds', $count, $time));
 
         Log::info(sprintf('Imported %s hosting records in %s seconds', $count, $time));
     }

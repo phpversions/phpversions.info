@@ -3,12 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class HostEvent extends Model
 {
-    private const CURRENT_VERSION = 7.2;
+    private const SUPPORTED_VERSIONS = [7.3, 7.2];
+
+    private const SECURITY_VERSIONS = [7.1];
+
+    private const EOL_VERSIONS = [7.0, 5.6, 5.5, 5.4, 5.3, 5.2];
 
     protected $fillable = [
         'host_id',
@@ -88,14 +93,14 @@ class HostEvent extends Model
         return $this->is_confirmed;
     }
 
-    public function setSemver(string $semver) : void
+    public function setSemver(float $semver) : void
     {
         $this->semver = $semver;
     }
 
-    public function getSemver() : ? string
+    public function getSemver() : ? float
     {
-        return $this->semver;
+        return (float) $this->semver;
     }
 
     public function getPhpVersion() : ? int
@@ -106,6 +111,11 @@ class HostEvent extends Model
     public function setPhpVersion(int $phpVersion) : void
     {
         $this->php_version = $phpVersion;
+    }
+
+    public function getHostId() : int
+    {
+        return $this->host_id;
     }
 
     public function host() : BelongsTo
@@ -131,5 +141,55 @@ class HostEvent extends Model
     public function scopeByPaasHost(Builder $query) : Builder
     {
         return $query->where('host_type', '=', 'paas');
+    }
+
+    public function scopeByHostId(Builder $query, int $id) : Builder
+    {
+        return $query->where('host_id', '=', $id);
+    }
+
+    public function getSupportedVersions(int $id) : Collection
+    {
+        $supportedVersions = new Collection();
+
+        $events = self::byHostId($id)->get();
+
+        $events->map(function($event) use ($supportedVersions) {
+            if (in_array($event->semver, self::SUPPORTED_VERSIONS)) {
+                $supportedVersions->add($event->semver);
+            }
+        });
+
+        return $supportedVersions;
+    }
+
+    public function getSecurityVersions(int $id) : Collection
+    {
+        $securityVersions = new Collection();
+
+        $events = self::byHostId($id)->get();
+
+        $events->map(function($event) use ($securityVersions) {
+            if (in_array($event->semver, self::SECURITY_VERSIONS)) {
+                $securityVersions->add($event->semver);
+            }
+        });
+
+        return $securityVersions;
+    }
+
+    public function getEolVersions(int $id) : Collection
+    {
+        $eolVersions = new Collection();
+
+        $events = self::byHostId($id)->get();
+
+        $events->map(function($event) use ($eolVersions) {
+           if (in_array($event->semver, self::EOL_VERSIONS)) {
+               $eolVersions->add($event->semver);
+           }
+        });
+
+        return $eolVersions;
     }
 }

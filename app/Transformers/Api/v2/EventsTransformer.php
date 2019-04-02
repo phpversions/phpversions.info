@@ -17,11 +17,15 @@ class EventsTransformer extends TransformerAbstract
     public function transform(HostEvent $event) : array
     {
         return [
-            'type' => $event->getHostType(),
-            'id' => $event->getId(),
-            'default' => $event->getDefaultPhpVersion(),
-            'semver' => $event->getSemver(),
-            'hostType' => $event->getHostType(),
+            'type'                  => $event->getHostType(),
+            'id'                    => $event->getId(),
+            'default'               => $event->getDefaultPhpVersion(),
+            'semver'                => $event->getSemver(),
+            'hostType'              => $event->getHostType(),
+            'hostId'                => $event->getHostId(),
+            'supportedVersions'     => $event->getSupportedVersions($event->getHostId()),
+            'securityVersions'      => $event->getSecurityVersions($event->getHostId()),
+            'eolVersions'           => $event->getEolVersions($event->getHostId()),
         ];
     }
 }

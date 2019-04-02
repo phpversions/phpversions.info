@@ -19,13 +19,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/hosts/shared', ['uses' => 'Api\v2\SharedHostsController@index']);
+
 Route::get('/hosts/managed', ['uses' => 'Api\v2\ManagedHostsController@index']);
+Route::get('/hosts/managed/{slug}', ['uses' => 'Api\v2\ManagedHostsController@fetch']);
+
 Route::get('/hosts/paas', ['uses' => 'Api\v2\PaasHostsController@index']);
+
 Route::get('/hosts/distros', ['uses' => 'Api\v2\OperatingSystemsController@index']);
+
 Route::get('/versions/current', ['uses' => 'Api\v2\CurrentPhpVersionController@index']);
 Route::get('/versions/deprecated', ['uses' => 'Api\v2\DeprecatedPhpVersionController@index']);
+
 Route::get('/vulnerabilities', ['uses' => 'Api\v2\VulnerabilitiesController@index']);
-Route::get('/vulnerabilities/search', ['uses' => 'Api\v2\VulnerabilitySearchController@index']);
 
 Route::get('/contributors', ['uses' => 'Api\v2\ContributorsController@index']);
 Route::get('/commits/latest', ['uses' => 'Api\v2\CommitsController@fetch']);

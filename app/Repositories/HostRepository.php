@@ -87,4 +87,14 @@ class HostRepository implements Storable
             $query->byPaasHost();
         }])->get();
     }
+
+    public function findBySlug(string $hostName)
+    {
+        return $this->host->byHostName($hostName)->get();
+    }
+
+    public function findHostsWithPhpVersionsUrl() : Collection
+    {
+
+    }
 }

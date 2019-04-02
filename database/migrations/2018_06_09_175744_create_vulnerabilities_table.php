@@ -15,11 +15,11 @@ class CreateVulnerabilitiesTable extends Migration
     {
         Schema::create('vulnerabilities', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('version_id');
-            $table->integer('cve_id');
-            $table->integer('risk');
-            $table->longtext('summary');
-            $table->text('fix_base_versions');
+            $table->integer('version_id')->nullable();
+            $table->integer('cve_id')->nullable();
+            $table->integer('risk')->nullable();
+            $table->longtext('summary')->nullable();
+            $table->text('fix_base_versions')->nullable();
             $table->timestamps();
         });
     }

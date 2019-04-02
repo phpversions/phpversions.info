@@ -67,11 +67,15 @@ paths:
           description: 'I am a teapot'
         500:
           description: 'The server can not complete the request'
+  /hosts/paas:
+    get:
+      summary: A list of resources that are considered to be Platform as a Service (PaaS) hosts.
+
 
 components:
   responses:
     SharedHostsResponse:
-      description: A list a resorts at Walt Disney World
+      description: The response that the Shared Hosts endpoint will return
         content:
           application/json:
             schema:

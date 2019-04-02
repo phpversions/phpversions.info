@@ -54894,9 +54894,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     searchedOperatingSystems: function searchedOperatingSystems() {
       var _this = this;
 
-      return this.operatingSystems.filter(function (host) {
-        return host.distribution.toLowerCase().includes(_this.search.toLowerCase());
+      return this.operatingSystems.filter(function (os) {
+        return os.distribution.toLowerCase().includes(_this.search.toLowerCase());
+      }).map(function (os) {
+        if (os.default >= "7.1") {
+          return Object.assign({ supported: true }, os);
+        } else {
+          return Object.assign({ supported: false }, os);
+        }
       });
+    },
+    supportedVersions: function supportedVersions() {
+      return this.operatingSystems.map(function (os) {});
     }
   },
 
@@ -54991,9 +55000,17 @@ var render = function() {
               _vm._v(_vm._s(distribution.family))
             ]),
             _vm._v(" "),
-            _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
-              _vm._v(_vm._s(distribution.default))
-            ])
+            _c(
+              "td",
+              {
+                staticClass: "font-sans tracking-wide font-light",
+                class: {
+                  "text-green": distribution.supported === true,
+                  "text-red": distribution.supported === false
+                }
+              },
+              [_vm._v(_vm._s(distribution.default))]
+            )
           ])
         }),
         0
@@ -55143,12 +55160,14 @@ exports.push([module.i, "\ntr[data-v-45b433dc]:nth-child(even) {\n  background-c
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__VersionCheckComponent_vue__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__VersionCheckComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__VersionCheckComponent_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__VersionCheckComponent_vue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__VersionCheckComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__VersionCheckComponent_vue__);
 //
 //
 //
@@ -55185,6 +55204,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
@@ -55202,7 +55222,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       return this.hosts.filter(function (host) {
         return host.host.toLowerCase().includes(_this.search.toLowerCase());
-      });
+      }).sort(function (host) {});
     }
   },
 
@@ -55218,7 +55238,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getSharedHosts: function getSharedHosts() {
       var _this2 = this;
 
-      return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/hosts/shared').then(function (response) {
+      return __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/api/hosts/shared').then(function (response) {
         _this2.hosts = response.data.data;
       }).catch(function (error) {
         console.log(error);
@@ -55227,12 +55247,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   components: {
-    VersionCheck: __WEBPACK_IMPORTED_MODULE_2__VersionCheckComponent_vue___default.a
+    VersionCheck: __WEBPACK_IMPORTED_MODULE_3__VersionCheckComponent_vue___default.a
   },
 
   filters: {
     date: function date(value) {
-      return __WEBPACK_IMPORTED_MODULE_1_moment___default()(value.date).format('M-d-YYYY');
+      return __WEBPACK_IMPORTED_MODULE_2_moment___default()(value.date).format('M-d-YYYY');
     }
   }
 });
@@ -55285,10 +55305,6 @@ exports.push([module.i, "\n", ""]);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 //
 //
 //
@@ -55297,39 +55313,23 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //
 //
 //
-
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['host', 'version'],
 
+  data: function data() {
+    return {
+      semver: null,
+      eolVersions: []
+    };
+  },
+
+
   computed: {
-    hasVersion: function hasVersion() {
-      var _this = this;
-
-      var eolVersions = [];
-      this.host.events.data.forEach(function (event) {
-        var semver = event.semver.slice(0, 3);
-        if (typeof _this.version === 'number') {
-          console.log(semver, _this.version);
-          if (semver == _this.version) {
-            eolVersions = event.semver;
-          } else {
-            eolVersions = ' ';
-          }
-        } else {
-          if (_this.version.includes(semver)) {
-            eolVersions.push(event.semver);
-          }
-        }
-      });
-      if ((typeof eolVersions === 'undefined' ? 'undefined' : _typeof(eolVersions)) === 'object') {
-        return eolVersions.join(', ');
-      }
-
-      return eolVersions;
-    }
+    // rename this
+    hasVersion: function hasVersion() {}
   }
 });
 
@@ -55493,6 +55493,15 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
+          [_vm._v("7.3")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "text-left font-sans tracking-wide font-light text-2xl pr-2"
+          },
           [_vm._v("7.2")]
         ),
         _vm._v(" "),
@@ -55503,15 +55512,6 @@ var staticRenderFns = [
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
           [_vm._v("7.1")]
-        ),
-        _vm._v(" "),
-        _c(
-          "th",
-          {
-            staticClass:
-              "text-left font-sans tracking-wide font-light text-2xl pr-2"
-          },
-          [_vm._v("7.0")]
         ),
         _vm._v(" "),
         _c(
@@ -55671,12 +55671,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
@@ -55736,6 +55730,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   filters: {
     date: function date(value) {
       return __WEBPACK_IMPORTED_MODULE_1_moment___default()(value.date).format('M-d-YYYY');
+    },
+    string: function string(value) {
+      return value.toString();
     }
   }
 });
@@ -55784,49 +55781,56 @@ var render = function() {
       _c(
         "tbody",
         _vm._l(_vm.hosts, function(host) {
-          return _c(
-            "tr",
-            [
-              _c(
-                "td",
-                { staticClass: "font-sans tracking-wide font-light pb-2" },
-                [_vm._v(_vm._s(host.host))]
-              ),
-              _vm._v(" "),
-              _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
-                _vm._v(_vm._s(_vm._f("date")(host.scannedAt)))
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
-                _vm._v(_vm._s(host.default))
-              ]),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-green",
-                attrs: { host: host, version: 7.3 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-green",
-                attrs: { host: host, version: 7.2 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
+          return _c("tr", [
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light pb-2" },
+              [_vm._v(_vm._s(host.host))]
+            ),
+            _vm._v(" "),
+            _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
+              _vm._v(_vm._s(_vm._f("date")(host.scannedAt)))
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
+              _vm._v(_vm._s(host.default))
+            ]),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-green" },
+              [
+                _vm._v(
+                  _vm._s(
+                    _vm._f("string")(host.events.data[0].supportedVersions)
+                  )
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              {
                 staticClass:
-                  "font-sans tracking-wide font-light text-yellow-dark",
-                attrs: { host: host, version: 7.1 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-red",
-                attrs: {
-                  host: host,
-                  version: ["7.0", "5.6", "5.5", "5.4", "5.3", "5.2"]
-                }
-              })
-            ],
-            1
-          )
+                  "font-sans tracking-wide font-light text-yellow-dark"
+              },
+              [
+                _vm._v(
+                  _vm._s(_vm._f("string")(host.events.data[0].securityVersions))
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-red" },
+              [
+                _vm._v(
+                  _vm._s(_vm._f("string")(host.events.data[0].eolVersions))
+                )
+              ]
+            )
+          ])
         }),
         0
       )
@@ -55872,7 +55876,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.3")]
+          [_vm._v("Supported Versions")]
         ),
         _vm._v(" "),
         _c(
@@ -55881,7 +55885,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.2")]
+          [_vm._v("Security Versions")]
         ),
         _vm._v(" "),
         _c(
@@ -55890,16 +55894,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.1")]
-        ),
-        _vm._v(" "),
-        _c(
-          "th",
-          {
-            staticClass:
-              "text-left font-sans tracking-wide font-light text-2xl pr-2"
-          },
-          [_vm._v("EOL")]
+          [_vm._v("EOL Versions")]
         )
       ])
     ])

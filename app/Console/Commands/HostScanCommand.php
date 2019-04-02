@@ -20,6 +20,9 @@ class HostScanCommand extends Command
      */
     protected $description = 'Command description';
 
+    /** @var  */
+    private $phparse;
+
     /**
      * Create a new command instance.
      *

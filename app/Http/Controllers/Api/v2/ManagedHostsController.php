@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
 use League\Fractal\Resource\Collection;
+use League\Fractal\Resource\Item;
 
 class ManagedHostsController extends ApiBaseController
 {
@@ -38,8 +39,23 @@ class ManagedHostsController extends ApiBaseController
         $resources->setMeta($this->createMetaData());
 
         $data = $manager->createData($resources)->toArray();
+
+        $etag = md5(json_encode($data));
+
+        return $this->createSuccessResponse($data, $etag);
+    }
+
+    public function fetch(Request $request) : Response
+    {
+        $managedHost = $this->repository->findBySlug($request->slug);
+
+        $manager = $this->createManager();
         $manager->parseIncludes('events');
 
+        $resource = new Item($managedHost, $this->transformer, 'ManagedHost');
+        $resource->setMeta($this->createMetaData());
+
+        $data = $manager->createData($resource)->toArray();
         $etag = md5(json_encode($data));
 
         return $this->createSuccessResponse($data, $etag);

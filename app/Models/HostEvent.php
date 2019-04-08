@@ -9,9 +9,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class HostEvent extends Model
 {
-    private const SUPPORTED_VERSIONS = [7.3, 7.2];
+    // move these to .env file
+    private const LATEST_VERSION = 7.3;
 
-    private const SECURITY_VERSIONS = [7.1];
+    private const SUPPORTED_VERSION = 7.2;
+
+    private const SECURITY_VERSION = 7.1;
 
     private const EOL_VERSIONS = [7.0, 5.6, 5.5, 5.4, 5.3, 5.2];
 
@@ -93,14 +96,14 @@ class HostEvent extends Model
         return $this->is_confirmed;
     }
 
-    public function setSemver(float $semver) : void
+    public function setSemver(string $semver) : void
     {
         $this->semver = $semver;
     }
 
-    public function getSemver() : ? float
+    public function getSemver() : ? string
     {
-        return (float) $this->semver;
+        return (string) $this->semver;
     }
 
     public function getPhpVersion() : ? int
@@ -148,34 +151,49 @@ class HostEvent extends Model
         return $query->where('host_id', '=', $id);
     }
 
-    public function getSupportedVersions(int $id) : Collection
+    public function getLatestVersion(int $id) : \App\Dto\Version
     {
-        $supportedVersions = new Collection();
+        $version = new \App\Dto\Version();
 
         $events = self::byHostId($id)->get();
 
-        $events->map(function($event) use ($supportedVersions) {
-            if (in_array($event->semver, self::SUPPORTED_VERSIONS)) {
-                $supportedVersions->add($event->semver);
+        $events->map(function($event) use ($version) {
+            if ($event->semver == self::LATEST_VERSION) {
+                $version->setVersion((string) $event->semver);
             }
         });
 
-        return $supportedVersions;
+        return $version;
     }
 
-    public function getSecurityVersions(int $id) : Collection
+    public function getSupportedVersion(int $id) : \App\Dto\Version
     {
-        $securityVersions = new Collection();
+        $version = new \App\Dto\Version();
 
         $events = self::byHostId($id)->get();
 
-        $events->map(function($event) use ($securityVersions) {
-            if (in_array($event->semver, self::SECURITY_VERSIONS)) {
-                $securityVersions->add($event->semver);
+        $events->map(function($event) use ($version) {
+            if ($event->semver == self::SUPPORTED_VERSION) {
+                $version->setVersion((string) $event->semver);
             }
         });
 
-        return $securityVersions;
+        return $version;
+    }
+
+    public function getSecurityVersion(int $id) : \App\Dto\Version
+    {
+        $version = new \App\Dto\Version();
+
+        $events = self::byHostId($id)->get();
+
+        $events->map(function($event) use ($version) {
+            if ($event->semver == self::SECURITY_VERSION) {
+                $version->setVersion((string) $event->semver);
+            }
+        });
+
+        return $version;
     }
 
     public function getEolVersions(int $id) : Collection

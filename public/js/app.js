@@ -55253,6 +55253,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   filters: {
     date: function date(value) {
       return __WEBPACK_IMPORTED_MODULE_2_moment___default()(value.date).format('M-d-YYYY');
+    },
+    string: function string(value) {
+      return value.toString();
     }
   }
 });
@@ -55405,49 +55408,52 @@ var render = function() {
       _c(
         "tbody",
         _vm._l(_vm.searchedHosts, function(host) {
-          return _c(
-            "tr",
-            [
-              _c(
-                "td",
-                { staticClass: "font-sans tracking-wide font-light pb-2" },
-                [_vm._v(_vm._s(host.host))]
-              ),
-              _vm._v(" "),
-              _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
-                _vm._v(_vm._s(_vm._f("date")(host.scannedAt)))
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
-                _vm._v(_vm._s(host.default))
-              ]),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-green",
-                attrs: { host: host, version: 7.3 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-green",
-                attrs: { host: host, version: 7.2 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
+          return _c("tr", [
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light pb-2" },
+              [_vm._v(_vm._s(host.host))]
+            ),
+            _vm._v(" "),
+            _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
+              _vm._v(_vm._s(_vm._f("date")(host.scannedAt)))
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
+              _vm._v(_vm._s(host.default))
+            ]),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-green" },
+              [_vm._v(_vm._s(host.events.data[0].latestVersion))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-green" },
+              [_vm._v(_vm._s(host.events.data[0].supportedVersion))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              {
                 staticClass:
-                  "font-sans tracking-wide font-light text-yellow-dark",
-                attrs: { host: host, version: 7.1 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-red",
-                attrs: {
-                  host: host,
-                  version: ["7.0", "5.6", "5.5", "5.4", "5.3", "5.2"]
-                }
-              })
-            ],
-            1
-          )
+                  "font-sans tracking-wide font-light text-yellow-dark"
+              },
+              [_vm._v(_vm._s(host.events.data[0].securityVersion))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-red" },
+              [
+                _vm._v(
+                  _vm._s(_vm._f("string")(host.events.data[0].eolVersions))
+                )
+              ]
+            )
+          ])
         }),
         0
       )
@@ -55493,7 +55499,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.3")]
+          [_vm._v("Latest Version")]
         ),
         _vm._v(" "),
         _c(
@@ -55502,7 +55508,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.2")]
+          [_vm._v("Supported Versions")]
         ),
         _vm._v(" "),
         _c(
@@ -55511,7 +55517,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.1")]
+          [_vm._v("Security Versions")]
         ),
         _vm._v(" "),
         _c(
@@ -55520,7 +55526,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("EOL")]
+          [_vm._v("EOL Versions")]
         )
       ])
     ])
@@ -55671,6 +55677,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -55729,7 +55737,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   filters: {
     date: function date(value) {
-      return __WEBPACK_IMPORTED_MODULE_1_moment___default()(value.date).format('M-d-YYYY');
+      return __WEBPACK_IMPORTED_MODULE_1_moment___default()(value.date).format('MM-DD-YYYY');
     },
     string: function string(value) {
       return value.toString();
@@ -55799,13 +55807,13 @@ var render = function() {
             _c(
               "td",
               { staticClass: "font-sans tracking-wide font-light text-green" },
-              [
-                _vm._v(
-                  _vm._s(
-                    _vm._f("string")(host.events.data[0].supportedVersions)
-                  )
-                )
-              ]
+              [_vm._v(_vm._s(host.events.data[0].latestVersion))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-green" },
+              [_vm._v(_vm._s(host.events.data[0].supportedVersion))]
             ),
             _vm._v(" "),
             _c(
@@ -55814,11 +55822,7 @@ var render = function() {
                 staticClass:
                   "font-sans tracking-wide font-light text-yellow-dark"
               },
-              [
-                _vm._v(
-                  _vm._s(_vm._f("string")(host.events.data[0].securityVersions))
-                )
-              ]
+              [_vm._v(_vm._s(host.events.data[0].securityVersion))]
             ),
             _vm._v(" "),
             _c(
@@ -55868,6 +55872,15 @@ var staticRenderFns = [
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
           [_vm._v("Default Version")]
+        ),
+        _vm._v(" "),
+        _c(
+          "th",
+          {
+            staticClass:
+              "text-left font-sans tracking-wide font-light text-2xl pr-2"
+          },
+          [_vm._v("Latest Version")]
         ),
         _vm._v(" "),
         _c(
@@ -56108,6 +56121,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     date: function date(value) {
       console.log(value);
       return __WEBPACK_IMPORTED_MODULE_2_moment___default()(value.date).format('M-d-YYYY');
+    },
+    string: function string(value) {
+      return value.toString();
     }
   }
 });
@@ -56162,50 +56178,52 @@ var render = function() {
       _c(
         "tbody",
         _vm._l(_vm.searchedHosts, function(host) {
-          return _c(
-            "tr",
-            { staticClass: "pt-2 pb-2" },
-            [
-              _c(
-                "td",
-                { staticClass: "font-sans tracking-wide font-light pb-2" },
-                [_vm._v(_vm._s(host.host))]
-              ),
-              _vm._v(" "),
-              _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
-                _vm._v(_vm._s(_vm._f("date")(host.scannedAt)))
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
-                _vm._v(_vm._s(host.default))
-              ]),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-green",
-                attrs: { host: host, version: 7.3 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-green",
-                attrs: { host: host, version: 7.2 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
+          return _c("tr", [
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light pb-2" },
+              [_vm._v(_vm._s(host.host))]
+            ),
+            _vm._v(" "),
+            _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
+              _vm._v(_vm._s(_vm._f("date")(host.scannedAt)))
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "font-sans tracking-wide font-light" }, [
+              _vm._v(_vm._s(host.default))
+            ]),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-green" },
+              [_vm._v(_vm._s(host.events.data[0].latestVersion))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-green" },
+              [_vm._v(_vm._s(host.events.data[0].supportedVersion))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              {
                 staticClass:
-                  "font-sans tracking-wide font-light text-yellow-dark",
-                attrs: { host: host, version: 7.1 }
-              }),
-              _vm._v(" "),
-              _c("VersionCheck", {
-                staticClass: "font-sans tracking-wide font-light text-red",
-                attrs: {
-                  host: host,
-                  version: ["7.0", "5.6", "5.5", "5.4", "5.3", "5.2"]
-                }
-              })
-            ],
-            1
-          )
+                  "font-sans tracking-wide font-light text-yellow-dark"
+              },
+              [_vm._v(_vm._s(host.events.data[0].securityVersion))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "font-sans tracking-wide font-light text-red" },
+              [
+                _vm._v(
+                  _vm._s(_vm._f("string")(host.events.data[0].eolVersions))
+                )
+              ]
+            )
+          ])
         }),
         0
       )
@@ -56251,7 +56269,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.3")]
+          [_vm._v("Latest Version")]
         ),
         _vm._v(" "),
         _c(
@@ -56260,7 +56278,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.2")]
+          [_vm._v("Supported Versions")]
         ),
         _vm._v(" "),
         _c(
@@ -56269,7 +56287,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("7.1")]
+          [_vm._v("Security Versions")]
         ),
         _vm._v(" "),
         _c(
@@ -56278,7 +56296,7 @@ var staticRenderFns = [
             staticClass:
               "text-left font-sans tracking-wide font-light text-2xl pr-2"
           },
-          [_vm._v("EOL")]
+          [_vm._v("EOL Versions")]
         )
       ])
     ])

@@ -23,8 +23,9 @@ class EventsTransformer extends TransformerAbstract
             'semver'                => $event->getSemver(),
             'hostType'              => $event->getHostType(),
             'hostId'                => $event->getHostId(),
-            'supportedVersions'     => $event->getSupportedVersions($event->getHostId()),
-            'securityVersions'      => $event->getSecurityVersions($event->getHostId()),
+            'latestVersion'         => $event->getLatestVersion($event->getHostId())->getVersion(),
+            'supportedVersion'      => $event->getSupportedVersion($event->getHostId())->getVersion(),
+            'securityVersion'       => $event->getSecurityVersion($event->getHostId())->getVersion(),
             'eolVersions'           => $event->getEolVersions($event->getHostId()),
         ];
     }

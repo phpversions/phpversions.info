@@ -13,6 +13,7 @@
                 <th class="text-left font-sans tracking-wide font-light text-2xl">Host</th>
                 <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">Last Scanned</th>
                 <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">Default Version</th>
+                <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">Latest Version</th>
                 <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">Supported Versions</th>
                 <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">Security Versions</th>
                 <th class="text-left font-sans tracking-wide font-light text-2xl pr-2">EOL Versions</th>
@@ -23,8 +24,9 @@
                 <td class="font-sans tracking-wide font-light pb-2">{{ host.host }}</td>
                 <td class="font-sans tracking-wide font-light">{{ host.scannedAt|date }}</td>
                 <td class="font-sans tracking-wide font-light">{{ host.default }}</td>
-                <td class="font-sans tracking-wide font-light text-green">{{ host.events.data[0].supportedVersions | string }}</td>
-                <td class="font-sans tracking-wide font-light text-yellow-dark">{{ host.events.data[0].securityVersions | string }}</td>
+                <td class="font-sans tracking-wide font-light text-green">{{ host.events.data[0].latestVersion}}</td>
+                <td class="font-sans tracking-wide font-light text-green">{{ host.events.data[0].supportedVersion}}</td>
+                <td class="font-sans tracking-wide font-light text-yellow-dark">{{ host.events.data[0].securityVersion }}</td>
                 <td class="font-sans tracking-wide font-light text-red">{{ host.events.data[0].eolVersions | string }}</td>
             </tr>
             </tbody>
@@ -88,7 +90,7 @@
 
     filters: {
       date(value) {
-        return moment(value.date).format('M-d-YYYY');
+        return moment(value.date).format('MM-DD-YYYY');
       },
 
       string(value) {

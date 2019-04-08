@@ -5,11 +5,12 @@ declare(strict_types=1);
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 class ETag
 {
-    public function handle($request, Closure $next) : Response
+    public function handle($request, Closure $next)
     {
         // Get response
         $response = $next($request);

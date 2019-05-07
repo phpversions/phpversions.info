@@ -3,7 +3,7 @@
     family: linux
     distro: centos
     package_url: 'http://vault.centos.org/centos/7/os/Source/SPackages/'
-    version: 5.4.16-42.el7
+    version: 5.4.16-46.el7
     semver: 5.4.16
     patch: 16
 -
@@ -35,17 +35,17 @@
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/jessie/php5'
-    version: 5.6.30+dfsg-0+deb8u1
-    semver: 5.6.30
-    patch: 30
+    version: 5.6.40+dfsg-0+deb8u2
+    semver: 5.6.40
+    patch: 40
 -
     name: 'Debian 9 (Stretch)'
     family: linux
     distro: debian
     package_url: 'https://packages.debian.org/stretch/php7.0'
-    version: 7.0.27-0+deb9u1
-    semver: 7.0.27
-    patch: 27
+    version: 7.0.33-0+deb9u3
+    semver: 7.0.33
+    patch: 33
 -
     name: 'Red Hat Enterprise Linux (RHEL) 6.7'
     family: linux
@@ -94,8 +94,8 @@
     name: 'Ubuntu 14.04 LTS (Trusty)'
     family: linux
     distro: ubuntu
-    package_url: 'http://packages.ubuntu.com/trusty/php/php5'
-    version: 5.5.9-1ubuntu4.22
+    package_url: null
+    version: 5.5.9-1ubuntu4.29
     semver: 5.5.9
     patch: 9
 -
@@ -119,9 +119,9 @@
     family: linux
     distro: ubuntu
     package_url: 'http://packages.ubuntu.com/xenial/php/php7.0'
-    version: 7.0.32-0ubuntu0.16.04.1
-    semver: 7.0.32
-    patch: 32
+    version: 7.0.33-0ubuntu0.16.04.4
+    semver: 7.0.33
+    patch: 33
 -
     name: 'Ubuntu 16.10 (Yakkety)'
     family: linux
@@ -142,18 +142,18 @@
     name: 'Ubuntu 18.04 (Bionic)'
     family: linux
     distro: ubuntu
-    package_url: https://packages.ubuntu.com/bionic/php7.2
-    version: 7.2.10-0ubuntu0.18.04.1
-    semver: 7.2.10
-    patch: 10
+    package_url: 'https://packages.ubuntu.com/bionic/php7.2'
+    version: 7.2.17-0ubuntu0.18.04.1
+    semver: 7.2.17
+    patch: 17
 -
     name: 'Ubuntu 18.10 (Cosmic)'
     family: linux
     distro: ubuntu
-    package_url: https://packages.ubuntu.com/cosmic/php7.2
-    version: 7.2.10-0ubuntu1,
-    semver: 7.2.10
-    patch: 10
+    package_url: 'https://packages.ubuntu.com/cosmic/php7.2'
+    version: 7.2.17-0ubuntu0.18.10.1
+    semver: 7.2.17
+    patch: 17
 -
     name: 'openSUSE Tumbleweed'
     family: linux
@@ -173,6 +173,6 @@
     family: linux
     distro: arch
     package_url: 'https://www.archlinux.org/packages/extra/x86_64/php/'
-    version: 7.3.0-1
-    semver: 7.3.0
-    patch: 0
+    version: 7.3.5-1
+    semver: 7.3.5
+    patch: 5

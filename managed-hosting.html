@@ -25,7 +25,7 @@ layout: default
                 {% assign hosts = (site.data.hosts | filter_by_type: 'managed' | semver_sort) %}
                 {% for host in hosts %}
                 <tr>
-                    <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
+                    <td class="host-name" data-value="{{ host.name | downcase }}"><a href="{{ host.url }}">{{ host.name }}</a></td>
                     <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
                         <i class="fa fa-times"></i>
                     </td>

@@ -25,7 +25,7 @@ layout: default
       {% for host in sorted_hosts %}
         {% if host.versions[73] %}
         <tr>
-          <td class="host-name"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
+          <td class="host-name" data-value="{{ host.name | downcase }}"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
           <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
               <i class="fa fa-times"></i>
           </td>

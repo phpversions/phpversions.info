@@ -14,22 +14,23 @@ layout: default
               <tr>
                 <th>Host</th>
                 <th>Last Scanned</th>
+                <th>7.3</th>
+                <th>7.2</th>
                 <th>7.1</th>
-                <th>7.0</th>
-                <th>5.6</th>
-                <th>5.5</th>
-                <th>5.4</th>
+                <th colspan="4">End Of Life</th>
                 <th>Default</th>
               </tr>
             </thead>
             <tbody>
-            {% assign hosts = (site.data.hosts | filter_by_type: 'paas') %}
+            {% assign hosts = (site.data.hosts | filter_by_type: 'paas' | semver_sort) %}
             {% for host in hosts %}
               <tr>
-                <td class="host-name"><a href="{{ host.url }}">{{ host.name }}</a></td>
+                <td class="host-name" data-value="{{ host.name | downcase }}"><a href="{{ host.url }}">{{ host.name }}</a></td>
                 <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
                     <i class="fa fa-times"></i>
                 </td>
+                <td class="host-info version">{{ host.versions[73] | format_version }}</td>
+                <td class="host-info version">{{ host.versions[72] | format_version }}</td>
                 <td class="host-info version">{{ host.versions[71] | format_version }}</td>
                 <td class="host-info version">{{ host.versions[70] | format_version }}</td>
                 <td class="host-info version">{{ host.versions[56] | format_version }}</td>

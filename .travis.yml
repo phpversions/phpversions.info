@@ -1,11 +1,12 @@
 language: php
 php:
-- '7.0'
+- '7.2'
 before_install:
 - rvm install 2.3.1
 - gem update bundler && bundle install
 - composer install
 script:
+- php ./bin/validate-hosts-yml
 - php ./bin/update-versions
 - bundle exec jekyll build
 deploy:

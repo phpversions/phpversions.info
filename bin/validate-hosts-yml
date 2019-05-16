@@ -1,0 +1,62 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+use Naneau\SemVer\Parser as SemVerParser;
+use Symfony\Component\Yaml\Yaml;
+
+function fail(string $message, $thingToDump = null) {
+    echo "Error: " . $message . "\n";
+    $thingToDump && print_r($thingToDump);
+    exit(1);
+}
+
+$hostFilePath = __DIR__.'/../_data/hosts.yml';
+
+try {
+    $hosts = YAML::parse(file_get_contents($hostFilePath));
+} catch (Exception $ex) {
+    fail($ex->getMessage());
+}
+
+foreach ($hosts as $host) {
+    if (empty($host['name'])) {
+        fail('Missing "name"', $host);
+    }
+    if (empty($host['url'])) {
+        fail('Missing "url"', $host);
+    }
+    if (empty($host['type'])) {
+        fail('Missing "type"', $host);
+    }
+    if (empty($host['versions'])) {
+        fail('Missing "versions"', $host);
+    }
+    if (!empty($host['default'])) {
+        if (!preg_match('/^\d{2,}$/', $host['default'])) {
+            fail('Invalid "default" - must be null or digits only', $host);
+        }
+    }
+
+    foreach ($host['versions'] as $k => $v) {
+        if (!is_numeric($v['patch'])) {
+            fail('Invalid "patch" for version ' . $k, $host);
+        }
+        if (empty($v['version'])) {
+            fail('Missing "version" for version ' . $k, $host);
+        }
+        if (empty($v['semver'])) {
+            fail('Missing "semver" for version ' . $k, $host);
+        }
+
+        try {
+            $semver = SemVerParser::parse($v['semver']);
+        } catch (InvalidArgumentException $ex) {
+            fail('Invalid "semver" for version ' . $k . ': ' . $ex->getMessage(), $host);
+        }
+    }
+}
+
+echo "hosts.yml appears to be valid\n";
+exit(0);

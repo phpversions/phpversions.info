@@ -1,3 +1,13 @@
+var eolVersions = {
+    '5.4': new Date('2015-09-03T23:59:59'),
+    '5.5': new Date('2016-07-21T23:59:59'),
+    '5.6': new Date('2018-12-31T23:59:59'),
+    '7.0': new Date('2018-12-03T23:59:59'),
+    '7.1': new Date('2019-12-01T23:59:59'),
+    '7.2': new Date('2020-11-30T23:59:59'),
+    '7.3': new Date('2021-12-06T23:59:59')
+};
+
 // Simple function for comparing x.y.z versions
 function cmpVersions (a, b) {
     var i, l, d;
@@ -65,6 +75,7 @@ function getFixedVersions(callback) {
 // Only execute this code on pages which have version tables
 if (document.getElementsByClassName('tables').length > 0) {
     getFixedVersions(function (fixedVersions) {
+        var now = new Date();
         var versionCells = document.querySelectorAll('.tables .version');
         Array.prototype.forEach.call(versionCells, function (el) {
             var version = el.textContent.trim();
@@ -82,12 +93,12 @@ if (document.getElementsByClassName('tables').length > 0) {
             var fullVersion = version[0];
             var minorVersion = version[1];
 
-            if (typeof fixedVersions[minorVersion] === 'undefined') {
-                el.classList.add('good-version');
-            } else if (cmpVersions(fullVersion, fixedVersions[minorVersion]) >= 0) {
-                el.classList.add('good-version');
-            } else {
+            if (typeof fixedVersions[minorVersion] !== 'undefined' && cmpVersions(fullVersion, fixedVersions[minorVersion]) < 0) {
                 el.classList.add('bad-version');
+            } else if (typeof eolVersions[minorVersion] !== 'undefined' && eolVersions[minorVersion] < now) {
+                el.classList.add('eol-version');
+            } else {
+                el.classList.add('good-version');
             }
         });
     });

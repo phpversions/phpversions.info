@@ -1,9 +1,10 @@
+#!/usr/bin/env php
 <?php
 
 $hostFilePath = __DIR__.'/../_data/hosts.yml';
 $osFilePath   = __DIR__.'/../_data/operating_systems.yml';
 
-require "vendor/autoload.php";
+require __DIR__.'/../vendor/autoload.php';
 
 use Sturgeon\PHPArse\Parser;
 use Symfony\Component\DomCrawler\Crawler;
@@ -89,7 +90,12 @@ function updateOperatingSystem($os)
 
   echo "Parsing {$os['name']} from: {$os['package_url']}".PHP_EOL;
 
-  $version = readDistroPackageVersion($os['package_url'], $os['distro']);
+  try {
+    $version = readDistroPackageVersion($os['package_url'], $os['distro']);
+  } catch (Exception $ex) {
+    echo "- Failed to read {$os['name']}: ".$ex->getMessage().PHP_EOL;
+    return $os;
+  }
 
   if ($version === $os['version']) {
     echo "- No change for {$os['name']}, stil {$version}".PHP_EOL;

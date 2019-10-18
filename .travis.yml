@@ -18,4 +18,4 @@ deploy:
   on:
     branch: master
 env:
-  secure: 6l62BVXSEaQFC9SjIwtz6T8kVsd0RymMiO1YO9BwiV435yOpwfBqXl83rhCOkxCJ0w3q5QZDk3sILNup18lq9E0yhrVGDIJgKFpTsU/XS/dymu8EYmWixC09L0laf9BDsYetSML/SPJhz54f6sFvIkD+t5f2dtzPmte+2tzAYB8=
+  secure: FyMrm2TkN1W1vxZFfqrzLYX3FtJ4ATfN/0KA0ldLcyqE6I7uHkgD835jiEwnDxGWb/V1uuS5gi9u+u3H8/wwBH4ar37dOJlxUPgi7sswAyBaTaw0GAlbpJ3gyLsvRLSd4nWdoyuAIgFiaRUdVFDxCxjyDCyAleWSTnD1IXm0oX4=

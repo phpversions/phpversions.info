@@ -2,7 +2,7 @@ language: php
 php:
 - '7.2'
 before_install:
-- rvm install 2.4.6
+- rvm install 2.3.1
 - gem update bundler && bundle install
 - composer install
 script:

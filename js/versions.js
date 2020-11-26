@@ -1,3 +1,4 @@
+// https://www.php.net/eol.php
 var eolVersions = {
     '5.4': new Date('2015-09-03T23:59:59'),
     '5.5': new Date('2016-07-21T23:59:59'),
@@ -6,7 +7,8 @@ var eolVersions = {
     '7.1': new Date('2019-12-01T23:59:59'),
     '7.2': new Date('2020-11-30T23:59:59'),
     '7.3': new Date('2021-12-06T23:59:59'),
-    '7.4': new Date('2022-12-06T23:59:59')
+    '7.4': new Date('2022-12-06T23:59:59'),
+    '8.0': new Date('2023-11-26T23:59:59') // https://externals.io/message/110470
 };
 
 // Simple function for comparing x.y.z versions

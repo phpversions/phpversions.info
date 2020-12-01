@@ -14,11 +14,10 @@ layout: default
               <tr>
                 <th>Host</th>
                 <th>Last Scanned</th>
+                <th>8.0</th>
                 <th>7.4</th>
                 <th>7.3</th>
-                <th>7.2</th>
-                <th>7.1</th>
-                <th colspan="4">End Of Life</th>
+                <th colspan="6">End Of Life</th>
                 <th>Default</th>
               </tr>
             </thead>
@@ -30,6 +29,7 @@ layout: default
                 <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
                     <i class="fa fa-times"></i>
                 </td>
+                <td class="host-info version">{{ host.versions[80] | format_version }}</td>
                 <td class="host-info version">{{ host.versions[74] | format_version }}</td>
                 <td class="host-info version">{{ host.versions[73] | format_version }}</td>
                 <td class="host-info version">{{ host.versions[72] | format_version }}</td>

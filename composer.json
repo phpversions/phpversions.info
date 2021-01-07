@@ -1,0 +1,28 @@
+{
+    "name": "phpversions/phpversions.info",
+    "description": "Shows which web hosting providers offer modern versions of PHP",
+    "type": "project",
+    "license": "Unlicense",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/phpversions/phparse"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "sturgeon/phparse": "dev-master",
+        "symfony/dom-crawler": "^4.0",
+        "symfony/yaml": "^4.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.3|^3.0"
+    },
+    "scripts": {
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 bin",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 bin"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PHP Versions</title>
+  <meta name="description" content="Learn which versions of PHP are available on different web hosting providers, so you can make informed decisions.
+">
+  <meta name="keywords" content="php, versions, hosts, shared hosts, managed hosts, paas, hosting platforms, php versions">
+  <meta name="robots" content="index,follow">
+  <link href='//fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="canonical" href="http://phpversions.info/">
+</head>
+
+<body>
+
+    
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo home">
+      <img src="/php-versions.png" alt="Logo Image">
+    </a>
+    <nav role="navigation">
+      <ul class="navigation-menu show">
+        <li class="nav-link"><a href="/shared-hosting">Shared Hosts</a></li>
+        <li class="nav-link"><a href="/paas-hosting">PaaS Hosts</a></li>
+        <li class="nav-link"><a href="/managed-hosting">Managed Hosts</a></li>
+        <li class="nav-link"><a href="/operating-systems">Operating Systems</a></li>
+        <li class="nav-link"><a href="/new-and-shiny">PHP 8.0</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </div>
+</header>
+
+
+    <div class="hero">
+    	<div class="hero-inner">
+    		<div class="hero-copy">
+                <p>Don't get stuck on crap old versions of PHP just because your host does not support it. Keep using the newest version, and if you gotta switch... maybe you gotta switch.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="wrapper">
+            <div class="grid-items">
+  <div class="grid-item">
+    <a href="/shared-hosting">
+      <h1>Shared Hosting</h1>
+      <p>Need a standard bit of web hosting? Something all set up for you and you just
+      gotta throw your code up there?</p>
+      <p>Maybe a bit of SSH, but just a bit? Take a look at these.</p>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="/paas-hosting">
+      <h1>PaaS Hosting</h1>
+      <p>Gotta get that Git-push fancy goodness, with simple addons?</p>
+      <p>Heroku started a trend years ago, and now we have a lot of Platform-as-a-Service systems that take minimal effort to get working.</p>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="/managed-hosting">
+      <h1>Managed Hosting</h1>
+      <p>Not interested in managing servers yourself?</p>
+      <p>Managed hosting providers will keep your server and software up-to-date for you.</p>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="/operating-systems">
+      <h1>Operating Systems</h1>
+      <p>Want to know which Linux distribution or OS X version come with what version of PHP?</p>
+      <p>Sure, you can upgrade the version, but some folks don't know how, so maybe starting out right is a good move.</p>
+    </a>
+  </div>
+</div>
+
+<div class="homepage-article grid-item-image">
+    <p>Curious to know the history of the project and where we hope to take it?</p>
+    
+    <a href="https://www.hostingadvice.com/blog/php-versions-tracks-language-updates-and-hosting-support/?fbclid=IwAR0PZxUFTLnloRhxbF1x3A4uY5W9mCfWgkiw0W2dNR94DvW12Rt_RPg8LPU">
+         Check out this article from HostingAdvice.com!
+    </a>
+</div>
+
+<div class="homepage-faq grid-item-image">
+    <h2>FAQ</h2>
+
+    <h3>I work for a hosting company that isn't on here, can we get listed?</h3>
+    <p>Sure why not! Shout at <a href="https://twitter.com/matthewtrask">@matthewtrask</a> or <a href="https://twitter.com/colinodell">@colinodell</a> on Twitter, or send a pull request to the <a href="https://github.com/philsturgeon/phpversions.info/blob/master/_data/hosts.yml">GitHub repo</a>.</p>
+
+    <h3>Where do you get the data from?</h3>
+    <p>This used to be entirely manual, which was a horrendous to keep up to date. Now we parse phpinfo() on public URLs that hosts make available, like this:</p>
+
+    <p><a href="http://php70.webhosting.be/phpinfo.php">http://php70.webhosting.be/phpinfo.php</a></p>
+
+    <p>Not all hosts have them so some are still entirely manual. Either way, sending us patch version changes, changes in the default versions, or new public phpinfo URLs can be done via updating <a href="https://github.com/philsturgeon/phpversions.info/tree/master/_data">hosts.yml</a>.</p>
+
+    <h3>How do I contribute?</h3>
+
+    <p>Read the <a href="https://github.com/phpversions/phpversions.info/blob/master/CONTRIBUTING.md">contributing guide on GitHub</a>.</p>
+
+    <h3>Do you intend to implement X or Y?</h3>
+
+    <p>I have a bit of a <a href="https://github.com/phpversions/phpversions.info#todo">todo list</a>, and I would love help if you're bored.</p>
+
+</div>
+
+        </div>
+    </section>
+
+    <!--<div class="wrapper-for-content-outside-of-footer">
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+</div>-->
+
+<footer>
+    <p>Copyright © 2019-2020 <a href="https://matthewtrask.net/">Matt Trask</a>. <a href="https://github.com/phpversions/phpversions.info/">Contributions</a> from the <a href="https://github.com/phpversions/phpversions.info/graphs/contributors">community</a>.</p>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sortable/0.8.0/js/sortable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/versions.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69566063-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

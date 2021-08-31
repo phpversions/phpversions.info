@@ -176,3 +176,11 @@
     version: 7.3.5-1
     semver: 7.3.5
     patch: 5
+    
+    name: 'Debian 11 (Bullseye)'
+    family: linux
+    distro: debian
+    package_url: 'https://packages.debian.org/bullseye/php7.4'
+    version: 7.4.21-1+deb11u1
+    semver: 7.4.21
+    patch: 45

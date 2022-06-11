@@ -61,6 +61,7 @@ The remaining stuff is `default`, which points to one of the `versions` below. H
 - 73
 - 74
 - 80
+- 81
 
 Probably don't bother listing PHP 5.x versions because we'll probably remove them soon, _as should you as any sort of responsible hosting company!_ :) 
 

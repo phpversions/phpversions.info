@@ -8,9 +8,9 @@ layout: default
 <article class="hosts">
   <section>
     <div class="host-description">
-      <h2>PHP 8.0</h2>
-      <p>PHP 8.0 is out! After maturing like a fine artisanal cheese in through months of release candidates, it's now <a href="http://php.net/releases/8_0_0.php">officially released</a> and heading to a server near you.</p>
-      <p>Upgrading to PHP 8.0 is <a href="http://php.net/manual/en/migration80.php">really easy</a>, and installing locally is explained over on <a href="http://www.phptherightway.com/#use_the_current_stable_version">PHP The Right Way: Getting Started</a>. If you're feeling a bit more adventurous, you can install <a href="https://github.com/php/php-src">from source</a> to see some of the features coming in <a href="https://wiki.php.net/rfc#php_80">PHP 8.0</a></p>
+      <h2>PHP 8.1</h2>
+      <p>PHP 8.1 is out! After maturing like a fine artisanal cheese in through months of release candidates, it's now <a href="http://php.net/releases/8_1_0.php">officially released</a> and heading to a server near you.</p>
+      <p>Upgrading to PHP 8.1 is <a href="http://php.net/manual/en/migration81.php">well documented</a>, and installing locally is explained over on <a href="http://www.phptherightway.com/#use_the_current_stable_version">PHP The Right Way: Getting Started</a>.</p>
       <hr>
     </div>
     <table class="tables">
@@ -23,13 +23,13 @@ layout: default
       </thead>
       <tbody>
       {% for host in sorted_hosts %}
-        {% if host.versions[80] %}
+        {% if host.versions[81] %}
         <tr>
           <td class="host-name" data-value="{{ host.name | downcase }}"><a href="{{ host.url }}">{{ host.name | escape }}</a></td>
           <td class="host-info" data-last-scanned="{{ host.last_scanned_at }}">
               <i class="fa fa-times"></i>
           </td>
-          <td class="host-info version">{{ host.versions[80] | format_version }}</td>
+          <td class="host-info version">{{ host.versions[81] | format_version }}</td>
         </tr>
         {% endif %}
       {% endfor %}

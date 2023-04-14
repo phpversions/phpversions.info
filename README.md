@@ -1,5 +1,9 @@
 # phpversions.info
 
+**This repository was archived on April 14, 2023. Thank you all for your past contributions.**
+
+---
+
 As a PHP developer, we are often stuck with hosts that support insanely old versions of PHP. This means that some
 projects end up supporting those insanely old versions, and we all get stuck in this "Mexican Standoff" situation.
 
